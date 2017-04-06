@@ -1,0 +1,8 @@
+.mapxian{ width:1200px; height:60px; margin:10px auto; color:#000; font-size:18px; border-bottom:2px solid #000; line-height:60px;}
+.mapbox{ width:1200px; height:650px; margin:20px auto;}
+.mapleft{ width:200px; height:650px; float:left; color:#000; text-align:center; line-height:20px; font-size:14px;}
+.mapright{ width:850px; height:650px; float:left; margin-left:20px;}
+.mapright .title{ width:800px; height:60px; border-bottom:1px solid #666; font-size:18px; line-height:60px; color:#000;}
+.mapright .reirong{ font-size:14px; line-height:60px; color:#000;}
+.mapright .reirong span{ font-size:14px; line-height:50px; margin-left:10px;} 
+.mapbottom { width:1200px; height:350px; margin:5px auto;  }

@@ -1,0 +1,62 @@
+
+.jianHead{ width:100%; height:150px; float:left; z-index:9999;}
+.jianContainer{ width:1200px;  margin:0 auto; overflow:hidden;}
+.jianTop{ width:1200px; height:80px;}
+.jianTopLeft{ float:left; width:450px; height:80px; margin-top:15px;}
+.jianTopRight{ float:right; width:470px; height:80px; margin-top:20px;}
+.jianTopRight p{ float:left; font-size:12px; font-weight:bold; line-height:18px; }
+.jianTopRight p span{ font-size:48px; font-weight:bold; margin-left:5px; margin-top:10px; line-height:48px; font-family:"Arial Black", Gadget, sans-serif;}
+.jianMenu{ width:100%; height:50px; background-color:#ea2865; z-index:9999;}
+.jianMenuCon{ width:1200px; margin:0 auto; z-index:9999;}
+#jianMenuConNav { }
+#jianMenuConNav li { float: left; font: normal 16px/50px 微软雅黑; color: #fff; }
+#jianMenuConNav li a { padding-left: 20px; padding-right: 20px; display: block; float: left; font: normal 16px/50px 微软雅黑; color: #fff; text-decoration:none; }
+#jianMenuConNav li .home:hover { color: #fff; background: #ea2865; }
+#jianMenuConNav li a:hover { color: #ea2865; background: #fff; }
+#jianMenuConNav li a span { float: left; margin-right: 10px; font: bold 16px/50px 宋体; color: #fff; }
+#jianMenuConNav li ul {position: absolute; display: block; width: 150px; margin-top: 50px; display: none; z-index: 9999; }
+#jianMenuConNav li ul li { float: left; }
+#jianMenuConNav li ul a { display: block; width: 105px; font: normal 16px/50px 微软雅黑; color: #fff; text-align: center; background: #ea2865; border-top: 1px solid #fff; }
+.jianMenuConNav li ul a:hover { color: #ea2865; background: #fff; text-decoration: none; font-weight: normal; }
+
+.footer { width: 100%; height: 390px; float: left; margin: 0 auto; margin-top: 20px; }
+.footer .partners { width: 1200px; margin: 0 auto; text-align: center; border-top: 1px solid #d4d4d4; margin-bottom: 35px; }
+.footer .partners span { color: #ea2867; font: normal 45px/80px 微软雅黑; }
+.footer .partners p { color: #989696; font: normal 20px/20px 微软雅黑; }
+.footer .partners img { margin-top: 10px; }
+.footer .footer_title { width: 100%; height: 70px; float: left; margin: 0 auto; background: #e6145f; }
+.footer .footer_title .ftitle_box { width: 1200px; height: 50px; margin: 0 auto; margin-top: 10px; font-family: Microsoft YaHei; }
+.footer .footer_title .ftitle_box .ftitle_a { float: left; }
+.footer .footer_title .ftitle_box .ftitle_b { float: left; font-size: 18px; color: #FFF; line-height: 50px; margin-left: 20px; }
+.footer .footer_title .ftitle_box .ftitle_c { width: 105px; height: 37px; display: block; background: #262626; background: rgba(38, 38, 38, 1); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: right; color: #FFF; font-size: 18px; line-height: 37px; text-align: center; margin-top: 8px; }
+.footer .footercontent { width: 100%; height: 260px; float: left; margin: 0 auto; background: #262626; }
+.footer .footercontent .fcontent_box { width: 1200px; height: 200px; margin: 0 auto; /*border:2px solid #FFF;*/ margin-top: 30px; font-family: Microsoft YaHei; }
+.footer .footercontent .fcontent_box .fcontent_a { width: 250px; float: left; }
+.footer .footercontent .fcontent_box .fcontent_a .fcontent_a_1 { width: 240px; height: 35px; border: 2px solid #9ea2a5; border-top: 1px solid #FFF; padding-left: 10px; font-size: 16px; color: #8b8f92; line-height: 35px; }
+.footer .footercontent .fcontent_box .fcontent_a .fcontent_a_2 { width: 250px; height: 27px; border-bottom: 1px solid #63686c; text-align: left; }
+.footer .footercontent .fcontent_box .fcontent_a .fcontent_a_2 a { overflow: hidden; font-size: 12px; color: #d7d6d4; line-height: 27px; }
+.footer .footercontent .fcontent_box .fcontent_a .fcontent_a_2 a:hover { color: #e6145f; }
+.footer .footercontent .fcontent_box .fcontent_b { width: 180px; float: left; margin-left: 80px; }
+.footer .footercontent .fcontent_box .fcontent_b .fcontent_b_1 { width: 220px; height: 35px; border: 2px solid #9ea2a5; border-top: 1px solid #FFF; padding-left: 10px; font-size: 16px; color: #8b8f92; line-height: 35px; }
+.footer .footercontent .fcontent_box .fcontent_b .fcontent_b_2 { width: 230px; text-align: left; }
+.footer .footercontent .fcontent_box .fcontent_b .fcontent_b_2 a { font-size: 12px; color: #d7d6d4; margin-top: 10px; float: left; }
+.footer .footercontent .fcontent_box .fcontent_b .fcontent_b_2 a:hover { color: #e6145f; }
+.footer .footercontent .fcontent_box .fcontent_c { width: 320px; float: left; margin-left: 140px; }
+.footer .footercontent .fcontent_box .fcontent_c .fcontent_c_1 { width: 320px; font-size: 24px; color: #FFF; font-weight: bold; }
+.footer .footercontent .fcontent_box .fcontent_c .fcontent_c_1 a:hover { color: #e6145f; }
+.footer .footercontent .fcontent_box .fcontent_c .fcontent_c_2 { width: 320px; font-size: 12px; color: #d7d6d4; line-height: 25px; margin-top: 20px; }
+.footer .footercontent .fcontent_box .fcontent_c .fcontent_c_3 { width: 320px; text-align: left; margin-top: 15px; }
+.footer .footercontent .fcontent_box .fcontent_d { width: 180px; float: right; }
+.footer .footercontent .fcontent_box .fcontent_d .fcontent_d_1 { width: 180px; font-size: 24px; color: #FFF; font-weight: bold; }
+.footer .footercontent .fcontent_box .fcontent_d .fcontent_d_2 { width: 180px; margin-top: 15px; }
+.footer .footercontent .fcontent_box .fcontent_d .fcontent_d_2 ul { width: 180px; }
+.footer .footercontent .fcontent_box .fcontent_d .fcontent_d_2 ul li { font-size: 12px; color: #d7d6d4; line-height: 25px; }
+.footer .footer_under { width: 100%; height: 50px; float: left; margin: 0 auto; background: #000; }
+.footer .footer_under .funder_box { width: 1200px; height: 50px; margin: 0 auto; font-size: 14px; color: #FFF; line-height: 50px; }
+
+#totop { position: fixed; bottom: 20px; right: 20px; z-index: 999; width: 60px; cursor: pointer; display: none }
+*html #totop { position: absolute; cursor: pointer; display: none;  top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-112+"px")
+}
+#totop a { display: block; width: 60px; height: 60px; background: url("/templets/pc/images/gotop.png") no-repeat; background-size: cover; opacity: .5; filter: alpha(opacity=50); -moz-opacity: .5; -khtml-opacity: .5 }
+#totop a.cur { opacity: 1; filter: alpha(opacity=100); -moz-opacity: 1; -khtml-opacity: 1 }
+
