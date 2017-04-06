@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="/templets/pc/js/respond.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/templets/pc/js/PIE.js"></script>
+<![endif]-->
+    <link href="/templets/pc/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/templets/pc/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/templets/pc/css/banner1.css" type="text/css">
+    <link rel="stylesheet" href="/templets/pc/css/index.css" type="text/css">
+    <!-- banner -->
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/templets/pc/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+</head>
+
+<body> 
+   
+   
+    
+   
+    
+   
+    
+   
+   
+    
+    <div class="container news">
+        <div class="row">
+            <i>HUAJIANG&nbsp;DESIGN</i>
+            <h3>CONTANCT&nbsp;US</h3>
+            <p>联系我们</p>
+        </div>
+    </div>
+      <div class="container">
+    <div class="row">
+          <div class="col-lg-7">
+        <form method="post" action="/plus/guestbook1.php" name="form1">
+     	<input type='hidden' name='action' value='save' />
+              <div class="design-26">
+            <div class="design-27"> <span>SEND&nbsp;US&nbsp;MESSAGE</span>
+                  <p>填写您的需求，花匠品牌顾问会即时与您联系</p>
+                </div>
+            
+            <!--lxwm_title-->
+            
+            <input type="text" class="design-28" name="uname" value="姓名  *" onFocus="if(this.value=='姓名  *'){this.value='';}" onBlur="if(this.value==''){this.value='姓名  *';}" />
+            <div class="sex">
+                  <input type="radio" name="img" value="男" checked="checked" />
+                  &nbsp;先生
+                  <input type="radio" name="img" value="女" />
+                  &nbsp;女士 </div>
+            <input type="text" class="design-28" name="qq" value="回访电话  *" onFocus="if(this.value=='回访电话  *'){this.value='';}" onBlur="if(this.value==''){this.value='回访电话  *';}" />
+            <input type="text" class="design-28" name="homepage" value="品牌名称" onFocus="if(this.value=='品牌名称'){this.value='';}" onBlur="if(this.value==''){this.value='品牌名称';}" />
+            <input type="text" class="design-29" name="msg" value="请填写你的合作需求" onFocus="if(this.value=='请填写你的合作需求'){this.value='';}" onBlur="if(this.value==''){this.value='请填写你的合作需求';}" />
+            <div class="design-30">
+                  <p>
+                <input name="email" type="radio" value="健康 美肤 快消品" checked="checked" />
+                &nbsp;健康&nbsp;美肤&nbsp;快消品</p>
+                  <p>
+                <input name="email" type="radio" value="时尚 珠宝 服装" />
+                &nbsp;时尚&nbsp;珠宝&nbsp;服装</p>
+                  <p>
+                <input name="email" type="radio" value="餐饮 家具 环保" />
+                &nbsp;餐饮&nbsp;家具&nbsp;环保</p>
+                  <p>
+                <input name="email" type="radio" value="电商 互联网 科技" />
+                &nbsp;电商&nbsp;互联网&nbsp;科技</p>
+                  <p>
+                <input name="email" type="radio" value="金融 制造 服务" />
+                &nbsp;金融&nbsp;制造&nbsp;服务</p>
+                  <p>
+                <input name="email" type="radio" value="其他行业" />
+                &nbsp;其他行业 </p>
+                </div>
+            <input type="submit" class="submit" name="submit" value="点击提交" />
+          </div>
+              
+              <!--design-26-->
+              
+            </form>
+      </div>
+          <div class="col-lg-5"> {dede:include filename="message.htm"/} </div>
+        </div>
+  </div>
+      
+      <!-- container -->   
+    {dede:include filename="footerself.htm"/}
+    <!-- footer.htm -->
+    <!--head-->
+    <script src="/templets/pc/js/respond.src.js" type="text/javascript"></script>
+    <script src="/templets/pc/js/jquery.panelslider.js"></script>
+    <script>
+    $('#left-panel-link').panelslider();
+    </script>
+    <!-- Side bar -->
+    <script src="/templets/pc/js/owl.carousel.js"></script>
+    <script src="/templets/pc/js/index.js"></script>
+	<!-- banner -->
+    <script src="/templets/pc/js/message.js"></script>
+</html>

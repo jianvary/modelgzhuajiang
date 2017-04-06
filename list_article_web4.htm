@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+
+<title>{dede:global.cfg_webname/}</title>
+
+<meta name="description" content="{dede:global.cfg_description/}" />
+
+<meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+
+<link href="/templets/default/style/designindex.css" rel="stylesheet" media="screen" type="text/css"/>
+<!-------------------------------轮播图开始------------------------------------------------------->
+<link href="/templets/default/style/luenbotu.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="/templets/default/js/jquery-1.10.2.min.js"></script>
+    <script src="/templets/default/js/slider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 500,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+    })
+    </script>
+<!-------------------------------轮播图结束------------------------------------------------------->
+</head>
+<body>
+<div class="all">
+{dede:include filename="head1.htm"/}
+<!-- /header -->
+<div class="design_carouselfigure">
+
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+            {dede:arclist row=1  type='image.'  typeid='49' flag='h' }
+            <li>
+                <a href="#">
+                    <img style="background: url([field:picname/]) no-repeat center; background-size:cover;" >
+                </a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist row=1  type='image.'  typeid='50' flag='h' }
+            <li>
+                <a href="http://www.gzhuajiang.com">
+                    <img style="background: url([field:picname/]) no-repeat center; background-size:cover;">
+                </a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist row=1  type='image.'  typeid='51' flag='h' }
+            <li>
+                <a href="#">
+                    <img style="background: url([field:picname/]) no-repeat center; background-size:cover;">
+                </a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist row=1  type='image.'  typeid='52' flag='h' }
+            <li>
+                <a href="#">
+                    <img style="background: url([field:picname/]) no-repeat center; background-size:cover;">
+                </a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist row=1  type='image.'  typeid='53' flag='h' }
+            <li>
+                <a href="#">
+                    <img style="background: url([field:picname/]) no-repeat center; background-size:cover;">
+                </a>
+            </li>
+            {/dede:arclist}
+        </ul>
+        <ul class="flex-direction-nav">
+            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+            <li><a class="flex-next" href="javascript:;">Next</a></li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>4</a></li>
+            <li><a>5</a></li>
+        </ol>
+    </div>
+<!--<img src="/images/carouselfigure/1.png"/>-->
+</div><!--design_carouselfigure-->
+<!--轮播图-->
+
+<div class="chest">
+  <div class="chest_box">
+    <div class="chest_a">
+    <img src="/images/chesta/chest_1.png"/>
+    <span>营销型网站</span>
+    </div><!--chest_a-->
+    <div class="chest_a">
+    <img src="/images/chesta/chest_2.png"/>
+    <span>品牌展示型</span>
+    </div><!--chest_a-->
+    <div class="chest_a">
+    <img src="/images/chesta/chest_3.png"/>
+    <span>移动网站</span>
+    </div><!--chest_a-->
+    <div class="chest_a">
+    <img src="/images/chesta/chest_4.png"/>
+    <span>量身定制型</span>
+    </div><!--chest_a-->
+  </div><!--chest_box-->      
+</div><!--chest-->
+<div class="activity">
+  <div class="activity_box">
+    <i>HUAJING DESIGN</i><br/>
+    <span>PREFERENTIAL ACTIVITY</span>
+    <p>优惠活动</p>
+  </div><!--ctivity_box-->
+</div><!--activity-->
+
+
+<div class="customercase">
+  <div class="customercasebox">
+    <div class="customercasebox_a">
+      <div class="customercasebox_a_1">
+        <span>超过</span>
+        <p>50个连锁品牌</p>
+      </div><!--customercasebox_a_1-->
+      <div class="customercasebox_a_2">
+      <
+      </div><!--ustomercasebox_a_2-->
+      <div class="customercasebox_a_1">
+        <span>超过</span>
+        <p>100个时尚品牌</p>
+      </div><!--customercasebox_a_1-->
+      <div class="customercasebox_a_2">
+      <
+      </div><!--ustomercasebox_a_2-->
+      <div class="customercasebox_a_1">
+        <span>超过</span>
+        <p>800个家中小企业</p>
+      </div><!--customercasebox_a_1-->
+      <div class="customercasebox_a_2">
+      <
+      </div><!--ustomercasebox_a_2-->
+      <div class="customercasebox_a_3">
+        <span>选择</span>
+        <p>花匠建站</p>
+      </div><!--customercasebox_a_1-->
+    </div><!--customercasebox_a-->        
+  </div><!--customercasebox-->
+</div><!--customercase-->
+<div class="anlie">
+  <div class="anlie_box">
+    <span>SHOW CASE</span> 
+    <p><small>花匠</small><b>.</b>品牌营销型网站案例</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">花匠专注建造识别强与询盘率爆表的营销网站</div>
+  </div><!--anlie_boxtwo-->
+</div><!--anlie-->
+
+<script src="/templets/default/js/jqthumb.min.js"></script>
+<script>
+$(function(){
+	$('#design1 img').jqthumb({
+		width: 1200,
+		height: 520,
+		after: function(imgObj){
+			imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
+		}
+	});
+});
+$(function(){
+	$('#design2 img').jqthumb({
+		width: 390,
+		height: 240,
+		after: function(imgObj){
+			imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
+		}
+	});
+});
+$(function(){
+	$('#design3 img').jqthumb({
+		width: 490,
+		height: 505,
+		after: function(imgObj){
+			imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
+		}
+	});
+});
+$(function(){
+	$('#design4 img').jqthumb({
+		width: 390,
+		height: 245,
+		after: function(imgObj){
+			imgObj.css('opacity', 0).animate({opacity: 1}, 2000);
+		}
+	});
+});
+</script>
+<div class="customercasetwo">
+  <div class="customercasetwobox">
+    {dede:arclist row=1  type='image.'  typeid='20' imgwidth='1200' imgheight='520' limit='0,1' flag='c' titlelen='200'}
+    <div class="customercasetwobox_a">
+    <a href="[field:arcurl/]" id="design1">
+    <img src="/images/cai.jpg"/>
+    <div class="bbtt">
+    <p>[field:title/]</p>
+    </div><!--bbtt-->
+    </a>
+    </div><!--customercasetwobox_a-->
+    {/dede:arclist}
+    
+    {dede:arclist row=6  type='image.'  typeid='20' imgwidth='390' imgheight='240' limit='1,6' flag='c' titlelen='200'}
+    <div class="customercasetwobox_b">
+      <div class="customercasetwobox_b_1">      
+   <a href="[field:arcurl/]"><span id="design2">[field:image/]</span>
+        <div class="txt">
+          <p>点击查看</p>
+        </div>
+    </a>  
+<script type="text/javascript">
+$(".customercasetwobox_b_1 a").hover(function(){
+	$(this).find(".txt").stop().animate({height:"240px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"60px"},400);
+},function(){
+	$(this).find(".txt").stop().animate({height:"0px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"0px"},400);
+})
+</script>
+      </div><!--customercasetwobox_b_1--> 
+      <div class="customercasetwobox_b_2">
+      <a href="[field:arcurl/]">  
+        <span>[field:title/]</span>
+        <p>#[field:shorttitle/]#</p>
+      </a>
+      </div><!--customercasetwobox_b_2-->
+    </div><!--customercasetwobox_b--> 
+    {/dede:arclist}
+  </div><!--customercasetwobox-->
+</div><!--customercasetwo-->
+
+<div class="morecase">
+  <div class="morecase_box">
+  
+    <div class="morecase_box_a">
+    
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1--> 
+           
+    </div><!--cmorecase_box_a-->
+    
+      <a>查看更多作品</a>
+      <span>+</span>
+  </div>
+  
+</div><!--morecase-->
+<div class="anlie">
+  <div class="anlie_box">
+    <span>SHOW CASE</span> 
+    <p><small>花匠</small><b>.</b>品牌展示型网站案例</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">涵盖移动端+PC端网站定制，赢得5000+品牌商掌声</div>
+  </div><!--anlie_boxtwo-->
+</div><!--anlie-->
+
+<div class="customercasetwo">
+  <div class="customercasetwobox">
+    {dede:arclist row=1  type='image.'  typeid='20' imgwidth='1200' imgheight='520' limit='6,1' flag='c' titlelen='200'}
+    <div class="customercasetwobox_a">
+    <a href="[field:arcurl/]" id="design1">
+    <img src="/images/cai.jpg"/>
+    <div class="bbtt">
+    <p>[field:title/]</p>
+    </div><!--bbtt-->
+    </a>
+    </div><!--customercasetwobox_a-->
+    {/dede:arclist}
+    
+    {dede:arclist row=6  type='image.'  typeid='20' imgwidth='390' imgheight='240' limit='7,6' flag='c' titlelen='200'}
+    <div class="customercasetwobox_b">
+      <div class="customercasetwobox_b_1">      
+   <a href="[field:arcurl/]"><span id="design2">[field:image/]</span>
+        <div class="txt">
+          <p>点击查看</p>
+        </div>
+    </a>  
+<script type="text/javascript">
+$(".customercasetwobox_b_1 a").hover(function(){
+	$(this).find(".txt").stop().animate({height:"240px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"60px"},400);
+},function(){
+	$(this).find(".txt").stop().animate({height:"0px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"0px"},400);
+})
+</script>
+      </div><!--customercasetwobox_b_1--> 
+      <div class="customercasetwobox_b_2">
+      <a href="[field:arcurl/]">  
+        <span>[field:title/]</span>
+        <p>#[field:shorttitle/]#</p>
+      </a>
+      </div><!--customercasetwobox_b_2-->
+    </div><!--customercasetwobox_b--> 
+    {/dede:arclist}
+  </div><!--customercasetwobox-->
+</div><!--customercasetwo-->
+
+<div class="morecase">
+  <div class="morecase_box">
+  
+    <div class="morecase_box_a">
+    
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1--> 
+           
+    </div><!--cmorecase_box_a-->
+    
+      <a>查看更多作品</a>
+      <span>+</span>
+  </div>
+</div><!--morecase-->
+
+<div class="designbg">
+</div><!--designbg-->
+<div class="designbg_head">
+  <div class="designbg_head_box">
+    <img src="/images/tiaophone.jpg"/> 
+  </div><!--esignbg_head_box-->  
+</div><!--designbg_head-->
+
+
+<div class="anlie">
+  <div class="anlie_box">
+    <span>SHOW CASE</span> 
+    <p><small>花匠</small><b>.</b>手机网站案例</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">全套移动端解决方案，100家连锁品牌实现快速拓店</div>
+  </div><!--anlie_boxtwo-->
+</div><!--anlie-->
+
+<div class="phonecase">
+  <div class="phonecase_box">
+  
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://m.lyy99.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://m.lyy99.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+
+        <div class="phonecase_box_a_1">
+        <iframe src="http://wap.hukouztc.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://wap.hukouztc.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://wap.gxgl188.cn/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://wap.gxgl188.cn/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://wap.gangzailiansuo.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://wap.gangzailiansuo.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://m.huisheliren.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://m.huisheliren.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://wap.ygytw.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://wap.ygytw.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://wap.gzhuajiang.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://wap.gzhuajiang.net/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://m.hkgc100.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://m.hkgc100.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    <div class="phonecase_a">    
+      <div class="phonecase_box_a">
+        <div class="phonecase_box_a_1">
+        <iframe src="http://m.elcolourprint.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;">
+        </iframe>
+      </div><!--phonecase_box_a_1-->
+    </div><!--phonecase_box_a-->            
+    <a href="http://m.elcolourprint.com/">点击进入手机网站</a>   
+    </div><!--phonecase_a-->
+    
+    
+     
+
+  </div><!--phonecase_box-->
+  
+</div><!--phonecase-->
+
+<div class="morecase">
+  <div class="morecase_box">
+  
+    <div class="morecase_box_a">
+    
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1--> 
+           
+    </div><!--cmorecase_box_a-->
+    
+      <a>查看更多作品</a>
+      <span>+</span>
+  </div>
+</div><!--morecase-->
+
+<div class="anlie" style="height:160px;">
+  <div class="anlie_box" style="border:0;">
+    <p><small>花匠</small><b>.</b>手机网站的便捷功能</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">花匠网络与您一起抓住那5.6亿手机用户</div>
+  </div><!--anlie_boxtwo-->
+</div><!--anlie-->
+
+<div class="gongneng">
+  <div class="gongneng_box">
+    <div class="gongneng_box_a">
+      <a href="">一键拨打</a>
+    </div><!--gongneng_a-->
+    <div class="gongneng_box_a">
+      <a href="">一键咨询</a>
+    </div><!--gongneng_a-->
+    <div class="gongneng_box_a">
+      <a href="">一键分享</a>
+    </div><!--gongneng_a-->
+    <div class="gongneng_box_a">
+      <a href="">一键留言</a>
+    </div><!--gongneng_a-->
+    <div class="gongneng_box_a">
+      <a href="">地图定位</a>
+    </div><!--gongneng_a-->
+    <div class="gongneng_box_a">
+      <a href="">互动推广</a>
+    </div><!--gongneng_a-->
+  </div><!--gongneng_box-->
+</div><!--gongneng-->
+
+
+<div class="brand">
+  <div class="brand_box">
+    <div class="brand_top">
+      <span>通过研究商业模式来定义品牌模式</span>
+      <p>提供优秀的品牌整合解决方案，令品牌长远发展，更具竞争力</p>
+    </div><!--brand_top-->
+    {dede:type typeid='5'}<a href='[field:typeurl/]' [field:rel/]><div class="brand_down">了解更多信息</div></a>{/dede:type}<!--brand_down-->
+</div><!--brand_box-->
+</div><!--"brand-->
+
+<div class="anlie">
+  <div class="anlie_box" style="border:0;">
+    <span>ACTIVITY NEWS</span>
+    <p><small>花匠</small><b>.</b>活动新闻</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">花匠网络与您一起抓住那5.6亿手机用户</div>
+  </div><!--anlie_boxtwo-->
+</div><!--anlie-->
+
+<div class="designcontent">
+   <div class="designnews">
+   {dede:arclist row=8  type='image.'  typeid='14' imgwidth='235' imgheight='160' limit='0,8' flag='c' titlelen='200'}
+     <a href="[field:arcurl/]">
+    [field:image/]
+     <div class="dstiao">
+       <div class="dstiao_a"></div>
+       <div class="dstiao_b">[field:pubdate function="MyDate('y-m-d',@me)"/]</div>
+       <div class="dstiao_c"></div>
+       <div class="dstiao_b">[field:click/]</div>    
+     </div>
+     <div class="news_title"><p>[field:title/]</p></div>
+     <div class="news_detail">[field:description function='cn_substr(@me,200)'/]</div>  
+    </a>
+   {/dede:arclist}   
+  </div><!--designnews-->
+</div><!--designcontent--> 
+
+<div class="morecase">
+  <div class="morecase_box">
+  
+    <div class="morecase_box_a">
+    
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1-->
+      <div class="morecase_box_a1">
+      </div><!--morecase_box_a1--> 
+           
+    </div><!--cmorecase_box_a-->
+    
+      <a>查看更多作品</a>
+      <span>+</span>
+  </div>
+</div><!--morecase-->
+
+<div class="anlie">
+  <div class="anlie_box" style="border:0;">
+    <span>CONTACT US</span>
+    <p><small>花匠</small><b>.</b>联系我们</p>
+  </div><!--anliebox-->
+  <div class="anlie_boxtwo">
+    <div class="anlie_boxtwo_a">花匠网络与您一起抓住那5.6亿手机用户</div>
+  </div><!--anlie_boxtwo-->
+</div>
+
+<div class="contactus">
+<form method="post" action="/plus/guestbook1.php" name="form1">
+  <input type='hidden' name='action' value='save' />
+  <div class="contactus_box">
+    <div class="contactus_a">
+      <span>有老网站&nbsp;&nbsp;我来诊断方案</span>
+      <p>预约营销型网站专家，<small>获取价值9800元诊断方案！</small></p>
+      <p>时间有限，每日仅限<small>10名！</small></p>
+      <input type="text" class="txtname" name="uname"  value="姓名"   onfocus="if(this.value=='姓名'){this.value='';}"  onblur="if(this.value==''){this.value='姓名';}"/><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="text" class="txtname" name="qq"  value="电话" onfocus="if(this.value=='电话'){this.value='';}"  onblur="if(this.value==''){this.value='电话';}" /><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="text" class="txtname" name="homepage"  value="网站" onfocus="if(this.value=='网站'){this.value='';}"  onblur="if(this.value==''){this.value='网站';}"/><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="submit" class="submit" name="submit"  value="给我出方案"/>
+      <a href="">在线咨询我</a>
+    </div><!--contactus_a-->
+    
+    <div class="contactus_b"></div>
+    
+    <div class="contactus_a">
+      <span>没有网站&nbsp;&nbsp;我要建站方案</span>
+      <p>预约营销型网站专家，<small>获取价值12800元建站方案！</small></p>
+      <p>时间有限，每日仅限<small>5名！</small></p>
+      <input type="text" class="txtname" name="uname"  value="姓名"   onfocus="if(this.value=='姓名'){this.value='';}"  onblur="if(this.value==''){this.value='姓名';}"/><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="text" class="txtname" name="qq"  value="电话" onfocus="if(this.value=='电话'){this.value='';}"  onblur="if(this.value==''){this.value='电话';}" /><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="text" class="txtname" name="homepage"  value="网站" onfocus="if(this.value=='网站'){this.value='';}"  onblur="if(this.value==''){this.value='网站';}"/><p class="hong">*&nbsp;&nbsp;必&nbsp;填</p>
+      <input type="submit" class="submit" name="submit"  value="给我出方案"/>
+      <a href="">在线咨询我</a>
+    </div><!--contactus_a-->
+  </div><!--ontactus_box-->
+  </form>
+</div><!--contactus-->
+
+  
+{dede:include filename="footerweb.htm"/}
+
+</div><!--all-->
+</body>
+
+</html>
+

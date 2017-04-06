@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.all{ width:1000px; height:auto; overflow:hidden; margin:15px auto; margin-top:30px;}
+.all img{ border:none;}
+.hj1{ width:998px; height:320px; overflow:hidden; float:left; /*border:1px solid #999;*/ background:#e5135e; }
+.hj1 .hj1_a{ width:800px; height:50px; font-size:50px; color:#FFF; margin:0 auto; text-align:center; margin-top:100px; font-family:Microsoft YaHei;}
+.hj1 .hj1_b{width:920px; height:45px; font-size:36px; color:#FFF; margin:0 auto; text-align:center; margin-top:30px; }
+.hj2{ width:998px; height:auto; overflow:hidden; float:left;color:#e5135e;text-align:center;}
+.hj2 .hj2_a{ width:650px; height:50px; margin:0 auto; margin-top:50px; font-size:44px;}
+.hj2 .hj2_b{ width:30px; height:50px; margin:0 auto; margin:0 auto; margin-top:20px;font-size:60px; overflow:hidden;}
+.hj2 .hj2_c{ width:895px; height:80px; margin:0 auto; margin-top:30px; border-bottom:4px solid #e5135e; border-top:4px solid #e5135e; font-size:36px; color:#e5135e; line-height:80px;}
+.hj2 .hj2_c span{ margin:auto 5px;}
+.hj2 .hj2_d { width:570px; height:70px; margin:0 auto; font-size:25px; color:#e5135e; line-height:36px; margin-top:30px; margin-bottom:10px;}
+.hj3{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj3 .hj3_a{ width:895px; height:50px; margin:0 auto; font-size:40px;color:#e5135e; margin-top:40px; font-weight:bold;}
+.hj3 .hj3_b{ width:895px; height:40px; margin:0 auto; font-size:28px;color:#000;font-weight:bold; margin-top:5px;}
+.hj3 .hj3_c{width:895px; height:130px; margin:0 auto; font-size:23px; margin-top:20px;}
+.hj3 .hj3_c p{ line-height:40px; color:#959595; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;} 
+.hj3 .hj3_c b{ color:#6b6b6b;}
+.hj3 .hj3_c span{ font-size:14px;}
+.hj4{ width:998px; height:auto; overflow:hidden; float:left; margin-bottom:50px;}
+.hj4 .hj4_a{ width:895px; height:50px; margin:0 auto; font-size:40px;color:#e5135e; margin-top:50px; font-weight:bold;}
+.hj4 .hj4_b{width:895px; height:80px; margin:0 auto; font-size:23px;color:#6b6b6b; margin-top:20px;  line-height:40px;}
+.hj4 .hj4_b p{font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+.about6{ width:998px; height:420px; overflow:hidden; float:left; margin-bottom:20px;}
+.about6 .about6box{ width:900px; margin:0 auto; overflow:hidden;/*border:1px solid #999;*/}
+.about6 .about6box .about6_a{ width:200px; height:420px; float:left;/*border:1px solid #999;*/}
+.about6 .about6box .about6_a .about6_a_A{ height:120px; width:120px; margin:0 auto;}
+.about6 .about6box .about6_a .about6_a_B{ height:290px; width:200px; margin-top:10px; text-align:center;}
+.about6 .about6box .about6_a .about6_a_B p{ font-size:20px; color:#1e1711;line-height:25px;}
+.about6 .about6box .about6_a .about6_a_B ul{ font-size:20px; color:#6b6b6b; margin-top:20px;}
+.about6 .about6box .about6_a .about6_a_B ul li{ line-height:35px;}
+.about6 .about6box .about6_a .about6_a_B ul li b{ color:red; margin-right:10px;}
+
+.hj5{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj5 .hj5_a{width:895px; height:50px; margin:0 auto; font-size:40px;color:#e5135e; margin-top:50px; font-weight:bold;}
+.hj5 .hj5_b{width:895px; height:200px; margin:0 auto; margin-top:40px;}
+.hj5 .hj5_b .hj5_b_1{ width:260px; height:200px; float:left;}
+.hj5 .hj5_c{ width:895px; height:50px; margin:0 auto; font-size:22px;color:#767676; margin-top:20px; font-family:Microsoft YaHei; text-align:center;}
+.hj6{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj7{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj7 .hj7_a{width:895px; height:50px; margin:0 auto; font-size:40px;color:#e5135e; margin-top:50px; font-weight:bold;}
+.hj7 .hj7_b{width:895px; height:175px; margin:0 auto; margin-top:40px;/*border:1px solid #999;*/}
+.hj7 .hj7_b .hj7_b_1{ width:420px; height:175px; float:left;}
+.hj7 .hj7_c{width:895px; height:70px; margin:0 auto; margin-top:10px;}
+.hj7 .hj7_c .hj7_c_1{ width:180px; height:70px; float:left; font-size:17px; color:#707070;}
+.hj7 .hj7_c .hj7_c_1 p{ font-family:Microsoft YaHei;}
+
+
+.web3{ width:998px; height:auto; overflow:hidden; float:left;}
+.web3 .web3_d{ margin-left:50px;height:50px; width:800px; float:left;font-size:34px; color:#e5135e;float:left; margin-left:50px; font-weight:bold; margin-top:20px;}
+.web3 .web3_e{margin-left:50px;height:50px; width:800px; float:left; color:#727473; font-size:24px; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; margin-top:10px;}
+.web3 .web3_f{ width:890px; height:auto; float:left; margin-left:50px;/*border:1px solid #999;*/ margin-top:20px;}
+.web3 .web3_f .web3_f_1{ width:280px; float:left; height:550px;/*border:1px solid #999;*/}
+.web3 .web3_f .web3_f_1 .web3_f_1_t{ height:100px;font-family:"Microsoft YaHei"; color:#000;}
+.web3 .web3_f .web3_f_1 .web3_f_1_t span{ font-size:24px; font-weight:bold;}
+.web3 .web3_f .web3_f_1 .web3_f_1_t p{ font-size:18px;margin:0; margin-top:5px; margin-bottom:5px; font-weight:normal; color:#333;}
+.web3 .web3_f .web3_f_1 .web3_f_1_t b{ font-size:22px;}
+.web3 .web3_f .web3_f_1 .web3_f_1_d{ width:260px; height:60px; float:left; margin-top:20px; background:#f3951b; text-align:center; color:#FFF; font-family:"Microsoft YaHei"; letter-spacing:2px;}
+.web3 .web3_f .web3_f_2{height:534px; float:left; /*border:1px solid #999;*/ margin-left:5px;}
+.hj9{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj9 .hj9_a{width:998px; height:auto; overflow:hidden; float:left;}
+.hj9 .hj9_b{width:895px; height:auto; overflow:hidden; margin:0 auto; background:#e6e4e5;}
+.hj9 .hj9_b .hj9_b_1{width:845px; height:100px; overflow:hidden;margin:0 auto;font-size:36px;color:#e5135e; line-height:100px; font-weight: bold;}
+.hj9 .hj9_b .hj9_b_2{width:845px; height:100px; overflow:hidden;margin:0 auto; background:#e5135e;}
+.hj9 .hj9_b .hj9_b_2 .hj9_b_2a{ height:auto; float:left;/*border:1px solid #999;*/ color:#FFF; text-align:left; margin-top:20px; border-right:1px solid #FFF; overflow:hidden;}
+.hj10{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj10 .hj10_a{width:895px; height: auto; overflow:hidden; margin:0 auto; background:#e6e4e5;}
+.hj10 .hj10_a .hj10_a_1{ width: auto; height:auto; float:left;/*border:1px solid #999;*/ margin-top:30px; margin-bottom:30px;}
+.hj10 .hj10_a .hj10_a_1 ul{ text-decoration:none; list-style:none;}
+.hj10 .hj10_a .hj10_a_1 ul li{ color:#757374; font-size:22px; margin-top:10px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+.hj10 .hj10_a .hj10_a_2{width:845px; height:50px; overflow:hidden;margin:0 auto; border-top:2px solid #e5135e; border-bottom:2px solid #e5135e; font-size:24px; color:#e5135e; line-height:50px; text-align:center;}
+.hj11{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj12{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj13{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj14{ width:998px; height:auto; overflow:hidden; float:left; background-color:#fff;}
+.hj14 .hj14_a{ width:875px; height:80px; margin:0 auto; font-size:38px; color:#e5135e; font-weight:bold; line-height:80px;}
+.hj15{ width:998px; height:auto; overflow:hidden; float:left; background:#d70050; margin-top:60px;}
+.hj15 .hj15_a{ width:895px; height:auto;margin:0 auto; font-size:40px; color:#FFF; text-align:center; margin-bottom:30px;}
+.hj15 .hj15_b{ width:895px; height:auto; margin:0 auto; text-align:center;}
+
+.web9{width:998px; height:auto; overflow:hidden; float:left; margin-top:30px;}
+.web9 .web9_a{width:998px; height:auto; overflow:hidden; float:left;}
+.web9 .web9_b{width:895px; height:430px; overflow:hidden; float:left; background:#e6e4e5; margin-left:52px;}
+.web9 .web9_b .web9_b_1{ width:270px; height:350px; float:left; margin-left:20px; border-right:1px  dashed #000000; margin-top:30px;}
+.web9 .web9_b .web9_b_1 span{ font-size:130px; font-weight:bold; color:#d70050; font-family:"SimHei"; line-height:130px;}
+.web9 .web9_b .web9_b_1 p{ padding:0; margin:0; font-size:28px; line-height:30px; font-family:"Microsoft YaHei"; color:#d80051;width:260px;}
+.web10{ width:998px; height:auto; overflow:hidden; float:left; background-color:#fff;}
+.web10 .web10_a{width:895px; height:100px; overflow:hidden;float:left; margin-left:52px; line-height:120px;background-color:#fff; font-size:36px; font-weight:bold; color:#d6024f;}
+.web10 .web10_b{width:998px; height:auto; overflow:hidden; float:left; margin-top:10px; margin-bottom:20px;}
+.web10 .web10_c{width:895px; height:100px; overflow:hidden;float:left; margin-left:52px; line-height:120px;background-color:#fff; font-size:36px; font-weight:bold; color:#d6024f;}
+.web10 .web10_d{width:998px; height:auto; overflow:hidden; float:left;}
+.web11{ width:998px; height:auto; overflow:hidden; float:left;}
+.web11 .web11_a{ width:895px; height:90px; float:left; margin-left:52px; background:#d70050; color:#FFF; font-size:36px; font-weight:bold; line-height:90px; text-align: center; margin-top:35px;}
+.web11 .web11_b{ width:998px; height:auto; overflow:hidden; float:left;}
+.web11 .web11_c{ width:895px; height:320px; float:left; margin-left:52px; border-bottom:2px solid #d5014e; border-top:2px solid #d5014e;}
+.web11 .web11_c .web11_c_1{ width:210px; height:316px; float:left; /*border:1px solid #999;*/ text-align:center;}
+.web11 .web11_c .web11_c_1 .web11_c_1a{ margin:0 auto; margin-top:30px;}
+.web11 .web11_c .web11_c_1 .web11_c_1b{ margin:0 auto;  margin-top:20px; color:#000; text-align:center;}
+.web11 .web11_c .web11_c_1 .web11_c_1b span{ font-size:36px; font-weight:bold;}
+.web11 .web11_c .web11_c_1 .web11_c_1b p{ font-weight:normal; color:#979797; font-size:22px;}
+
+.hj19{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj20{ width:998px; height:auto; overflow:hidden; float:left; background-image:url(http://www.gzhuajiang.com/images/hj/hj_20.jpg); background-repeat:no-repeat;}
+.hj21{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj21 .hj21_a{ width:975px; height:auto; margin:0 auto;}
+.hj21 .hj21_b{ width:875px; height:380px; margin:0 auto; background:#e6e4e5;}
+.hj21 .hj21_b .hj21_b_1{ width:845px; height:74px; float:left; margin-left:26px; margin-top:40px;}
+.hj21 .hj21_b .hj21_b_1 .hj21_b_1_a{ float:left;}
+.hj21 .hj21_b .hj21_b_1 .hj21_b_1_b{ float:left; width:660px; height:40px; font-size:22px; font-family:Microsoft YaHei; color:#000; border-bottom:1px dashed #000; line-height:40px; text-align: center;}
+.hj21 .hj21_b .hj21_b_1 .hj21_b_1_c{ margin-top:22px;float:left; font-size:24px; color:#000;}
+.hj21 .hj21_b .hj21_b_1 .hj21_b_1_d{ float:left;}
+.hj21 .hj21_b .hj21_b_2{width:845px; height: auto; float:left;margin-left:26px; margin-top:20px;}
+.hj21 .hj21_b .hj21_b_2 .hj21_b_2_a{ float:left;}
+.hj21 .hj21_b .hj21_b_2 .hj21_b_2_a span{ font-size:28px; color:#e5135e;}
+.hj21 .hj21_b .hj21_b_2 .hj21_b_2_a p{ font-size:22px; color:#000;}
+.hj21 .hj21_b .hj21_b_2 .hj21_b_2_b{ width:80px; height:2px;border-bottom:2px solid #000; float:left; margin-top:65px;}
+.hj21 .hj21_b .hj21_b_2 .hj21_b_2_c{ float:left; margin-top:50px;font-size:24px; color:#000; padding:0; margin-left:0;}
+.hj21 .hj21_b .hj21_b_3{width:830px; height:50px;float:left;margin-left:20px; margin-top:30px; border-bottom:1px solid #747273; border-top:1px solid #747273; font-size:22px; color:#939192; line-height:50px; font-family:Microsoft JhengHei;}
+
+.web13{ width:998px; height:auto; overflow:hidden; float:left;} 
+.web13 .web13_a{ width:998px; height:auto; overflow:hidden; float:left;}
+.web13 .web13_b{ width:895px; height:970px; overflow:hidden; float:left; background:#e6e4e5; margin-left:52px;}
+.web13 .web13_b .web13_b_img{ width:845px; height:330px; float:left; margin-left:26px; margin-top:20px;}
+.web13 .web13_b .web13_b_1{ width:800px; height:100px; float:left; margin-left:25px; font-size:36px; font-weight:bold; color:#d7004e; margin-top:45px;}
+.web13 .web13_b .web13_b_2{ width:390px; height:180px; float:left; margin-left:25px; margin-top:40px; /*border:1px solid #999;*/}
+.web13 .web13_b .web13_b_2 .web13_b_2t{ width:390px; height:62px; border-bottom:1px solid #737373; border-top:1px solid #737373; line-height:62px;}
+.web13 .web13_b .web13_b_2 .web13_b_2t a.zuo{ float:left; color:#d70050; font-size:24px; font-weight:bold;}
+.web13 .web13_b .web13_b_2 .web13_b_2t a.you{ float:right; color:#010101; font-size:24px;}
+.web13 .web13_b .web13_b_2 .web13_b_2d{ width:390px; height:90px; margin-top:20px; color:#7a7a7a; font-size:18px; line-height:30px; letter-spacing:1px;}
+.web14{ width:998px; height:auto; overflow:hidden; float:left;}
+.web14 .web14_box{ width:895px; height:730px; float:left; margin-left:52px; background:#e6e4e5;}
+.web14 .web14_box .web14_a{ width:800px; height:130px;margin-left:25px; font-size:36px; font-weight:bold; color:#d50052; float:left; line-height:130px;}
+.web14 .web14_box .web14_b{ width:840px; height:380px; margin-left:25px; float:left; background: url(../../images/web/images/web14_a.jpg) no-repeat;/*border:1px solid #999;*/}
+.web14 .web14_box .web14_b .web14_b_1{ width:220px; height:150px; float:left; /*border:1px solid #999;*/ margin-top:100px;}
+.web14 .web14_box .web14_b .web14_b_1 span{ font-size:24px; font-weight:bold; color:#d50052;}
+.web14 .web14_box .web14_b .web14_b_1 p{ font-size:18px; letter-spacing:3px; color:#747474; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}  
+.web14 .web14_box .web14_c{width:840px; height:210px; margin-left:25px; float:left;/*border:1px solid #999;*/}
+.web14 .web14_box .web14_c .web14_c_1{ width:220px; height:150px; float:left; /*border:1px solid #999;*/}
+.web14 .web14_box .web14_c .web14_c_1 span{ font-size:24px; font-weight:bold; color:#d50052;}
+.web14 .web14_box .web14_c .web14_c_1 p{ font-size:18px; letter-spacing:3px; color:#747474; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+
+.hj27{ width:998px; height:auto; overflow:hidden; float:left; background-color:#fff;}
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:16px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+
+.huawai {width: 1000px; margin:0 auto;}
+.huawai .huali{width: 1000px; margin:0 auto;}
+.huawai .huali .huabox{ width:285px; height:405px;background:url(/images/backbox.jpg); overflow:hidden; float:left; margin-top:20px;}
+.huawai .huali .huabox .shang{ width:240px; height:150px; margin:0 auto; margin-top:20px;}
+.huawai .huali .huabox .shang img{width:240px; height:150px;}
+.huawai .huali .huabox .zhong{ width:240px; height:50px;margin:0 auto; /*border:1px solid #ccc;*/ margin-top:10px; overflow:hidden;}
+.huawai .huali .huabox .zhong p{font-size:20px; font-weight:bold;line-height:20px; padding:0; margin:0;}
+.huawai .huali .huabox .zhong .pp{ width:240px;color:#d70252; margin-top:10px;}
+.huawai .huali .huabox .xia{ width:240px; height:70px; margin:0 auto; border-bottom:2px solid #dcdcdc; border-top:2px solid #dcdcdc; margin-top:10px; overflow:hidden; font-size:12px; line-height:24px; color:#737373; padding:0;}
+.huawai .huali .huabox .more666{ width:70px; height:20px; margin-top:40px; background:#d4004f; line-height:20px; text-align:center; margin-left:20px; overflow:hidden;}
+.huawai .huali .huabox .more666 a{ text-decoration:none; font-size:12px; color:#FFF; height:20px; line-height:20px; overflow:hidden;}
+.huawai .huali .hua_marginleft45{ margin-left:45px;}
+.huawai .huali .hua_marginleft25{ margin-left:25px;}
+
+</style>
+
+</head>
+<body class="articlelist">
+{dede:include filename="head.htm"/}
+<br />
+<!-- /header -->
+<div class="all">
+	<br />
+	<div class="hj1">
+      <div class="hj1_a"><b>花匠速拓品牌网络</b> 整合营销机构</div><!--hj1_a-->
+      <div class="hj1_b">REWRITING THE STANDARDS FOR THE WORLD</div>
+    </div><!--hj1-->
+    <div class="hj2">
+      <div class="hj2_a">花匠速拓 品牌网络整合营销机构</div><!--hj2_a-->
+      <div class="hj2_b">||</div><!--hj2_b-->
+      <div class="hj2_c">品牌整合推广<span>×</span>品牌视觉设计<span>×</span>品牌网站定制</div>
+      <div class="hj2_d">
+        <p>碎片化时代 唯有品牌网络整合营销才是领航者</p>
+        <p>实战落地营销助力品牌深度扎根互联网</p>
+      </div>
+    </div><!--hj2-->
+    <div class="hj3">
+      <div class="hj3_a">我们是谁？ WHO ARE WE?</div><!--hj3_a-->
+      <div class="hj3_b">国内连锁市场网络营销领域的<span style="color:#e5135e;">革新者</span> 花匠速拓网络</div>
+      <div class="hj3_c">
+        <p><b>花匠速拓</b> 中国首家集网络品牌推广、品牌整合设计、品牌网站定制的全网营销专业机构</p>
+        <p><b>花匠速拓</b> 中国最全面提供品牌营销顾问式咨询服务团队，开创市场领军品牌</p>
+        <p><b>花匠速拓</b> 中国品牌网络整合营销机构，深度聚集连锁行业品牌实战营销全案</p>
+      </div>
+    </div><!--hj3-->
+    <div class="hj4">
+       <div class="hj4_a">我们在做什么？ WHAT ARE WE DOING?</div>
+       <div class="hj4_b">
+         <p>传统品牌的拯救者，互联网品牌的缔造者，协肋企业品牌成功转型。</p>
+         <p>搭建品牌与消费者的互动平台，开创品类时代领军品牌。</p>
+       </div>
+    </div><!--hj4-->
+    <div class="about6">
+      <div class="about6box">
+        <div class="about6_a">
+          <div class="about6_a_A"><img src="/images/about/about6_a.jpg" /></div>
+          <div class="about6_a_B">
+            <p>INTEGRATION</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p> 
+            <ul>
+              <li><b>·</b>品牌定义</li>
+              <li><b>·</b>创意执行</li>
+              <li><b>·</b>网络营销</li>
+              <li><b>·</b>活动推广</li>
+              <li><b>·</b>微信营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_b.jpg" /></div>
+          <div class="about6_a_B">
+            <p>VISUAL DESIGN</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌视觉设计</p> 
+            <ul>
+              <li><b>·</b>品牌设计&nbsp;VI设计&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>品牌连锁&nbsp;零售环境</li>
+              <li><b>·</b>产品包装&nbsp;视觉营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_c.jpg" /></div>
+          <div class="about6_a_B">
+            <p>I DESIGN</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌网站定制</p> 
+            <ul>
+              <li><b>·</b>营销型网站</li>
+              <li><b>·</b>购物网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>新闻网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>移动网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>微商城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <li>......</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:30px;">
+          <div class="about6_a_A"><img src="/images/about/about6_d.jpg" /></div>
+          <div class="about6_a_B">
+            <p>INTEGRATION</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p> 
+            <ul>
+              <li><b>·</b>品牌定义</li>
+              <li><b>·</b>创意执行</li>
+              <li><b>·</b>网络营销</li>
+              <li><b>·</b>活动推广</li>
+              <li><b>·</b>微信营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+      </div><!--about6box-->
+    </div><!--about6-->
+    <div class="hj5">
+      <div class="hj5_a">碎片化数字时代解读——不是挣扎，而是扎根</div>
+      <div class="hj5_b">
+        <div class="hj5_b_1"><img src="/images/hj/hj5_a.jpg" /></div>
+        <div class="hj5_b_1" style="margin-left:57px;"><img src="/images/hj/hj5_b.jpg" /></div>
+        <div class="hj5_b_1" style=" margin-left:57px;"><img src="/images/hj/hj5_c.jpg" /></div>
+      </div><!--hj5_b-->
+      <div class="hj5_c">如果不透过网络 / 您能知道些什么？</div>
+    </div><!--hj5-->
+    <div class="hj6">
+    	<img src="/images/hj/hj_06_01.jpg" />
+        <img src="/images/hj/hj_06_02.jpg" />
+        <img src="/images/hj/hj_06_03.jpg" />
+        <img src="/images/hj/hj_06_04.jpg" />
+        <img src="/images/hj/hj_06_05.jpg" />
+        <img src="/images/hj/hj_06_06.jpg" />
+        <img src="/images/hj/hj_06_07.jpg" />
+        <img src="/images/hj/hj_06_08.jpg" />
+        <img src="/images/hj/hj_06_09.jpg" />
+    </div><!--hj6-->
+    <div class="hj7">
+      <div class="hj7_a">碎片化数字时代，如何进行品牌整合营销？</div>
+      <div class="hj7_b">
+        <div class="hj7_b_1"><img src="/images/hj/hj7_a.jpg" /></div>
+        <div class="hj7_b_1" style=" margin-left:50px;"><img src="/images/hj/hj7_b.jpg" /></div>
+      </div><!--hj7_b-->
+      <div class="hj7_c">
+        <div class="hj7_c_1" style=" margin-left:20px;">
+          <p>在社会媒体之前</p>
+          <p style="font-size:12px;">BEFORE SOCIAL MEDIA</p>
+        </div><!--hj7_c_1-->
+        <div class="hj7_c_1" style=" margin-left:440px;">
+          <p>在社会媒体之后</p>
+          <p style="font-size:12px;">AFTRE SOCIAL MEDIA</p>
+        </div><!--hj7_c_1-->
+      </div><!--hj7_c-->
+      </div><!--hj7-->
+      
+    <div class="web3">
+      <div class="web3_d">传统品牌转型互联网品牌</div>
+      <div class="web3_e">一切未被互联网改变的行业终究会被改变</div>
+      
+      <div class="web3_f">
+        <div class="web3_f_1">
+          <div class="web3_f_1_t">
+            <span>塑造 MODEL</span>
+            <p>WHAT DO WE WANT TO BUILD?</p>
+            <b>我们要塑造什么?</b>
+          </div><!--web3_f_1_t-->
+          <div class="web3_f_1_d">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">品牌定义</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">BRAND DEFINTION</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">品牌管理</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">BRAND MANAGEMENT</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">品牌接触</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">BRAND CONTACT</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">品牌基因</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">BRAND GENE</p>
+          </div><!--web3_f_1_d-->
+        </div><!--web3_f_1-->
+        <div class="web3_f_2"><img src="/images/web/images/web3_f.jpg" /></div><!--web3_f_2-->
+        
+        <div class="web3_f_1" style="margin-left:25px;">
+          <div class="web3_f_1_t">
+            <span>结果 RESULT</span>
+            <p>WHAT WE WANT TO BE?</p>
+            <b>我们想要的结果是?</b>
+          </div><!--web3_f_1_t-->
+          <div class="web3_f_1_d" style="background:#e83838;">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">提高竞争</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">IMPROVE COMPETITION</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d" style="background:#e83838;">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">拓展客户</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">EXPAND CUSTOMER</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d" style="background:#e83838;">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">抢占市场</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">SEIZE THE MARKET</p>
+          </div><!--web3_f_1_d-->
+          <div class="web3_f_1_d" style="background:#e83838;">
+            <p style="font-size:20px; font-weight:bold; margin:0; padding-top:5px;">达成分享</p>
+            <p style="font-size:14px; margin:0; margin-top:1px;">COME TO SHARE</p>
+          </div><!--web3_f_1_d-->
+        </div><!--web3_f_1-->
+      </div><!--web3_f-->    
+    </div><!--web3-->
+    <div class="hj9">
+      <div class="hj9_a"><img src="/images/hj/hj9_a.jpg" /></div>
+      <div class="hj9_b">
+        <div class="hj9_b_1">品牌传播：创始人包装+品牌核心+产品营销</div><!--hj9_b_1-->
+        <div class="hj9_b_2">
+          <div class="hj9_b_2a" style="margin-left:50px; width:190px;">
+            <p style=" font-size:25px;">创始人包装</p>
+            <p style=" font-size:26px; font-weight:bold;">FOUNDER</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:50px; width:170px;">
+            <p style=" font-size:25px;">品牌报道</p>
+            <p style=" font-size:26px; font-weight:bold;">BRAND</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:50px; width:170px;">
+            <p style=" font-size:25px;">产品营销</p>
+            <p style=" font-size:26px; font-weight:bold;">PRODUCT</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:30px; border:0;color:#dd6a79;">
+            <p style=" font-size:25px;">查看更多</p>
+            <p style=" font-size:26px; font-weight:bold;">MORE+</p>
+          </div>
+        </div><!--hj9_b_2-->
+      </div><!--hj9_b-->
+    </div><!--hj9-->
+    <div class="hj10">
+      <div class="hj10_a">
+        <div class="hj10_a_1" style=" margin-left:75px;">
+          <ul>
+            <li>人物故事</li>
+            <li>创业感悟</li>
+            <li>出席活动</li>
+            <li>社会公益</li>
+            <li>媒体采访</li>
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_1" style=" margin-left:155px;">
+          <ul>
+            <li>品牌故事</li>
+            <li>品牌文化</li>
+            <li>品牌活动</li>
+            <li>市场潜力</li>
+            <li>盈利模式</li>
+            <li>品牌口碑</li>
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_1" style=" margin-left:130px;">
+          <ul>
+            <li>产品功效</li>
+            <li>产品包装</li>
+            <li>新品上市</li>
+            <li>市场动销</li>
+            <li>客户体验</li>
+            <li>产品口碑</li>
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_2">根据长期潜在代理商与消费者的浏览与搜索习惯， 进行多维度的营销推广工作</div>
+      </div><!--hj10_a-->
+    </div><!--hj10-->
+    <div class="hj9">
+      <div class="hj9_b">
+        <div class="hj9_b_1">品牌传播：企业实力+渠道代理商+消费者</div><!--hj9_b_1-->
+        <div class="hj9_b_2">
+          <div class="hj9_b_2a" style="margin-left:50px; width:190px;">
+            <p style=" font-size:25px;">企业实力</p>
+            <p style=" font-size:26px; font-weight:bold;">STRENGTH</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:50px; width:170px;">
+            <p style=" font-size:25px;">渠道代理商</p>
+            <p style=" font-size:26px; font-weight:bold;">AGENT</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:50px; width:170px;">
+            <p style=" font-size:25px;">消费者</p>
+            <p style=" font-size:26px; font-weight:bold;">CONSUMER</p>
+          </div><!--hj9_b_2a-->
+          <div class="hj9_b_2a" style="margin-left:30px; border:0;color:#dd6a79;">
+            <p style=" font-size:25px;">查看更多</p>
+            <p style=" font-size:26px; font-weight:bold;">MORE+</p>
+          </div>
+        </div><!--hj9_b_2-->
+      </div><!--hj9_b-->
+    </div><!--hj9-->
+    <div class="hj10">
+      <div class="hj10_a">
+        <div class="hj10_a_1" style=" margin-left:70px;">
+          <ul>
+            <li></li>
+            <li>生产基地</li>
+            <li>企业荣誉</li>
+            <li>企业科研</li>
+            <li>企业规模</li>
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_1" style=" margin-left:155px;">
+          <ul>
+            <li>门店促销</li>
+            <li>市场动态</li>
+            <li>渠道进驻</li>
+            <li>代理商采访</li>
+            <li>商业模式剖析</li>
+
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_1" style=" margin-left:100px;">
+          <ul>
+            <li>疑难解答</li>
+            <li>顾客互动</li>
+            <li>顾客引导</li>
+            <li>知识普及</li>
+            <li>领袖引导</li>
+          </ul>
+        </div><!--hj10_a_1-->
+        <div class="hj10_a_2" style="margin-bottom:50px">根据长期潜在代理商与消费者的浏览与搜索习惯，进行多维度的营销推广工作</div>
+      </div><!--hj10_a-->
+    </div><!--hj10-->
+    
+    
+    <div class="hj13">
+    	<a href="#guest"><img src="/images/hj/hj_13.jpg" /></a>
+    </div><!--hj13-->
+    <div class="web10">    
+      <div class="web10_c">花匠速拓品牌整合营销案例</div><!--web10_c-->
+      <div class="web10_d">
+        <div class="huawai">
+  <div class="huali">
+    <div class="huabox hua_marginleft45">
+      <div class="shang"><img src="/images/91.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">汇香坊.香薰图书馆</p>
+        <p class="pp">3年拓店600家的商业传奇</p>
+      </div>
+      <div class="xia">汇香坊全力打造中国香品行业领军品牌，联手花匠速拓网络营销机构，实现3年拓店600家的商业传奇，已经赢得1054320名消费者掌声。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150604635.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+     <div class="shang"><img src="/images/92.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">美酒佳 GOOD WINE</p>
+        <p class="pp">香港美酒佳专门店的蜕变</p>
+      </div>
+      <div class="xia">花匠速拓为GOOD WINE量身定制了一整套网络整合营销方案，通过一系列营销活动，提高GOOD WINE美酒佳红酒专门店中国市场品牌曝光。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+         <div class="shang"><img src="/images/93.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">台湾芋观园</p>
+        <p class="pp">2年成功拓展385家甜品店铺</p>
+      </div>
+      <div class="xia">台湾甜品专家携手花匠速拓网络，打造365天持续盈利的特色店铺，2年成功在中国市场拓展385家连锁店铺，成为亚洲甜品市场领军品牌。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft45">
+      <div class="shang"><img src="/images/94.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">水碧泉</p>
+        <p class="pp">打造微商长线品牌航母</p>
+      </div>
+      <div class="xia">2014年花匠速拓品牌网络整合营销机构，推出震惊业界的微商品牌孵化器，国内矿泉养肤领军品牌水碧泉通过花匠速拓打造微商长线品牌航母。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150608645.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+      <div class="shang"><img src="/images/95.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">豪的健康车居</p>
+        <p class="pp">汽车后市场如何全国连锁？</p>
+      </div>
+      <div class="xia">2014年8月豪的与花匠速拓合作，对定制移动端与pc端网站，进行360度品牌全网整合营销，全力打造“健康车居生活馆”连锁加盟项目。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615666.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+      <div class="shang"><img src="/images/96.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">兰心雅素</p>
+        <p class="pp">中高端面膜品牌.领跑者</p>
+      </div>
+      <div class="xia">兰心雅素，柯马集团下知名品牌，2015年携手花匠速拓通过互联网+营销思维，激活全国300家渠道代理商，成中高端面膜品牌，领跑者。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615667.html">点击进入></a></div>
+    </div>
+  </div><!--"huali-->
+</div><!--huawai-->
+</div><!--web10_d-->
+  </div><!--web10-->
+        
+   <div class="web9">
+    <div class="web9_a"><img src="/images/hj/hj16_a.jpg" /></div>
+    <div class="web9_b">
+      <div class="web9_b_1">
+        <span>1</span>
+        <P style="font-weight:bold;">品牌单项外包服务</P>
+        <p style="font-size:18PX;">BRAND INDIYVIDUAL</p>
+        <p style="font-size:18PX;">OUTSOURCING SERVICE</P>
+        <p style=" width:260px;font-size:20px;color:#909090; line-height:30px; font-family:SimHei; letter-spacing:1px; margin-top:10px;">根据品牌需求，如展会活动、招商会、明星见面会等一次性活动，按照单项目计费服务。</p>
+      </div><!--web9_b_1-->
+      <div class="web9_b_1">
+        <span>2</span>
+        <P style="font-weight:bold;">品牌阶段性外包服务</P>
+        <p style="font-size:18PX;">BRAND PHASED</p>
+        <p style="font-size:18PX;">OUTSOURCING SERVICE</P>
+        <p style=" width:260px;font-size:20px;color:#909090; line-height:30px; font-family:SimHei; letter-spacing:1px; margin-top:10px;">按约定服务内容，以阶段形式（一般3-6月）提供品牌解决方案并收取服务费用，按工作阶段付款。</p>
+      </div><!--web9_b_1-->
+      <div class="web9_b_1" style="border:0;">
+        <span>3</span>
+        <P style="font-weight:bold;">品牌年度外包服务</P>
+        <p style="font-size:18PX;">BRAND YEAR</p>
+        <p style="font-size:18PX;">OUTSOURCING SERVICE</P>
+        <p style=" width:260px;font-size:20px;color:#909090; line-height:30px; font-family:SimHei; letter-spacing:1px; margin-top:10px;">以年度为时间单位的顾问式服务，针对企业运营中的实际问题，提出解决方案，按月收取服务费。</p>
+      </div><!--web9_b_1-->
+    </div><!--web9_b-->
+    </div><!--web9-->  
+    
+    <div class="web10">
+      <div class="web10_a">花匠速拓全网整合营销外包实战型案例</div><!--web10_a-->
+      <div class="web10_b"><img src="/images/web/images/web10_a.jpg" /></div><!--web10_b-->     
+    </div><!--web10-->  
+    <div class="web11">
+      <div class="web11_a">2年，汇香坊实现1千万到1个亿的品牌蜕变</div>
+      <div class="web11_b">
+        <img src="/images/web/images/web_11_03.jpg" />
+        <img src="/images/web/images/web_11_04.jpg" />
+        <img src="/images/web/images/web_11_05.jpg" />
+        <img src="/images/web/images/web_11_06.jpg" />
+        <img src="/images/web/images/web_11_07.jpg" />
+        <img src="/images/web/images/web_11_08.jpg" />
+        <img src="/images/web/images/web_11_09.jpg" />
+        <img src="/images/web/images/web_11_10.jpg" />
+        <img src="/images/web/images/web_11_11.jpg" />
+        <img src="/images/web/images/web_11_12.jpg" />
+        <img src="/images/web/images/web_11_13.jpg" />
+        <img src="/images/web/images/web_11_14.jpg" />
+        <img src="/images/web/images/web_11_15.jpg" />
+      </div><!--web11_b-->
+      <div class="web11_c">
+        <div class="web11_c_1">
+          <div class="web11_c_1a">
+          <img src="/images/web/images/web11_c_1.jpg" />
+          </div><!--web11_c_1a-->
+          <div class="web11_c_1b">
+          <span>100+<pan>
+          <p>超过100次</p>
+          <p>品牌连锁招商会</p>
+          </div><!--web11_c_1b-->          
+        </div><!--web11_c_1-->
+        <div class="web11_c_1" style="margin-left:15px;">
+          <div class="web11_c_1a">
+          <img src="/images/web/images/web11_c_2.jpg" />
+          </div><!--web11_c_1a-->
+          <div class="web11_c_1b">
+          <span>1800+<pan>
+          <p>连锁店铺</p>
+          <p>已经成功突破1800家</p>
+          </div><!--web11_c_1b-->  
+        </div><!--web11_c_1-->
+        <div class="web11_c_1" style="margin-left:15px;">
+          <div class="web11_c_1a">
+          <img src="/images/web/images/web11_c_3.jpg" />
+          </div><!--web11_c_1a-->
+          <div class="web11_c_1b">
+          <span>20532+<pan>
+          <p>意向加盟商</p>
+          <p>年超过20532位</p>
+          </div><!--web11_c_1b-->  
+        </div><!--web11_c_1-->
+        <div class="web11_c_1" style="margin-left:15px;">
+          <div class="web11_c_1a">
+          <img src="/images/web/images/web11_c_4.jpg" />
+          </div><!--web11_c_1a-->
+          <div class="web11_c_1b">
+          <span>1054320+<pan>
+          <p>已经赢得</p>
+          <p>100万消费者掌声</p>
+          </div><!--web11_c_1b-->  
+        </div>
+      </div><!--web11_c_1-->
+    </div><!--web11-->
+    <div class="hj20">
+    	<div style="width:650px; height:90px; margin:0 auto;">
+        	 <form method="post" action="/plus/guestbook1.php" name="form1">
+             	<input type='hidden' name='action' value='save' />
+                <input name="email" type="hidden" value="免费赠送8000元专家在线品牌诊断"  checked="checked"/> 
+        	<div style=" width:600px; height:45px; /*border:1px solid #000;*/ margin-left:150px; margin-top:86px; line-height:35px;">
+        		<div style="width:100px; height:35px; overflow:hidden; float:left; margin-left:68px; margin-top:13px;">
+                 <input type="text"   name="uname" size="60" width="80px;" style="width:80px;"  />
+                </div>
+                <div style="width:170px; height:35px; overflow:hidden; float:left; margin-left:105px; margin-top:13px; ">
+                <input type="text" id="telephone"   name="qq"    />
+                </div>
+                <div style="width:120px; height:45px; overflow:hidden; float:left; margin-left:30px;  ">
+                <input type="image" src="/images/hj/hj_20button.jpg" alt="Submit"  name="submit"  />
+                </div>
+            </div>
+            </form>
+        </div>
+    </div><!--hj20-->
+    <div class="hj21">
+      <div class="hj21_a"><img src="/images/hj/hj21_a.jpg" /></div>
+      <div class="hj21_b">
+        <div class="hj21_b_1">
+          <div class="hj21_b_1_a"><img src="/images/hj/hj21_a1.jpg" /></div>
+          <div class="hj21_b_1_b">全程引导用户认知、认购满足自身需求的高价值品牌/产品</div>
+          <div class="hj21_b_1_c">▶</div>
+          <div class="hj21_b_1_d"><img src="/images/hj/hj21_a2.jpg" /></div>
+        </div><!--hj21_b-->
+        <div class="hj21_b_2">
+          <div class="hj21_b_2_a">
+            <span>接触阶段</span>
+            <p>需求产生</p>
+            <p>信息接触</p>
+          </div><!--hj21_b_2_a-->
+          <div class="hj21_b_2_b"></div><!--hj21_b_2_b-->
+          <div class="hj21_b_2_c">▶</div><!--hj21_b_2_c-->
+           <div class="hj21_b_2_a">
+            <span>认知阶段</span>
+            <p>产品认知</p>
+            <p>情感说服</p>
+          </div><!--hj21_b_2_a-->
+          <div class="hj21_b_2_b"></div><!--hj21_b_2_b-->
+          <div class="hj21_b_2_c">▶</div><!--hj21_b_2_c-->
+           <div class="hj21_b_2_a">
+            <span>购买阶段</span>
+            <p>形成&nbsp;&nbsp;&nbsp;&nbsp;产生</p>
+            <p>购买决策 购买行为</p>
+          </div><!--hj21_b_2_a-->
+          <div class="hj21_b_2_b"></div><!--hj21_b_2_b-->
+          <div class="hj21_b_2_c">▶</div><!--hj21_b_2_c-->
+          <div class="hj21_b_2_a">
+            <span>分享阶段</span>
+            <p>产品体验</p>
+            <p>口碑传播</p>
+          </div><!--hj21_b_2_a-->
+        </div><!--hj21_b_2-->
+        <div class="hj21_b_3">
+        通过提供全方位的导购服务，带领用户需求与产品价值完美对接
+        </div>
+      </div><!--hj21_b-->
+    </div><!--hj21-->
+    <div class="web10">
+      <div class="web10_d">
+        <div class="huawai">
+  <div class="huali">
+    <div class="huabox hua_marginleft45">
+      <div class="shang"><img src="/images/meier.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">美华少儿英语</p>
+        <p class="pp">建中国少儿美式教育第一品牌</p>
+      </div>
+      <div class="xia">美华教育集团旗下著名英语培训学校CTP与互联网的恋爱，是由官网定制开始，以全网整合营销为婚姻的节点，这个过程有花匠速拓陪伴。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150604635.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+     <div class="shang"><img src="/images/baoxuan.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">宝宣集团</p>
+        <p class="pp">美容市场发起最后1公里进攻</p>
+      </div>
+      <div class="xia">花匠速拓全方位、顾问式全网整合营销，助力宝宣旗下卉舍多品牌美妆特色店、珍熙妝微信商城、多利安侬品牌抢攻万亿美妆市场。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+         <div class="shang"><img src="/images/babas.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p style=" color:#000;">芭笆莎Babarsa</p>
+        <p class="pp">健康时尚内衣体验馆变革之道</p>
+      </div>
+      <div class="xia">源自意大利品牌设计的芭笆莎BABARSA,借助花匠速拓网络突破内衣加盟连锁困境，2014年开始踏上全网布局式、策略性整合营销道路。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->  
+  </div><!--"huali-->
+</div><!--huawai-->
+</div><!--web10_d-->
+  </div>
+    <div class="web11">
+      <div class="web11_a" style="margin-bottom:30px;">宝宣集团，对美容市场发起最后1公里进攻</div>
+      <div class="web11_b">
+        <img src="/images/hj/hj_24_03.jpg" />
+        <img src="/images/hj/hj_24_04.jpg" />
+        <img src="/images/hj/hj_24_05.jpg" />
+        <img src="/images/hj/hj_24_06.jpg" />
+        <img src="/images/hj/hj_24_07.jpg" />
+        <img src="/images/hj/hj_24_08.jpg" />
+        <img src="/images/hj/hj_24_09.jpg" />
+        <img src="/images/hj/hj_24_10.jpg" />
+      </div>
+    </div><!--hj24-->   
+    <div class="web13" style="margin-top:30px;">
+      <div class="web13_a"><img src="/images/hj/hj25_a.jpg" /></div>
+      <div class="web13_b">
+        <div class="web13_b_img"><img src="/images/hj/hj25_b.jpg" /></div>
+        <div class="web13_b_1">
+          <p>花匠速拓客户心声</p>
+          <p>携手合作企业开创市场领军品牌</p>
+        </div><!--web13_b_1-->
+        <div class="web13_b_2">
+          <div class="web13_b_2t">
+            <a href="#" class="zuo">汇香坊</a>
+            <a href="#" class="you">汇香坊郑总</a>
+          </div><!--web13_b_2t-->
+          <div class="web13_b_2d">
+            <p>联手花匠速拓网络，全力打造中国香品行业领军品牌，汇香坊实现了3年拓店逾600家的商业传奇。</p>
+          </div>
+        </div><!--web13_b_2-->
+        <div class="web13_b_2">
+          <div class="web13_b_2t">
+            <a href="#" class="zuo">豪的健康车居</a>
+            <a href="#" class="you">豪的健康车居周总</a>
+          </div><!--web13_b_2t-->
+          <div class="web13_b_2d">
+            <p>摒弃传统思维，走上互联网+时代，花匠速拓网络帮助豪的打造健康车居生活馆连锁国际第一品牌。</p>
+          </div>
+        </div><!--web13_b_2-->
+        <div class="web13_b_2">
+          <div class="web13_b_2t">
+            <a href="#" class="zuo">柯玛集团</a>
+            <a href="#" class="you">柯玛集团江总</a>
+          </div><!--web13_b_2t-->
+          <div class="web13_b_2d">
+            <p>旗下兰心雅素品牌联姻花匠速拓网络后，接触互联网思维，打造微商长线品牌航母，成为中高端面膜品牌.领跑者。</p>
+          </div>
+        </div><!--web13_b_2-->
+        <div class="web13_b_2">
+          <div class="web13_b_2t">
+            <a href="#" class="zuo">水碧泉</a>
+            <a href="#" class="you">水碧泉杨总</a>
+          </div><!--web13_b_2t-->
+          <div class="web13_b_2d">
+            <p>2014年开始接触花匠速拓网络，花匠速拓对品牌有独到的见解，特别擅长品类营销，水碧泉每一次新品上市与品牌活动都会与花匠速拓网络进行深度合作。</p>
+          </div>
+        </div><!--web13_b_2-->
+      </div><!--web13_b-->
+    </div><!--web13-->
+    <div class="web14">
+      <div class="web14_box">
+        <div class="web14_a">花匠速拓网络整合营销服务流程</div>
+        <div class="web14_b">
+          <div class="web14_b_1">
+            <span>项目沟通</span>
+            <span style="font-weight:normal; font-size:20px;">COMMUNICATION</span>
+            <p>简要调研；明确项目需求、范围及周期；提交项目规划书、报价。</p>
+          </div><!--web14_b_1-->
+          <div class="web14_b_1" style=" margin-left:75px;">
+            <span>合同立项</span><br />
+            <span style="font-weight:normal; font-size:20px;">PROJECT CONTRACT</span>
+            <p>项目内容、合同费用及细则确认；项目款项支付。</p>
+          </div><!--web14_b_1-->
+          <div class="web14_b_1" style=" margin-left:55px;">
+            <span>品牌诊断</span><br />
+            <span style="font-weight:normal; font-size:20px;">DIAGNOSIS</span>
+            <p>分析品牌现状；提供品牌营销方向；对品牌进行深度定位。</p></div><!--web14_b_1-->
+        </div><!--web14_b-->
+        <div class="web14_c">
+          <div class="web14_c_1">
+            <span>项目执行</span><br/>
+            <span style="font-weight:normal; font-size:20px;">PROJECT EXECUTION</span>
+            <p>根据执行方案，进行品牌营销方案撰写；进行全方位品牌推广活动。</p>
+          </div><!--web14_b_1-->
+          <div class="web14_c_1" style=" margin-left:75px;">
+            <span>项目成果</span><br />
+            <span style="font-weight:normal; font-size:20px;">ACHIEVEMENT</span>
+            <p>提交《网络营销报告》；提交品牌营销相关标准电子文档。</p>
+          </div><!--web14_b_1-->
+          <div class="web14_c_1" style=" margin-left:55px;">
+            <span>后续服务</span><br/>
+            <span style="font-weight:normal; font-size:20px;">FOLLOW-UP</span>
+            <p>品牌后续跟踪，与网络整合营销后续咨询指导</p></div><!--web14_b_1-->
+        </div><!--web14_c-->
+      </div><!--web14_box-->
+    </div><!--web14-->
+    <div class="hj27">
+    	 <a name="guest">
+    	<div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠速拓品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠速拓<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+    </a>
+    </div><!--hj27-->
+</div><!--all-->
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

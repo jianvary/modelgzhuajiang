@@ -1,0 +1,111 @@
+<style>
+.sub-nav .sub-list-at{ color:#e5004a;} 
+.case-radio label { width:152px; margin-bottom:10px; margin-right:50px;}
+.tab-radio div a,.tab-radio div { display:block; text-align:center; width:152px}
+.nav > li > p{ background:none;}
+#cssdropdown li.headlink ul { display: none;   text-align: center; background-color: #e6145f; width:70px; }
+#cssdropdown li.headlink ul li a { height: 30px; color:#fff; line-height:25px; width:80px; font-size:14px;  }
+#cssdropdown li.headlink ul li a:hover { /*background-color: #e95412;*/ }
+</style>
+
+<div id="wrapper">
+<div id="header">
+  	<div class="wrapper top-header">
+    	<div class="header-contact floatright">
+			广州<span>|</span>上海<span>|</span>北京
+            <p>业务垂询&nbsp;<b>400-0906-920<!--020-36480872--></b></p>
+        </div>
+    	<div class="fl">
+        	<a href="/" class="logo fl"><img src="/templets/default/images/logo.png" width="438" height="68"/></a>
+        </div>
+        <div class="cb"></div>
+    </div>
+    <!--<hr/>-->
+    <div class="foot-header" >
+    <div class="wrapper" >
+
+<ul  id="cssdropdown" class="nav" >
+    <li>
+    <p style="background-color:#e6145f;"><a href="http://www.gzhuajiang.com" style="color:#FFF;"><span>></span>关于品牌整合创新</a></p>
+    <div class="menu-nav">
+        <ul >
+			<li>
+            <a href="#">            <img src="/image/m-icon001.png" class=" fl"/></a>
+                        </a>
+            <a href="/about/">健康 美妆 快消</a></li><li>
+            <a href="/about/">            <img src="/image/m-icon002.png" class=" fl"/></a>
+                        </a>
+            <a href="/about/">时尚 珠宝 服装</a></li><li>
+            <a href="/about/"><img src="/image/m-icon003.png" class=" fl"/></a>
+                        </a>
+            <a href="/about/">餐饮 家具 环保</a></li><li>
+            <a href="/about/"><img src="/image/m-icon004.png" class=" fl"/></a>
+                        </a>
+            <a href="/about/">电商 互联网  科技</a></li>            
+            
+            <li>
+            <a href="#"><img src="/image/m-icon005.png" class=" fl"/>
+                        
+            <a href="/about/">微信|APP推广</a></li><li>
+            <a href="#"><img src="/image/m-icon006.png" class=" fl"/>
+                        
+            <a href="/about/">品牌咨询</a></li><li>
+            <a href="#"><img src="/image/m-icon007.png" class=" fl"/>
+                        
+            <a href="/about/">品牌设计</a></li><li>
+            <a href="#"><img src="/image/m-icon008.png" class=" fl"/>
+                        
+            <a href="/about/">整合营销</a></li><li>
+            <a href="#"><img src="/image/m-icon009.png" class=" fl"/>
+                        
+            <a href="/about/">视频广告</a></li><li>
+            <a href="#"><img src="/image/m-icon010.png" class=" fl"/>
+                        
+            <a href="/wzdz/">网站建设</a></li><li>
+            <a href=""><img src="/image/m-icon011.png" class=" fl"/>
+                        
+            <a href="/wygx/">手机网站</a></li>           
+        </ul>
+    </div>
+    </li>
+    <li ><a href="/about" style=" width:100px;">我们</a></li>
+    <li class="headlink" ><a href="/dt">动态</a>
+    		<ul>
+				<li><a href="/dt/ppbd/">品牌报道</a></li>
+				<li><a href="/dt/xyxw/">行业新闻</a></li>
+				<li><a href="/dt/zhys/">整合营销</a></li>
+                <li><a href="/dt/pbsj/">品牌视觉</a></li>
+				<li><a href="/dt/web/">网站建设</a></li>
+				<li><a href="/dt/wys/">微营销</a></li>
+			</ul>
+    </li>
+    <li ><a href="/anli">案例</a></li>
+    <li ><a href="http://www.zghuajiang.com/">培训</a></li>
+    <li ><a href="/zhyx">网络整合营销</a></li>
+    <li ><a href="http://gzhuajiang.net/" target="_blank">品牌设计</a></li>
+    <li ><a href="/web" target="_blank">网站建设</a></li>
+    <li ><a href="/ditui">微信|APP推广</a></li>
+    <li ><a href="/lianxi">联系</a></li>    
+    <div class="cb"></div>
+</ul>
+        <div class="cb"></div>
+    </div>
+    </div>
+  </div>
+  
+<script language="JavaScript">
+	window.onload = function()
+	{
+		var lis = document.getElementById('cssdropdown').getElementsByTagName('li');
+		for(i = 0; i < lis.length; i++)
+		{
+			var li = lis[i];
+			if (li.className == 'headlink')
+			{
+				li.onmouseover = function() { this.getElementsByTagName('ul').item(0).style.display = 'block'; }
+				li.onmouseout = function() { this.getElementsByTagName('ul').item(0).style.display = 'none'; }
+			}
+		}
+	}
+	
+</script>

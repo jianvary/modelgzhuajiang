@@ -1,0 +1,297 @@
+<div class="seventeen"><span>合作客户</span>
+  <p>最新公司合作客户</p>
+</div>
+
+<!-- seventeen -->
+
+<div class="eighteen"><img src="/templets/pc/images/partners.jpg" /></div>
+<div class="footerone">
+  <div class="onebox">
+    <p class="pull-left">国际领先的品牌设计理念与品牌管理经验，使我们始终保持行业领先的设计思维与工作方法！</p>
+    {dede:type typeid='1'}<a href='[field:typeurl/]' [field:rel/] class="pull-right">花匠速拓优势</a>{/dede:type}</div>
+</div>
+
+<!-- footerone -->
+
+<div class="footertwo">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 hidden4">
+        <div class="design-31">公司动态 </div>
+        {dede:arclist titlelen='45' typeid='2' row='5' orderby='pubdate'}
+        <div class="design-32 hidden4"><a href="[field:arcurl/]">[field:title/]</a></div>
+        {/dede:arclist}</div>
+      <div class="col-lg-3 hidden4">
+        <div class="design-31 hidden4">友情链接 </div>
+        <div class="design-33 hidden4"><a href="/anli/">案例</a>  <a href="/zhyx/">网络整合营销</a> <a href="http://gzhuajiang.net/" target="_blank">品牌设计</a>  <a href="/ditui/" target="_blank">微信|APP推广</a> 
+        <a href="http://www.timelylove.cn/" target="_blank">蛋糕培训学校</a> 
+
+            
+        </div>
+      </div>
+      <div class="col-lg-3 hidden4">
+        <div class="design-34">HUAJAING </div>
+        <div class="design-35">您需要任何专业上的咨询，请直接与我们联系，我们将会尽快回复您的讯息并竭诚地为您服务。 </div>
+        <div class="design-36"><img src="/templets/pc/images/footer_02.png" /></div>
+      </div>
+      <div class="col-lg-3">
+        <div class="design-34 hidden4">CONTACT </div>
+        <div class="design-35 design-35tt design-35tit">Address </div>
+        <div class="design-35 design-35tt mt10">广州白云区国际单位二期A10栋 </div>
+        <div class="design-35 design-35tt">202A/202B </div>
+        <div class="design-35 design-35tt">Telephone </div>
+        <div class="design-35 design-35tt mb10">400-0906-920 </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- container --> 
+  
+</div>
+
+<!-- footertwo -->
+
+<div class="footerthree">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="design-37 hidden4">COPYRIGHTS 2013-2015. HUAJIANG CO.,LTD. ALL RIGHTS RESERVED.</div>
+        <div class="design-37 ml60"><a href="http://www.miitbeian.gov.cn/">粤ICP备14073626号-1</a></div>
+        <div class="design-37 ml60"><a href="http://www.gzhuajiang.com/map/">网站地图</a></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- container --> 
+  
+</div>
+
+<!-- footerthree --> 
+<script type="text/javascript">
+
+$(function() {
+
+    $.fn.toTop = function(options) {
+
+        var defaults = {
+
+            showHeight: 150,
+
+            speed: 1000
+
+        };
+
+        var options = $.extend(defaults, options);
+
+        $("body").prepend("<div id='totop'><a></a></div>");
+
+        var $toTop = $(this);
+
+        var $top = $("#totop");
+
+        var $ta = $("#totop a");
+
+        $toTop.scroll(function() {
+
+            var scrolltop = $(this).scrollTop();
+
+            if (scrolltop >= options.showHeight) {
+
+                $top.show()
+
+            } else {
+
+                $top.hide()
+
+            }
+
+        });
+
+        $ta.hover(function() {
+
+            $(this).addClass("cur")
+
+        }, function() {
+
+            $(this).removeClass("cur")
+
+        });
+
+        $top.click(function() {
+
+            $("html,body").animate({
+
+                scrollTop: 0
+
+            }, options.speed)
+
+        })
+
+    }
+
+});
+
+$(function() {
+
+    $(window).toTop({
+
+        showHeight: 100,
+
+        speed: 500
+
+    })
+
+});
+
+</script>
+<style type="text/css">
+
+@media screen and (max-width:1199px) {
+
+    #totop {
+
+        position: fixed;
+
+        bottom: 15px;
+
+        right: 15px;
+
+        z-index: 999;
+
+        width: 40px;
+
+        cursor: pointer;
+
+        display: none
+
+    }
+
+    *html #totop {
+
+        position: absolute;
+
+        cursor: pointer;
+
+        display: none;
+
+        top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-112+"px")
+
+    }
+
+    #totop a {
+
+        display: block;
+
+        width: 40px;
+
+        height: 40px;
+
+        background: url("/templets/pc/images/gotop.png") no-repeat;
+
+        background-size: cover;
+
+        opacity: .5;
+
+        filter: alpha(opacity=50);
+
+        -moz-opacity: .5;
+
+        -khtml-opacity: .5
+
+    }
+
+    #totop a.cur {
+
+        opacity: 1;
+
+        filter: alpha(opacity=100);
+
+        -moz-opacity: 1;
+
+        -khtml-opacity: 1
+
+    }
+
+}
+
+
+
+@media screen and (min-width:1200px) {
+
+    #totop {
+
+        position: fixed;
+
+        bottom: 20px;
+
+        right: 20px;
+
+        z-index: 999;
+
+        width: 60px;
+
+        cursor: pointer;
+
+        display: none
+
+    }
+
+    *html #totop {
+
+        position: absolute;
+
+        cursor: pointer;
+
+        display: none;
+
+        top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight)-112+"px")
+
+    }
+
+    #totop a {
+
+        display: block;
+
+        width: 60px;
+
+        height: 60px;
+
+        background: url("/templets/pc/images/gotop.png") no-repeat;
+
+        background-size: cover;
+
+        opacity: .5;
+
+        filter: alpha(opacity=50);
+
+        -moz-opacity: .5;
+
+        -khtml-opacity: .5
+
+    }
+
+    #totop a.cur {
+
+        opacity: 1;
+
+        filter: alpha(opacity=100);
+
+        -moz-opacity: 1;
+
+        -khtml-opacity: 1
+
+    }
+
+}
+
+</style>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3bc06a26a956efbd1cf59462fa228920";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fac892156eb7663e875efe56e07423e36' type='text/javascript'%3E%3C/script%3E")) </script>

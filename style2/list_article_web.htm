@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.all{ width:1000px; height:auto; overflow:hidden; margin:15px auto;}
+.all img{ border:none;}
+.web1{ width:998px; height:auto; overflow:hidden; float:left; /*border:1px solid #999;*/ }
+.web2{ width:998px; height:auto; overflow:hidden; float:left;}
+.web3{ width:998px; height:auto; overflow:hidden; float:left;}
+.web4{ width:998px; height:auto; overflow:hidden; float:left;}
+.web5{ width:998px; height:auto; overflow:hidden; float:left; background-image:url(http://www.gzhuajiang.com/images/hj/hj_20.jpg);}
+.web6{ width:998px; height:auto; overflow:hidden; float:left;}
+.web7{ width:998px; height:auto; overflow:hidden; float:left;}
+.web8{ width:998px; height:auto; overflow:hidden; float:left;}
+.web9{ width:998px; height:auto; overflow:hidden; float:left;}
+.web10{ width:998px; height:auto; overflow:hidden; float:left;}
+.web11{ width:998px; height:auto; overflow:hidden; float:left;}
+.web12{ width:998px; height:auto; overflow:hidden; float:left; background-image:url(http://www.gzhuajiang.com/images/hj/hj_20.jpg);}
+.web13{ width:998px; height:auto; overflow:hidden; float:left;}
+.web14{ width:998px; height:auto; overflow:hidden; float:left;}
+.web15{ width:998px; height:auto; overflow:hidden; float:left; background-color:#fff;}
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+
+.hjiphone{ width:998px; height:510px; overflow:hidden;}
+.hjiphone .one{ width:998px; height:125px; overflow:hidden; float:left;}
+.hjiphone .two{ width:998px; height:320px; overflow:hidden; float:left; background-image:url(http://www.gzhuajiang.com/images/web/images/web_08_02.jpg);}
+.hjiphone .two .box{ width:250px; height:310px; /*border:1px solid #000;*/ margin-left:520px;}
+.hjiphone .three{ width:998px; height:65px; overflow:hidden; float:left;}
+</style>
+
+
+</head>
+<body >
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div class="all" > 
+
+	<div class="web1">
+    	<img src="/images/web/images/web_01_01.jpg" />
+        <img src="/images/web/images/web_01_02.jpg" />
+        <img src="/images/web/images/web_01_03.jpg" />
+        <img src="/images/web/images/web_01_04.jpg" />
+        <img src="/images/web/images/web_01_05.jpg" />
+        <img src="/images/web/images/web_01_06.jpg" />
+        <img src="/images/web/images/web_01_07.jpg" />
+        <img src="/images/web/images/web_01_08.jpg" />
+        <img src="/images/web/images/web_01_09.jpg" />
+        <img src="/images/web/images/web_01_10.jpg" />
+    </div>
+    <div class="web2">
+    	<img src="/images/web/images/web_02_01.jpg" />
+        <img src="/images/web/images/web_02_02.jpg" />
+        <img src="/images/web/images/web_02_03.jpg" />
+        <img src="/images/web/images/web_02_04.jpg" />
+        <img src="/images/web/images/web_02_05.jpg" />
+        <img src="/images/web/images/web_02_06.jpg" />
+        <img src="/images/web/images/web_02_07.jpg" />
+        <img src="/images/web/images/web_02_08.jpg" />
+        <img src="/images/web/images/web_02_09.jpg" />
+        <img src="/images/web/images/web_02_10.jpg" />
+    </div>
+    <div class="web3">
+    	<img src="/images/web/images/web_03_01.jpg" />
+        <img src="/images/web/images/web_03_02.jpg" />
+        <img src="/images/web/images/web_03_03.jpg" />
+        <img src="/images/web/images/web_03_04.jpg" />
+        <img src="/images/web/images/web_03_05.jpg" />
+        <img src="/images/web/images/web_03_06.jpg" />
+        <img src="/images/web/images/web_03_07.jpg" />
+        <img src="/images/web/images/web_03_08.jpg" />
+        <img src="/images/web/images/web_03_09.jpg" />
+        <img src="/images/web/images/web_03_10.jpg" />
+    </div>
+    <div class="web4">
+    	<img src="/images/web/images/web_04_01.jpg" />
+        <img src="/images/web/images/web_04_02.jpg" />
+        <img src="/images/web/images/web_04_03.jpg" />
+        <img src="/images/web/images/web_04_04.jpg" />
+        <img src="/images/web/images/web_04_05.jpg" />
+        <img src="/images/web/images/web_04_06.jpg" />
+        <img src="/images/web/images/web_04_07.jpg" />
+        <img src="/images/web/images/web_04_08.jpg" />
+        <img src="/images/web/images/web_04_09.jpg" />
+        <img src="/images/web/images/web_04_10.jpg" />
+        <img src="/images/web/images/web_04_11.jpg" />
+        <img src="/images/web/images/web_04_12.jpg" />
+        <img src="/images/web/images/web_04_13.jpg" />
+        <img src="/images/web/images/web_04_14.jpg" />
+        <img src="/images/web/images/web_04_15.jpg" />
+        <img src="/images/web/images/web_04_16.jpg" />
+        <img src="/images/web/images/web_04_17.jpg" />
+        <img src="/images/web/images/web_04_18.jpg" />
+        <img src="/images/web/images/web_04_19.jpg" />
+        <img src="/images/web/images/web_04_20.jpg" />
+    </div>
+    <div class="web5">
+    	 <div style="width:650px; height:90px; margin:0 auto;">
+        	 <form method="post" action="/plus/guestbook1.php" name="form1">
+             	<input type='hidden' name='action' value='save' />
+                <input name="email" type="hidden" value="免费赠送8000元专家在线品牌诊断"  checked="checked"/> 
+        	<div style=" width:600px; height:45px; /*border:1px solid #000;*/ margin-left:150px; margin-top:86px; line-height:35px;">
+        		<div style="width:100px; height:35px; overflow:hidden; float:left; margin-left:68px; margin-top:13px;">
+                 <input type="text"   name="uname" size="60" width="80px;" style="width:80px;"  />
+                </div>
+                <div style="width:170px; height:35px; overflow:hidden; float:left; margin-left:105px; margin-top:13px; ">
+                <input type="text" id="telephone"   name="qq"    />
+                </div>
+                <div style="width:120px; height:45px; overflow:hidden; float:left; margin-left:30px;  ">
+                <input type="image" src="/images/hj/hj_20button.jpg" alt="Submit"  name="submit"  />
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="web6">
+    	<img src="/images/web/images/web_06_01.jpg" />
+        <img src="/images/web/images/web_06_02.jpg" />
+        <img src="/images/web/images/web_06_03.jpg" />
+        <img src="/images/web/images/web_06_04.jpg" />
+        <img src="/images/web/images/web_06_05.jpg" />
+        <img src="/images/web/images/web_06_06.jpg" />
+        <img src="/images/web/images/web_06_07.jpg" />
+        <img src="/images/web/images/web_06_08.jpg" />
+        <img src="/images/web/images/web_06_09.jpg" />
+        <img src="/images/web/images/web_06_10.jpg" />
+    </div>
+    <div class="web7">
+    	<img src="/images/web/images/web_07_01.jpg" />
+        <img src="/images/web/images/web_07_02.jpg" />
+        <img src="/images/web/images/web_07_03.jpg" />
+        <img src="/images/web/images/web_07_04.jpg" />
+        <img src="/images/web/images/web_07_05.jpg" />
+        <img src="/images/web/images/web_07_06.jpg" />
+        <img src="/images/web/images/web_07_07.jpg" />
+        <img src="/images/web/images/web_07_08.jpg" />
+        <img src="/images/web/images/web_07_09.jpg" />
+        <img src="/images/web/images/web_07_10.jpg" />
+        <img src="/images/web/images/web_07_11.jpg" />
+        <img src="/images/web/images/web_07_12.jpg" />
+        <img src="/images/web/images/web_07_13.jpg" />
+        <img src="/images/web/images/web_07_14.jpg" />
+        <img src="/images/web/images/web_07_15.jpg" />
+        <img src="/images/web/images/web_07_16.jpg" />
+        <img src="/images/web/images/web_07_17.jpg" />
+        <img src="/images/web/images/web_07_18.jpg" />
+        <img src="/images/web/images/web_07_19.jpg" />
+        <img src="/images/web/images/web_07_20.jpg" />
+    </div>
+    <div class="web8">
+    	<div class="hjiphone">
+            <div class="one">
+                <img src="http://www.gzhuajiang.com/images/web/images/web_08_01.jpg" />
+            </div>
+            <div class="two">
+                <div class="box">
+                     <form method="post" action="/plus/guestbook1.php" name="form1">
+             			<input type='hidden' name='action' value='save' />
+                       <div style="margin-top:5px;">
+                       <input type="text"   name="uname" size="60" style="width:240px; height:36px; " value=" 姓名/公司 *"   onfocus="if(this.value==' 姓名/公司 *'){this.value='';}"  onblur="if(this.value==''){this.value=' 姓名/公司 *';}" />
+                       
+                       </div>
+                       <div style="margin-top:5px;">
+                       <input type="text" id="telephone"   name="qq"  style="width:240px; height:36px; " value=" 联系手机 *"   onfocus="if(this.value==' 联系手机 *'){this.value='';}"  onblur="if(this.value==''){this.value=' 联系手机 *';}"  />
+                       </div>
+                        <div style="margin-top:5px;  "> 
+                       <input type="text" id="telephone"    name="duoxuang" value=" 招商加盟"   style="width:240px; height:36px; "  />
+                        </div>
+                       <div style="margin-top:5px;">
+                       <input type="text" id="telephone"    name="homepage"  value=" 品牌名称"  style="width:240px; height:36px; "  />
+                       </div>
+                       <div style="margin-top:5px;">
+                       <input type="text"  name="msg"  value="简单描述" onfocus="if(this.value=='简单描述'){this.value='';}"  onblur="if(this.value==''){this.value='简单描述';}" style="width:240px; height:65px; "/>
+                       </div>
+                       <div style="margin-top:5px;"> <input type="image" src="/images/web/images/webbutton.jpg" alt="Submit"  name="submit"  /></div>
+                     </form>
+                </div>
+            </div>
+            <div class="three">
+                <img src="http://www.gzhuajiang.com/images/web/images/web_08_03.jpg" />
+            </div>
+        </div>
+    </div><!--web8-->
+    <div class="web9">
+    	<img src="/images/web/images/web_09_01.jpg" />
+        <img src="/images/web/images/web_09_02.jpg" />
+        <img src="/images/web/images/web_09_03.jpg" />
+        <img src="/images/web/images/web_09_04.jpg" />
+        <img src="/images/web/images/web_09_05.jpg" />
+        <img src="/images/web/images/web_09_06.jpg" />
+        <img src="/images/web/images/web_09_07.jpg" />
+        <img src="/images/web/images/web_09_08.jpg" />
+        <img src="/images/web/images/web_09_09.jpg" />
+        <img src="/images/web/images/web_09_10.jpg" />
+    </div>
+    <div class="web10">
+    	<img src="/images/web/images/web_10_01.jpg" />
+        <img src="/images/web/images/web_10_02.jpg" />
+        <img src="/images/web/images/web_10_03.jpg" />
+        <img src="/images/web/images/web_10_04.jpg" />
+        <img src="/images/web/images/web_10_05.jpg" />
+        <img src="/images/web/images/web_10_06.jpg" />
+        <img src="/images/web/images/web_10_07.jpg" />
+        <img src="/images/web/images/web_10_08.jpg" />
+        <img src="/images/web/images/web_10_09.jpg" />
+        <img src="/images/web/images/web_10_10.jpg" />
+    </div>
+    <div class="web11">
+    	<img src="/images/web/images/web_11_01.jpg" />
+        <img src="/images/web/images/web_11_02.jpg" />
+        <img src="/images/web/images/web_11_03.jpg" />
+        <img src="/images/web/images/web_11_04.jpg" />
+        <img src="/images/web/images/web_11_05.jpg" />
+        <img src="/images/web/images/web_11_06.jpg" />
+        <img src="/images/web/images/web_11_07.jpg" />
+        <img src="/images/web/images/web_11_08.jpg" />
+        <img src="/images/web/images/web_11_09.jpg" />
+        <img src="/images/web/images/web_11_10.jpg" />
+        <img src="/images/web/images/web_11_11.jpg" />
+        <img src="/images/web/images/web_11_12.jpg" />
+        <img src="/images/web/images/web_11_13.jpg" />
+        <img src="/images/web/images/web_11_14.jpg" />
+        <img src="/images/web/images/web_11_15.jpg" />
+        <img src="/images/web/images/web_11_16.jpg" />
+        <img src="/images/web/images/web_11_17.jpg" />
+        <img src="/images/web/images/web_11_18.jpg" />
+        <img src="/images/web/images/web_11_19.jpg" />
+        <img src="/images/web/images/web_11_20.jpg" />
+    </div>
+    <div class="web12">
+    	 <div style="width:650px; height:90px; margin:0 auto;">
+        	 <form method="post" action="/plus/guestbook1.php" name="form1">
+             	<input type='hidden' name='action' value='save' />
+                <input name="email" type="hidden" value="免费赠送8000元专家在线品牌诊断"  checked="checked"/> 
+        	<div style=" width:600px; height:45px; /*border:1px solid #000;*/ margin-left:150px; margin-top:86px; line-height:35px;">
+        		<div style="width:100px; height:35px; overflow:hidden; float:left; margin-left:68px; margin-top:13px;">
+                 <input type="text"   name="uname" size="60" width="80px;" style="width:80px;"  />
+                </div>
+                <div style="width:170px; height:35px; overflow:hidden; float:left; margin-left:105px; margin-top:13px; ">
+                <input type="text" id="telephone"   name="qq"    />
+                </div>
+                <div style="width:120px; height:45px; overflow:hidden; float:left; margin-left:30px;  ">
+                <input type="image" src="/images/hj/hj_20button.jpg" alt="Submit"  name="submit"  />
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="web13">
+    	<img src="/images/web/images/web_13_01.jpg" />
+        <img src="/images/web/images/web_13_02.jpg" />
+        <img src="/images/web/images/web_13_03.jpg" />
+        <img src="/images/web/images/web_13_04.jpg" />
+        <img src="/images/web/images/web_13_05.jpg" />
+        <img src="/images/web/images/web_13_06.jpg" />
+        <img src="/images/web/images/web_13_07.jpg" />
+        <img src="/images/web/images/web_13_08.jpg" />
+        <img src="/images/web/images/web_13_09.jpg" />
+        <img src="/images/web/images/web_13_10.jpg" />
+    </div>
+    <div class="web14">
+    	<img src="/images/web/images/web_14_01.jpg" />
+        <img src="/images/web/images/web_14_02.jpg" />
+        <img src="/images/web/images/web_14_03.jpg" />
+        <img src="/images/web/images/web_14_04.jpg" />
+        <img src="/images/web/images/web_14_05.jpg" />
+        <img src="/images/web/images/web_14_06.jpg" />
+        <img src="/images/web/images/web_14_07.jpg" />
+        <img src="/images/web/images/web_14_08.jpg" />
+        <img src="/images/web/images/web_14_09.jpg" />
+        <img src="/images/web/images/web_14_10.jpg" />
+    </div>
+    <div class="web15">
+    	<div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+    </div>
+   
+
+</div>
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link href="/templets/default/style/ditui.css" rel="stylesheet" media="screen" type="text/css"/>
+    <!-------------------------------轮播图开始------------------------------------------------------->
+    <link href="/templets/default/style/luenbotu.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="/templets/default/js/jquery-1.10.2.min.js"></script>
+    <script src="/templets/default/js/slider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 500,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+    })
+    </script>
+    <!-------------------------------轮播图结束------------------------------------------------------->
+    </head>
+    <body>
+<div class="all"> {dede:include filename="headweb.htm"/} 
+      <!-- /header -->
+      <div class="design_carouselfigure">
+    <div id="banner_tabs" class="flexslider">
+          <ul class="slides">
+        {dede:arclist row=1  type='image.'  typeid='56' flag='h' }
+        <li> <a href="#"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;" > </a> </li>
+        {/dede:arclist}
+        {dede:arclist row=1  type='image.'  typeid='60' flag='h' }
+        <li> <a href="http://www.gzhuajiang.com"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;"> </a> </li>
+        {/dede:arclist}
+        {dede:arclist row=1  type='image.'  typeid='61' flag='h' }
+        <li> <a href="#"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;"> </a> </li>
+        {/dede:arclist}
+       
+     
+      </ul>
+          <ul class="flex-direction-nav">
+        <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+        <li><a class="flex-next" href="javascript:;">Next</a></li>
+      </ul>
+          <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+        <li><a>1</a></li>
+        <li><a>2</a></li>
+        <li><a>3</a></li>
+        <!--<li><a>4</a></li>-->
+        
+      </ol>
+        </div>
+  </div>
+      <!--design_carouselfigure--> 
+      <!--轮播图-->
+      
+      <div class="chest">
+    <div class="chest_box">
+          <div class="chest_a"> <img src="/images/chesta/chests_1.jpg"/> <span>APP推广</span> </div>
+          <!--chest_a-->
+          <div class="chest_a"> <img src="/images/chesta/chests_2.jpg"/> <span>公众号推广</span> </div>
+          <!--chest_a-->
+          <div class="chest_a"> <img src="/images/chesta/chests_3.jpg"/> <span>产品推广</span> </div>
+          <!--chest_a-->
+          <div class="chest_a" style=" border-right:1px dotted #FFF;"> <img src="/images/chesta/chests_4.jpg"/> <span>社区营销</span> </div>
+          <!--chest_a--> 
+        </div>
+    <!--chest_box--> 
+  </div>
+      <!--chest-->
+      <div class="activity">
+    	<div class="activity_box"> 
+          <p>APP|微信用户数据造血者</p>
+          <p>互联网公司上市融资“助跑者”</p>
+        </div>      
+   		 <!--ctivity_box--> 
+ 	 </div> 
+      <!--activity-->
+      
+      
+      <div class="anlie">
+   		<div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">成功案例</div>
+        </div>
+    	<!--anlie_boxtwo--> 
+ 	 </div>
+      <!--anlie--> 
+      
+      <div class="dicontent">
+        <div class="box">
+          {dede:arclist row=4  type='image.' typeid=57  imgwidth='590' imgheight='280'  titlelen='100'}
+          <div class="con">
+            <div class="one">
+            <a href="[field:arcurl/]" target="_blank" >[field:image/]</a>
+            </div><!--one-->
+            <div class="two">
+              <a href="[field:arcurl/]" target="_blank" >[field:title/]</a>
+            </div><!--two-->
+            <div class="three">
+              #[field:shorttitle/]#
+            </div><!--three-->
+          </div><!--con-->
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='57,1433'  imgwidth='590' imgheight='280'  titlelen='100'}
+          <div class="con">
+            <div class="one">
+            <a href="[field:arcurl/]" target="_blank" >[field:image/]</a>
+            </div><!--one-->
+            <div class="two">
+              <a href="[field:arcurl/]" target="_blank" >[field:title/]</a>
+            </div><!--two-->
+            <div class="three">
+              #[field:shorttitle/]#
+            </div><!--three-->
+          </div><!--con-->
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='57,1434'  imgwidth='590' imgheight='280'  titlelen='100'}
+          <div class="con">
+            <div class="one">
+            <a href="[field:arcurl/]" target="_blank" >[field:image/]</a>
+            </div><!--one-->
+            <div class="two">
+              <a href="[field:arcurl/]" target="_blank" >[field:title/]</a>
+            </div><!--two-->
+            <div class="three">
+              #[field:shorttitle/]#
+            </div><!--three-->
+          </div><!--con-->
+          {/dede:arclist}
+        </div><!--box-->
+      </div><!--dicontent-->
+     
+      <div class="morecase">
+    <div class="morecase_box">
+          <div class="morecase_box_a">
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1--> 
+        
+      </div>
+          <!--cmorecase_box_a--> 
+          
+          <a>查看更多作品</a> <span>+</span> </div>
+  </div>
+      <!--morecase-->
+      
+   <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;"> 
+          <p style="line-height:40px;">超100所高校，逾1500名地推组员</p>
+          <p style="line-height:40px;">实现学校|社区|写字楼720度全面覆盖</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">地推渠道</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->
+    
+    <div class="dicontentEr">
+      <div class="box">
+        {dede:arclist row=6  type='image.' typeid=59  imgwidth='390' imgheight='250'  titlelen='100' shorttitle='200'}
+        <div class="con">
+          <div class="one">
+            [field:image/]
+          </div><!--one-->
+          <div class="two">
+            <div class="top">
+              [field:title/]
+            </div><!--top-->
+            <div class="bottom">
+              <div class="txt">
+              [field:description function='cn_substr(@me,100)'/]
+              </div>
+            </div><!--bottom-->
+          </div><!--two-->
+        </div><!--con-->
+        {/dede:arclist}
+      </div><!--box-->
+    </div><!--dicontentEr-->
+    
+    <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;"> 
+          <p style="line-height:40px;">1+N多渠道营销</p>
+          <p style="line-height:40px;">可短时间影响逾100万人群</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">网推渠道</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->      
+    
+    <div class="dicontentEr">
+      <div class="box">
+        {dede:arclist row=6  type='image.' typeid=58 imgwidth='390' imgheight='250'  titlelen='100'}
+        <div class="con">
+          <div class="one">
+            [field:image/]
+          </div><!--one-->
+          <div class="two">
+            <div class="top">
+              [field:title/]
+            </div><!--top-->
+            <div class="bottom">
+              <div class="txt">
+              [field:description function='cn_substr(@me,100)'/]
+              </div>
+            </div><!--bottom-->
+          </div><!--two-->
+        </div><!--con-->
+        {/dede:arclist}
+      </div><!--box-->
+    </div><!--dicontentEr-->
+    
+    <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;"> 
+          <p style="line-height:40px;">集全网营销|社区地推|</p>
+          <p style="line-height:40px;">品牌设计|品牌咨询为一体的品牌顾问公司</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">我们优势</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->
+      
+   <div class="about6">
+      <div class="about6box">
+        <div class="about6_a">
+          <div class="about6_a_A"><img src="/images/about/about6_a.jpg" /></div>
+          <div class="about6_a_B">
+            <p>INTEGRATION</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p> 
+            <ul>
+              <li><b>·</b>品牌定义</li>
+              <li><b>·</b>创意执行</li>
+              <li><b>·</b>网络营销</li>
+              <li><b>·</b>活动推广</li>
+              <li><b>·</b>微信营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_b.jpg" /></div>
+          <div class="about6_a_B">
+            <p>VISUAL DESIGN</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌视觉设计</p> 
+            <ul>
+              <li><b>·</b>品牌设计&nbsp;VI设计&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>品牌连锁&nbsp;零售环境</li>
+              <li><b>·</b>产品包装&nbsp;视觉营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_c.jpg" /></div>
+          <div class="about6_a_B">
+            <p>Community push</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">社区地推</p> 
+            <ul>
+              <li><b>·</b>APP推广&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>公众号推广</li>
+              <li><b>·</b>产品推广&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>社区营销&nbsp;&nbsp;&nbsp;</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:30px;">
+          <div class="about6_a_A"><img src="/images/about/about6_d.jpg" /></div>
+          <div class="about6_a_B">
+            <p>Consultant</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌咨询</p> 
+            <ul>
+              <li><b>·</b>网络营销培训</li>
+              <li><b>·</b>企业团队打造</li>
+              <li><b>·</b>销售实战培训</li>
+              <li><b>·</b>招商会议讲师</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+      </div><!--about6box-->
+    </div><!--about6-->
+      
+     <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;"> 
+          <p style="line-height:40px;">HUAJIANG CASE</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">花匠速拓品牌整合营销案例</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie--> 
+      
+      
+      <div class="designcontent">
+    <div class="designnews"> {dede:arclist row=8  type='image.'  typeid='18' imgwidth='235' imgheight='160' limit='0,8' flag='c' titlelen='200'} <a href="[field:arcurl/]"> [field:image/]
+      <div class="dstiao">
+        <div class="dstiao_a"></div>
+        <div class="dstiao_b">[field:pubdate function="MyDate('y-m-d',@me)"/]</div>
+        <div class="dstiao_c"></div>
+        <div class="dstiao_b">[field:click/]</div>
+      </div>
+      <div class="news_title">
+        <p>[field:title/]</p>
+      </div>
+      <div class="news_detail">[field:description function='cn_substr(@me,200)'/]</div>
+      </a> {/dede:arclist} </div>
+    <!--designnews--> 
+  </div>
+      <!--designcontent-->
+      
+      <div class="anlie">
+    <div class="anlie_box" style="border:0;"> <span>CONTACT US</span>
+          <p><small>花匠速拓</small><b>.</b>联系我们</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+         <!-- <div class="anlie_boxtwo_a">花匠速拓网络与您一起抓住那5.6亿手机用户</div>-->
+     </div>
+    <!--anlie_boxtwo--> 
+  </div>
+  
+  <div style="margin:0 auto; width:1200px;">
+    <div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠速拓<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="APP推广 " /><!--Network integrated marketing(英文翻译)-->
+             APP推广 
+            <br />
+            <input type="checkbox" name="duoxuang2" value="公众号推广" /><!--Visual design(英文翻译)-->
+             公众号推广
+            <br />
+            <input type="checkbox" name="duoxuang3" value="产品推广" /><!--Website construction(英文翻译)-->
+             产品推广
+            <br />
+            <input type="checkbox" name="duoxuang4" value="社区营销" /><!--Actual brand consultation(英文翻译)-->
+             社区营销
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+  </div>
+      <!--contactus--> 
+      
+      {dede:include filename="footerditui.htm"/} </div>
+<!--all-->
+</body>
+</html>

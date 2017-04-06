@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.all{ width:1000px; height:auto; overflow:hidden; margin:15px auto;background:#FFF;}
+.all img{ border:none;}
+.about1{ width:998px;overflow:hidden; float:left; /*border:1px solid #999;*/}
+.about1 .about1_a{height:140px;width:998px;overflow:hidden; float:left;}
+.about1 .about1_b{height:290px;width:998px;overflow:hidden; float:left; background:#e6145f;}
+.about1 .about1_b .about1_b_a{height:124px; width:285px;float:left; margin-top:85px; margin-left:90px; color:#FFF; font-size:60px; font-weight: bolder;line-height:114px; padding:0; border-right:1px solid #fff;}
+.about1 .about1_b .about1_b_b{height:120px; width:auto; float:left; margin-top:95px; margin-left:20px;}
+.about1 .about1_b .about1_b_b b{ font-weight:bolder;}
+.about1 .about1_b .about1_b_b p{font-size:35px; color:#fff; font-weight:normal; letter-spacing:5px;}
+.about2{ width:998px; height:755px; overflow:hidden; float:left;/*border:1px solid #999;*/}
+.about2 .about2box{height:auto; overflow:hidden; float:left;margin-left:50px;}
+.about2 .about2box .about2_a{ height:30px; width:auto; font-size:12px; margin-top:30px;line-height:30px;}
+.about2 .about2box .about2_a p{ float:left; margin-left:5px;}
+.about2 .about2box .about2_a img{ float:left; margin-top:4px;}
+.about2 .about2box .about2_b{height:110px;/*border:1px solid #999;*/ margin-top:35px;}
+.about2 .about2box .about2_b p{ font-size:40px; line-height:40px; color:#e6145f;}
+.about2 .about2box .about2_b p span{ margin:0 10px;}
+.about2 .about2box .about2_c{ height:120px; width:895px;margin-top:30px; color:#9b9b9b; font-size:24px; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;}
+.about4{ width:998px; height:600px; overflow:hidden; float:left;/*border:1px solid #999;*/}
+.about4 .about4box{ width:890px;margin:0 auto;/*border:1px solid #999;*/overflow:hidden;}
+.about4 .about4box .about4_a{ width:890px; height:114px; margin:0 auto;}
+.about4 .about4box .about4_a .about4_a_left{ width:220px; height:114px; float:left; background:#737373;}
+.about4 .about4box .about4_a .about4_a_left p{ font-size:24px; color:#fff; padding:0; line-height:30px; font-family:inherit; margin-left:20px;}
+.about4 .about4box .about4_a .about4_a_right{ width:670px; height:114px; float:left; background:#d41759; font-size:36px; color:#fff; } 
+.about4 .about4box .about4_a .about4_a_right p{ margin-left:60px; margin-top:30px;}
+.about4 .about4box .about4_b{ width:890px;height:140px; /*border:1px solid #999; */font-size:22px; color:#717171;}
+.about4 .about4box .about4_b .about4_b_A{width:890px; height:45px;}
+.about4 .about4box .about4_b .about4_b_A P{ float:left; padding:0; margin-top:10px; color:#6f6f6f; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+.about4 .about4box .about4_b .about4_b_A b{float:left; padding:0; margin-top:10px;}
+.about4 .about4box .about4_b .about4_b_A span{float:left;font-size:16px; padding:0; margin-top:5px; margin-right:8px; margin-left:2px;}
+.about4 .about4box .about4_c{ height:90px; width:890px; overflow:hidden; font-size:22px;line-height:45px;color:#6f6f6f;font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+.about6{ width:998px; height:420px; overflow:hidden; float:left;}
+.about6 .about6box{ width:900px; margin:0 auto; overflow:hidden;/*border:1px solid #999;*/}
+.about6 .about6box .about6_a{ width:200px; height:420px; float:left;/*border:1px solid #999;*/}
+.about6 .about6box .about6_a .about6_a_A{ height:120px; width:120px; margin:0 auto;}
+.about6 .about6box .about6_a .about6_a_B{ height:290px; width:200px; margin-top:10px; text-align:center;}
+.about6 .about6box .about6_a .about6_a_B p{ font-size:20px; color:#1e1711;line-height:25px;}
+.about6 .about6box .about6_a .about6_a_B ul{ font-size:20px; color:#7d7978; margin-top:20px;}
+.about6 .about6box .about6_a .about6_a_B ul li{ line-height:35px;}
+.about6 .about6box .about6_a .about6_a_B ul li b{ color:red; margin-right:10px;}
+.about7{ width:998px; height:auto; overflow:hidden; float:left;}
+.about7 .about7box{ width:998px; margin:0 auto; overflow:hidden;}
+.about7 .about7box .about7_a{ width:890px;height:120px; border-bottom:2px solid #b8b8b8; margin:0 auto; margin-top:40px;}
+.about7 .about7box .about7_a span{ color:#d41759; font-size:50px; font-weight:bold; padding:0; line-height:80px;}
+.about7 .about7box .about7_a p{ color:#737373; font-size:24px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; line-height:24px;}
+.about7 .about7box .about7_b{width:998px;}
+.about9{ width:998px; height:auto; overflow:hidden; float:left; background-color:#fff;}
+.about10{ width:998px; height:auto; overflow:hidden; float:left;}
+.about11{ width:998px; height:450px; overflow:hidden; float:left; /*border:1px solid #999;*/}
+.about11 .about11box{ width:890px; margin:0 auto;}
+.about11 .about11box .about11_a{ width:890px; height:140px; margin-top:40px;}
+.about11 .about11box .about11_a .about11_a_left{ width:220px; height:140px; float:left; background:#737373;}
+.about11 .about11box .about11_a .about11_a_left img{ float: left; margin-top:25px; margin-left:10px;}
+.about11 .about11box .about11_a .about11_a_left p{ font-size:22px; font-weight:bold; color:#FFF; float:left; margin-left:10px;}
+.about11 .about11box .about11_a .about11_a_right{ width:670px; height:140px; float:right;background:#d41759; font-size:35px; color:#fff; }
+.about11 .about11box .about11_a .about11_a_right p{ margin-left:50px; margin-top:40px;}
+.about11 .about11box .about11_a .about11_a_right span{ margin:0 10px;}
+.about11 .about11box .about11_b{width:890px; height:190px; margin-top:35px;}
+.about11 .about11box .about11_c{width:296px; height:30px; float:left; text-align:center; color:#4f4f4f; font-size:20px; line-height:60px;}
+.about12{ width:998px; height:auto; overflow:hidden; float:left;}
+.about12 .about12box{ width:998px; margin:0 auto;}
+.about12 .about12box .about12_a{ width:890px; height:140px;margin:0 auto;margin-top:50px;}
+.about12 .about12box .about12_a .about12_a_left{ width:220px; height:140px; float:left; background:#737373;}
+.about12 .about12box .about12_a .about12_a_left img{ float: left; margin-top:25px; margin-left:10px;}
+.about12 .about12box .about12_a .about12_a_left p{ font-size:22px; font-weight:bold; color:#FFF; float:left; margin-left:10px;}
+.about12 .about12box .about12_a .about12_a_right{ width:670px; height:140px; float:right;background:#d41759; font-size:40px; color:#fff; }
+.about12 .about12box .about12_a .about12_a_right p{ margin-left:50px; margin-top:40px;}
+.about12 .about12box .about12_a .about12_a_right span{ margin:0 10px;}
+.about12 .about12box .about12_b{ width:998px;}
+.about12 .about12box .about12_c{ width:890px; height:130px; margin:0 auto;margin-top:40px;}
+.all .about12 .about12box .about12_c span{ color:#c61450; font-size:38px; font-weight:bold;}
+.all .about12 .about12box .about12_c p{ font-size:36px; color:#dc175c;}
+.about15{ width:998px; height:auto; overflow:hidden; float:left;}
+.about15 .about15box{width:895px; margin:0 auto; overflow:hidden; margin-top:40px;}
+.about15 .about15box .about15_a{height:30px;}
+.about15 .about15box .about15_a span{ color:#707070;font-size:14px; float:left;}
+.about15 .about15box .about15_a p{font-size:14px; color:#7a7a7a; float:left; margin-left:5px;}
+.about15 .about15box .about15_b{height:190px;}
+.about15 .about15box .about15_b p{font-size:40px;line-height:60px; color:#e41c64;}
+.about15 .about15box .about15_c{ height:80px; margin-top:30px;}
+.about15 .about15box .about15_c p{ font-size:24px; color:#717171; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+.about16{ width:998px; height:auto; overflow:hidden; float:left;}
+.about16 .about16box{ width:895px; border-top:1px solid #d2d2d2; margin:0 auto; margin-top:30px;}
+.about16 .about16box .about16_a{height:135px; width:895px; border-bottom:1px solid #d2d2d2;}
+.about16 .about16box .about16_a .about16_a_A{ width:280px; height:60px; float:left; /*border:1px solid #999;*/ margin-top:40px;}
+.about16 .about16box .about16_a .about16_a_A span{ font-size:24px; font-weight:bold; color:#757575;}
+.about16 .about16box .about16_a .about16_a_A p{ color:#a7a7a7; font-size:14px; font-family: Verdana, Geneva, sans-serif;}
+.about16 .about16box .about16_a .about16_a_B{width:510px; height:60px; float:left; /*border:1px solid #999;*/ margin-top:40px;}
+.about16 .about16box .about16_a .about16_a_B p{ font-size:17px; color:#a5a5a5;}
+.about16 .about16box .about16_a .about16_a_C{ width:50px; height:20px; float:right; /*border:1px solid #999;*/ margin-top:40px;}
+.about17{ width:998px; height:auto; overflow:hidden; float:left;}
+.about16 .about16box .about16_a .about16_a_C a{ color:#c9c9c9; font-size:6px; font-family: Arial, Helvetica, sans-serif;}
+.about16 .about16box .about16_a .about16_a_C a:hover{ color:#e6145f;}
+.huawai {width: 1000px; margin:0 auto;}
+.huawai .huali{width: 1000px; margin:0 auto;}
+.huawai .huali .huabox{ width:285px; height:405px;background:url(/images/backbox.jpg); overflow:hidden; float:left; margin-top:20px;}
+.huawai .huali .huabox .shang{ width:240px; height:150px; margin:0 auto; margin-top:20px;}
+.huawai .huali .huabox .shang img{width:240px; height:150px;}
+.huawai .huali .huabox .zhong{ width:240px; height:50px;margin:0 auto; /*border:1px solid #ccc;*/ margin-top:10px; overflow:hidden;}
+.huawai .huali .huabox .zhong p{font-size:20px; font-weight:bold;line-height:20px; padding:0; margin:0;}
+.huawai .huali .huabox .zhong .pp{ width:240px;color:#d70252; margin-top:10px;}
+.huawai .huali .huabox .xia{ width:240px; height:70px; margin:0 auto; border-bottom:2px solid #dcdcdc; border-top:2px solid #dcdcdc; margin-top:10px; overflow:hidden; font-size:12px; line-height:24px; color:#737373; padding:0;}
+.huawai .huali .huabox .more666{ width:70px; height:20px; margin-top:40px; background:#d4004f; line-height:20px; text-align:center; margin-left:20px; overflow:hidden;}
+.huawai .huali .huabox .more666 a{ text-decoration:none; font-size:12px; color:#FFF; height:20px; line-height:20px; overflow:hidden;}
+.huawai .huali .hua_marginleft45{ margin-left:45px;}
+.huawai .huali .hua_marginleft25{ margin-left:25px;}
+</style>
+</head>
+<body >
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<div class="all"> 
+ 	<div class="about1">
+      <div class="about1_a">  
+      <img src="/images/about/about_01_01.jpg" />
+        <img src="/images/about/about_01_02.jpg" border="0" usemap="#Map3"/>
+        <map name="Map3" id="Map3">
+          <area shape="rect" coords="49,6,268,45" href="#one" />
+          <area shape="rect" coords="377,7,628,51" href="#two" />
+          <area shape="rect" coords="704,7,951,47" href="#three" />
+        </map>
+        <img src="/images/about/about_01_03.jpg"/>
+      </div>
+        <a name="one">
+      <div class="about1_b">
+        <div class="about1_b_a">花匠速拓</div>
+        <div class="about1_b_b">
+        <p><b>HUAJIANG</b>&nbsp;&nbsp;MARKETING</p>
+        <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;">花匠速拓品牌网络整合营销机构</p>
+        </div><!--about1_b_b-->
+      </div><!--about1_b-->
+        </a>      
+    </div><!--about1-->
+    <div class="about2">
+      <div class="about2box">
+        <div class="about2_a">
+        <img src="/images/about/about2_a.jpg"/>
+        <p>ABOUT&nbsp;&nbsp;HUAJIANG</p></div>
+        <div class="about2_b">
+          <p>花匠速拓<span>/</span>品牌网络整合营销机构</p>
+          <p style="margin-top:15px;">专注于国内连锁品牌研究</p>
+        </div>
+        <div class="about2_c">领先整合品牌定义、识别、营销力沟通和品牌管理系统，集品牌口碑营销、影视广告、数字互动营销、品牌VI视觉设计、高端网站建设、微品牌营销于一身的数字化全网营销服务专业机构</div>
+      </div><!--about2box-->
+      <div class="about2box" style="margin-top:35px;"> 
+        <div class="about2_a">
+        <img src="/images/about/about2_a.jpg"/>
+        <p>品牌行动指南&nbsp;vol&nbsp;1.0</p></div>
+        <div class="about2_b">
+          <p>花匠速拓<span>/</span>协助连锁经营企业建立品牌为核心使命</p>
+          <p style="margin-top:15px;">并透过建立合理<span>/</span>合适的机制及流程</p>
+        </div>
+        <div class="about2_c">协助中国企业在市场营销与店铺网点拓展当中获得具有强大价值的品牌形象的支持，帮助企业提升品牌附加值。</div>
+      </div><!--about2box-->
+    </div><!--about2-->
+    <div class="about4">
+     <div class="about4box">
+      <div class="about4_a">
+        <div class="about4_a_left">
+          <p style=" margin-top:30px;">我们是谁？</p>
+          <p>WHO ARE YOU?</p>
+        </div><!--bout4_a_left-->
+        <div class="about4_a_right"><p>花匠速拓品牌网络整合营销机构</p></div>
+      </div><!--about4_a-->
+      <div class="about4_b">
+        <div class="about4_b_A" style=" margin-top:20px;"><b>花匠速拓</b><!--<span>®</span>--><p>中国首家集网络品牌推广、品牌整合设计、品牌网站定制的全网营销专业机构</p></div>
+        <div class="about4_b_A"><b>花匠速拓</b><!--<span>®</span>--><p>中国最全面提供品牌营销顾问式咨询服务团队，开创市场领军品牌</p></div>
+        <div class="about4_b_A"><b>花匠速拓</b><!--<span>®</span>--><p>中国品牌网络整合营销机构，深度聚集连锁行业品牌实战营销全案</p></div>
+      </div><!--about4_b-->
+     </div><!--about4box-->
+          <div class="about4box" style="margin-top:60px;">
+      <div class="about4_a">
+        <div class="about4_a_left">
+          <p style=" margin-top:30px;">我们在做什么？</p>
+          <p>DOING WHAT?</p>
+        </div><!--bout4_a_left-->
+        <div class="about4_a_right"><p>花匠速拓品牌网络整合营销机构</p></div>
+      </div><!--about4_a-->
+      <div class="about4_c" style="margin-top:25px;">传统品牌的拯救者，互联网品牌的缔造者，协助惬意品牌成功转型，搭建品牌与消费者的互动平台，开创品类时代领军品牌。</div><!--about4_c-->
+     </div><!--about4box-->  
+    </div><!--about4-->
+    <div class="about6">
+      <div class="about6box">
+        <div class="about6_a">
+          <div class="about6_a_A"><img src="/images/about/about6_a.jpg" /></div>
+          <div class="about6_a_B">
+            <p>INTEGRATION</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p> 
+            <ul>
+              <li><b>·</b>品牌定义</li>
+              <li><b>·</b>创意执行</li>
+              <li><b>·</b>网络营销</li>
+              <li><b>·</b>活动推广</li>
+              <li><b>·</b>微信营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_b.jpg" /></div>
+          <div class="about6_a_B">
+            <p>VISUAL DESIGN</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌视觉设计</p> 
+            <ul>
+              <li><b>·</b>品牌设计&nbsp;VI设计&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>品牌连锁&nbsp;零售环境</li>
+              <li><b>·</b>产品包装&nbsp;视觉营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:31px;">
+          <div class="about6_a_A"><img src="/images/about/about6_c.jpg" /></div>
+          <div class="about6_a_B">
+            <p>I DESIGN</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌网站定制</p> 
+            <ul>
+              <li><b>·</b>营销型网站</li>
+              <li><b>·</b>购物网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>新闻网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>移动网站&nbsp;&nbsp;&nbsp;</li>
+              <li><b>·</b>微商城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <li>......</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+        <div class="about6_a" style=" margin-left:30px;">
+          <div class="about6_a_A"><img src="/images/about/about6_d.jpg" /></div>
+          <div class="about6_a_B">
+            <p>INTEGRATION</p> 
+            <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p> 
+            <ul>
+              <li><b>·</b>品牌定义</li>
+              <li><b>·</b>创意执行</li>
+              <li><b>·</b>网络营销</li>
+              <li><b>·</b>活动推广</li>
+              <li><b>·</b>微信营销</li>
+            </ul>       
+          </div>  <!--bout6_a_B-->        
+        </div><!--about6_a-->
+        
+      </div><!--about6box-->
+    </div><!--about6-->
+    <div class="about7">
+     <div class="about7box">
+      <div class="about7_a">
+        <span>BRAND THINKING MODE</span>
+        <p>我们的品牌思维方式</p>
+      </div><!--about_a-->
+      <div class="about7_b">
+        <img src="/images/about/about_07_04.jpg" />
+        <img src="/images/about/about_07_05.jpg" />
+        <img src="/images/about/about_07_06.jpg" />
+        <img src="/images/about/about_07_07.jpg" />
+        <img src="/images/about/about_07_08.jpg" />
+        <img src="/images/about/about_07_09.jpg" />
+        <img src="/images/about/about_07_10.jpg" />
+      </div><!--about7_b-->
+     </div><!--about7box-->
+    </div><!--about7-->
+   <div class="about7">
+     <div class="about7box">
+      <div class="about7_a">
+        <span>HUAJIANG SUCCESSFUL CASE</span>
+        <p>花匠速拓成功案例</p>
+      </div><!--about_a-->
+      <div class="about7_b">
+        <img src="/images/about/about_08_04.jpg" />
+        <img src="/images/about/about_08_05.jpg" />
+        <img src="/images/about/about_08_06.jpg" />
+        <img src="/images/about/about_08_07.jpg" />
+        <img src="/images/about/about_08_08.jpg" />
+        <img src="/images/about/about_08_09.jpg" />
+        <img src="/images/about/about_08_10.jpg" />
+      </div><!--about7_b-->
+     </div><!--about7box-->
+    </div><!--about7-->
+    <div class="about9">
+    	<div class="huawai">
+  <div class="huali">
+    <div class="huabox hua_marginleft45">
+      <div class="shang"><img src="/images/91.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>汇香坊.香薰图书馆</p>
+        <p class="pp">3年拓店600家的商业传奇</p>
+      </div>
+      <div class="xia">汇香坊全力打造中国香品行业领军品牌，联手花匠速拓网络营销机构，实现3年拓店600家的商业传奇，已经赢得1054320名消费者掌声。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150604635.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+     <div class="shang"><img src="/images/92.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>美酒佳 GOOD WINE</p>
+        <p class="pp">香港美酒佳专门店的蜕变</p>
+      </div>
+      <div class="xia">花匠速拓为GOOD WINE量身定制了一整套网络整合营销方案，通过一系列营销活动，提高GOOD WINE美酒佳红酒专门店中国市场品牌曝光。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+         <div class="shang"><img src="/images/93.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>台湾芋观园</p>
+        <p class="pp">2年成功拓展385家甜品店铺</p>
+      </div>
+      <div class="xia">台湾甜品专家携手花匠速拓网络，打造365天持续盈利的特色店铺，2年成功在中国市场拓展385家连锁店铺，成为亚洲甜品市场领军品牌。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615668.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft45">
+      <div class="shang"><img src="/images/94.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>水碧泉</p>
+        <p class="pp">打造微商长线品牌航母</p>
+      </div>
+      <div class="xia">2014年花匠速拓品牌网络整合营销机构，推出震惊业界的微商品牌孵化器，国内矿泉养肤领军品牌水碧泉通过花匠速拓打造微商长线品牌航母。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150608645.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+      <div class="shang"><img src="/images/95.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>豪的健康车居</p>
+        <p class="pp">汽车后市场如何全国连锁？</p>
+      </div>
+      <div class="xia">2014年8月豪的与花匠速拓合作，对定制移动端与pc端网站，进行360度品牌全网整合营销，全力打造“健康车居生活馆”连锁加盟项目。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615666.html">点击进入></a></div>
+    </div><!--huabox-->
+    <div class="huabox hua_marginleft25">
+      <div class="shang"><img src="/images/96.jpg" width="240" height="150" /></div>
+      <div class="zhong">
+        <p>兰心雅素</p>
+        <p class="pp">中高端面膜品牌.领跑者</p>
+      </div>
+      <div class="xia">兰心雅素，柯马集团下知名品牌，2015年携手花匠速拓通过互联网+营销思维，激活全国300家渠道代理商，成中高端面膜品牌，领跑者。</div>
+      <div class="more666"><a href="http://gzhuajiang.com/anli/zhyst/20150615667.html">点击进入></a></div>
+    </div>
+  </div><!--"huali-->
+</div><!--huawai-->
+  </div><!--about9-->
+   
+    <div class="about11">
+    <a name="two">
+      <div class="about11box">
+        <div class="about11_a">
+          <div class="about11_a_left"><img src="/images/about/about11_a.jpg" /><p style=" margin-top:40px;">BRAND</p><p>WISHES</p></div>
+          <div class="about11_a_right"><p>花匠速拓的愿望<span>/</span>为梦想者种植品牌</p></div>
+        </div><!--about11_a-->
+        <div class="about11_b"><img src="/images/about/about11_b.jpg" /></div>
+        <div class="about11_c">品牌播种</div>
+        <div class="about11_c">品牌灌溉</div>
+        <div class="about11_c">品牌传播</div>
+      </div><!--about11box-->
+    </a> 
+    </div><!--about11-->
+    <div class="about12">
+      <div class="about12box">
+        <div class="about12_a">
+          <div class="about12_a_left"><img src="/images/about/about11_a.jpg" /><p style="margin-top:40px;">COME</p><p>WITH US</p></div>
+          <div class="about12_a_right"><p>花匠速拓<span>/</span>仅为改变而存活</p></div>
+        </div><!--about12_a-->
+        <div class="about12_b">
+        <img src="/images/about/about_12_04.jpg" />
+        <img src="/images/about/about_12_05.jpg" />
+        <img src="/images/about/about_12_06.jpg" />
+        <img src="/images/about/about_12_07.jpg" />
+        <img src="/images/about/about_12_08.jpg" />
+        <img src="/images/about/about_12_09.jpg" />
+        <img src="/images/about/about_12_10.jpg" />
+        </div><!--about12_b-->
+      </div><!--about12box-->
+    </div><!--about12-->
+    <div class="about12">
+      <div class="about12box">
+        <div class="about12_a">
+          <div class="about12_a_left"><img src="/images/about/about11_a.jpg" /><p style="margin-top:40px;">COME</p><p>WITH US</p></div>
+          <div class="about12_a_right"><p>花匠速拓<span>/</span>为品牌业绩而生</p></div>
+        </div><!--about12_a-->
+        <div class="about12_c">
+          <span>品牌突破</span>
+          <p>营销型官网+品牌整合营销+全国招商会议</p>        
+        </div><!--about12_c-->
+      </div><!--about12box-->
+    </div><!--about12-->
+    <div class="about14">
+    	<img src="/images/about/about_14_01.jpg" />
+        <img src="/images/about/about_14_02.jpg" />
+        <img src="/images/about/about_14_03.jpg" />
+        <img src="/images/about/about_14_04.jpg" />
+        <img src="/images/about/about_14_05.jpg" />
+        <img src="/images/about/about_14_06.jpg" />
+        <img src="/images/about/about_14_07.jpg" />
+        <img src="/images/about/about_14_08.jpg" />             
+  </div><!--about14-->
+  <a name="three">
+    <div class="about15">
+      <div class="about15box">
+        <div class="about15_a"><span>▼</span><p>我们的优势</p></div>
+        <div class="about15_b">
+          <p>花匠速拓透过故事精彩 / 文案笔触 /  设计创意 /</p> 
+          <p>影视画面 / 氛围形塑 / 新媒体力量 /</p>
+          <p>品牌营销培训及团队合作</p>
+        </div>
+        <div class="about15_c">
+          <p>我们将每个企业品牌精神与文化，附着品牌整合营销传播上，配合活用网络语言与精准的媒体，传递远扬，打动人心。</p>
+        </div>
+        
+      </div><!--about15box-->
+    </div><!--about15--> 
+  </a>
+    <div class="about16">
+      <div class="about16box">
+        <div class="about16_a">
+          <div class="about16_a_A"><span>创建全新品牌</span><p>CREATE BRAND</p></div>
+          <div class="about16_a_B"><p>基于全新的产品、服务或商业模式，制定精准的品牌策略，以具备感染力的营销语言力强化品牌竞争力。</p></div>
+          <div class="about16_a_C"><a href="#">MORE+</a></div>          
+        </div><!--about16_a-->
+        <div class="about16_a">
+          <div class="about16_a_A"><span>重塑/改造现有品牌</span><p>REMODELING BRAND</p></div>
+          <div class="about16_a_B"><p>基于改造动因分析，制定适合当下竞争格局的品牌策略，重塑目标客户对品牌的认知，传递品牌新的态度。</p></div>
+          <div class="about16_a_C"><a href="#">MORE+</a></div>          
+        </div><!--about16_a-->
+        <div class="about16_a">
+          <div class="about16_a_A"><span>升级/优化现有品牌</span><p>UPGRADE BRAND</p></div>
+          <div class="about16_a_B"><p>传承品牌发展过程中的优秀因素，结合新的洞察，将原本零散的品牌基础片段形成更聚集的品牌语言。</p></div>
+          <div class="about16_a_C"><a href="#">MORE+</a></div>          
+        </div><!--about16_a-->
+        <div class="about16_a">
+          <div class="about16_a_A"><span>品牌落地与管理</span><p>BRAND LANDING</p></div>
+          <div class="about16_a_B"><p>在启用全新品牌之后，需要不断调整、优化、落地营销。我们非常乐意为企业提供年度品牌维护管理工作。</p></div>
+          <div class="about16_a_C"><a href="#">MORE+</a></div>          
+        </div><!--about16_a-->
+      </div><!--about16box-->
+
+    </div><!--about16-->
+    <div class="about1" style=" margin-top:70px;">
+      <div class="about1_b">
+        <div class="about1_b_a">花匠速拓</div>
+        <div class="about1_b_b">
+        <p><b>HUAJIANG</b>&nbsp;&nbsp;MARKETING</p>
+        <p style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;">花匠速拓品牌网络整合营销机构</p>
+        </div><!--about1_b_b-->
+      </div><!--about1_b-->
+    </div><!--about1-->
+ 
+</div>
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

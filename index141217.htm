@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script src="/templets/default/style/jquery.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("a[_for]").mouseover(function(){
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+		$("a[_for=flink_1]").mouseover();
+	});
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+  	<div class="wrapper top-header">
+    	<div class="header-contact floatright">
+			<!--<a href="#">广州</a><span>|</span><A href="#" target="_blank">成都</A>-->
+            <p>业务垂询<span>（+86） </span><b> 020 2210 5430</b></p>
+        </div>
+    	<div class="fl">
+        	<a href="/" class="logo fl"><img src="/templets/default/images/logo.png" width="232" height="50"/></a>
+        	<h1>国内连锁行业网络营销领域的革新者—花匠网络</h1>
+            <h2>花匠网络助连锁企业深耕中国市场，实现品牌跨越式发展</h2>
+        </div>
+        <div class="cb"></div>
+    </div>
+    <!--<hr/>-->
+    <div class="foot-header">
+    <div class="wrapper">
+    	<style>
+.sub-nav .sub-list-at{ color:#e5004a;}
+
+.case-radio label { width:152px; margin-bottom:10px; margin-right:50px;}
+.tab-radio div a,.tab-radio div { display:block; text-align:center; width:152px}
+.nav > li > p{ background:none;}
+</style>
+<!--<div class="header-search fr">
+        	<form>
+            <input type="text" id="searchTxt" name="keywords" value="搜索" onblur="if(this.value=='') this.value='搜索';" onkeypress="EnterPress(event)" onkeydown="EnterPress()" onclick="ClearContent(this);">
+            <button id="searchBtn" class="hideFont" type="submit"></button>
+          </form>
+</div>-->
+<ul class="nav">
+    <li>
+    <p style="background-color:#e95412;"><a href="http://gzhuajiang.com" style="color:#FFF;"><span>></span>关于品牌整合创新</a></p>
+    <div class="menu-nav">
+        <ul>
+			<li>
+            <a href="#">            <img src="/image/m-icon001.png" class=" fl"/></a>
+                        </a>
+            <a href="#">健康 食品 快消</a></li><li>
+            <a href="#">            <img src="/image/m-icon002.png" class=" fl"/></a>
+                        </a>
+            <a href="#">时尚 珠宝 鞋包</a></li><li>
+            <a href="#"><img src="/image/m-icon003.png" class=" fl"/></a>
+                        </a>
+            <a href="#">酒店 家具 环保</a></li><li>
+            <a href="#"><img src="/image/m-icon004.png" class=" fl"/></a>
+                        </a>
+            <a href="#">电商 互联网  科技</a></li>            
+            
+            <li>
+            <a href="#"><img src="/image/m-icon005.png" class=" fl"/>
+                        
+            <a href="#">O2O品牌落地</a></li><li>
+            <a href="#"><img src="/image/m-icon006.png" class=" fl"/>
+                        
+            <a href="#">品牌咨询</a></li><li>
+            <a href="#"><img src="/image/m-icon007.png" class=" fl"/>
+                        
+            <a href="#">品牌设计</a></li><li>
+            <a href="#"><img src="/image/m-icon008.png" class=" fl"/>
+                        
+            <a href="#">整合营销</a></li><li>
+            <a href="#"><img src="/image/m-icon009.png" class=" fl"/>
+                        
+            <a href="#">视频广告</a></li><li>
+            <a href="#"><img src="/image/m-icon010.png" class=" fl"/>
+                        
+            <a href="#">网站定制</a></li><li>
+            <a href=""><img src="/image/m-icon011.png" class=" fl"/>
+                        
+            <a href="">微营销</a></li>           
+        </ul>
+    </div>
+    </li>
+    <li >
+            	<a href="/about.html">关于花匠</a>
+                            </li>
+    <li ><a href="#">动态</a>
+    	    </li>
+    <li ><a href="#">案例</a>
+        </li>
+    <li ><a href="#">解决方案</a>
+               
+    </li>
+    <li ><a href="#">整合营销</a>
+    	    </li>
+    <li ><a href="#">品牌视觉</a></li>
+    <li ><a href="#">网站定制</a>
+    	    </li>
+             <li ><a href="#">微营销</a>
+    	    </li>
+    <li ><a href="#">联系</a></li>
+    <li ><a href="#">招商加盟 </a>
+    	    </li>
+    <div class="cb"></div>
+</ul>
+        <div class="cb"></div>
+    </div>
+    </div>
+  </div>
+  
+  <style>  	.tab-radio div a, .tab-radio div{ /*width:162px;*/  margin-right:21px;}
+	.tab-radio label{ margin:0px 0px 0px 52px;}
+	.tab-radio div a, .tab-radio div{ text-align:inherit; width:auto; margin-left:5px;margin-right:0}
+  </style>
+  				<div id="banner">
+                	<div class="banner"><!--banner start--><!--banner start-->
+                    		<div class="carousel">
+                            	<ul>
+                                <li><a href=""><img src="/templets/default/images/hj1.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj2.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj3.jpg"/></a></li>
+                                </ul>
+                              </div>
+                              <!--banner end-->
+                              <!--banner end-->
+                              </div>
+                              	<ul class="nav-banner">
+                               <li><a href=""><img src="/templets/default/images/hj1.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj2.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj3.jpg"/></a></li>
+                                 <li><a href=""><img src="/templets/default/images/hj4.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj5.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj6.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj7.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj8.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj1.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj2.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj3.jpg"/></a></li>
+                                </ul>
+                                <div class="banner-wrapper">
+                                	<div class="focus"><!--自动生成焦点与统计信息，留空勿删-->
+                                    </div></div></div>
+                                   
+                                    <div id="tab">
+                                    	<div class="content-menu">
+                                        <ul>
+                                        	<li><a href="#"><img src="/image/c-icon001.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon002.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon003.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon004.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon005.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon006.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon007.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon008.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon009.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon010.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon011.png" /></a></li>
+                                            </ul>
+                                            </div>
+                                            <div class="wrapper">
+                                            	<table width="100%" border="1" bordercolor="white" class="major-list tab-table">
+                                                	<tr>
+                                                    <td colspan="2" width="333" class="major-item">
+                                                    <a href="#" style="background:url(/image/201410201638.jpg) repeat;z-index:2;">
+                                                    <span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>时尚</h1><p>专注时尚领域品牌系统全案</p>
+                                                    </span><span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    <td rowspan="2" width="333" class="major-item" height="360">
+                                                    <a href="#" style="background:url(/image/201410201712.jpg) repeat; height:359px;z-index:2;"><span class="txt-hide front-face" style="height:359px;">
+                                                    <h1><b>花匠</b>品牌咨询</h1><p>跨界咨询与整合体验创新设计</p></span>
+                                                    <span class="back-face tab-black"></span></a>
+                                                    </td>
+                                                    <td colspan="2" width="300" class="major-item">
+                                                    <a href="/index.php/Case/list/38.html" style="background:url(/image/201410301005.jpg) repeat;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b>O2O</h1><p>全渠道体验，品牌时代新机</p></span><span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td colspan="2" width="333" class="major-item">
+                                                    <a href="#" style="background:url(/image/201410201640.jpg) repeat;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b>大健康</h1>
+                                                    <p>健康产业领袖品牌创建者</p></span>
+                                                    <span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    <td colspan="2"  width="333" class="major-item"><a href="#" style="background:#1c1c1c;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b> 创投</h1><p>花匠BIIC品牌孵化创新平台</p></span><span class="back-face tab-red"></span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td rowspan="2" width="166.5" class="major-item"><a href="/index.php/Case/list/42.html"  style="background:#f7aa28; z-index:2;"><span class="txt-hide front-face" style="background:#f7aa28;height:340px;"><h1><b>花匠</b><br/>品牌营销</h1><p class="bottom-text">跨界资源营销</p></span><span class="back-face tab-red"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b><br/>品牌视频</h1><p class="bottom-text">品牌理念直达心智</p></span><span class="back-face tab-red"></span></a></td>
+                                                    <td  width="333" class="major-item"><a href="/index.php/Case/list/43.html" style="background:#e95412;z-index:2;"><span class="txt-hide front-face" style="height:340px;"><h1><b>花匠</b>新媒体</h1><p class="bottom-text" style="bottom:188px;">互联网时代新形态品牌传播</p></span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#e95412;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b>学院</h1><p class="bottom-text">助力中国品牌教育</p></span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="/index.php/Case/list/41.html" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b><br/>零售店铺</h1><p class="bottom-text">释放品牌空间营销力</p></span><span class="back-face tab-red"></span></a></td> 
+                                                    </tr> 
+                                                    <tr> 
+                                                    <td  width="166.5" class="major-item"><a href="/index.php/Openday/list/74.html" style="background:#e95412;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b><br/>开放日</h1><p class="bottom-text">品牌智享社交圈</p></span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="333" class="major-item"><a href="/index.php/Case/list/40.html" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face"><h1><b>花匠</b>品牌执行</h1><p class="bottom-text">全产业链资源，
+                        <br/>确保设计制作精准落地
+                        </p></span><span class="back-face tab-red"></span></a></td>
+                        <td colspan="2" width="333" class="major-item"><a href="/index.php/Case/list/46.html" style="background:#e95412;z-index:2;"><span class="txt-hide front-face" ><h1><b>花匠</b>品牌电商</h1><p class="bottom-text">第一家专注电商品牌创建及运营机构</p></span><span class="back-face tab-black"></span></a></td>
+                        </tr>
+                        </table>
+                       
+                        </div></div>
+
+
+<script src="/templets/default/js/index.js"></script><script type="text/javascript">function msgsend(){
+	 var msg=[],i=0;
+	if($('#title1').val()==''){
+		msg[i++]= '请输入您的姓名';
+	}
+	if($('#company1').val()==''){
+		msg[i++]= '请输入您所在的公司';
+	}
+	if($('#position1').val()==''){
+		msg[i++]= '请输入您的职位';
+	}
+	if($('#email1').val()==''){
+		msg[i++]= '请输入您的邮箱';
+	}
+	if($('#wechat1').val()==''){
+		msg[i++]= '请输入您的微信';
+	}
+
+
+	if($('#content_1').val()==''){
+		msg[i++]= '请输入您的留言内容';
+	}
+	if($('#verifyCode1').val()==''){
+		msg[i++]= '请输入验证码';
+	}
+	
+	
+	if(msg.length>0){
+		alert(msg.join('\r\n'));
+		return false;
+	}
+	return true;
+	alert();
+}
+
+ 
+</script>
+
+
+ <div id="footer">
+     <!-- <div class="top-footer">
+        	<div class="wrapper">
+            	<img src="/Public/image/foot-logo.png" width="245" />
+            </div>
+      </div>-->
+      <div class="foot-wrapper">
+      	<div class="wrapper">
+      	<ul class="foot-long-list fr">
+        	<li><h1 class="foot-list-title"><span class="fr">></span>我们的客户</h1></li>
+        	<li>
+            	<table width="100%" border="0">
+              <tr>
+                <td><a href="#">汇香坊 </a></td>
+                <td><a href="#">美酒佳 </a></td>
+                <td><a href="#">笆笆莎 </a></td>
+                <td><a href="#">芋观园 </a></td>
+              </tr>
+              <tr>
+                <td><a href="#">雅纤宁 </a></td>
+                <td><a href="#">卉舍 </a></td>
+                <td><a href="#">Miss Qute</a></td>
+                <td><a href="#">豪的车居 </a></td>
+              </tr>
+              <tr>
+                <td><a href="#">美华少儿英语</a></td>
+                <td><a href="#">37°Love</a></td>
+                <td><a href="#">罗浮宫家居集团 </a></td>
+                <td><a href="#">千禧之星 </a></td>
+              </tr>
+              <tr>
+                <td><a href="#">VISCAP</a></td>
+                <td><a href="#">水碧泉 </a></td>
+                <td><a href="#">索芙特   </a></td>
+                <td><a href="#">新西兰?高培</a></td>
+              </tr>
+              <tr>
+                <td><a href="#">高端时尚网  </a></td>
+                <td><a href="#">中国化妆品网 </a></td>
+                <td><a href="#">第三娱乐网 </a></td>
+                <td><a href="#">miidii   </a></td>
+              </tr>
+              <tr>
+                <td><a href="#">中国餐饮品牌网</a></td>
+                
+              </tr>
+              
+            </table>
+            </li>
+        </ul>
+      	<ul class="foot-short-list fl">
+        	<li><h1 class="foot-list-title"><span class="fr">></span>关于花匠</h1></li>
+
+
+            <li>
+            	<p>国内连锁行业网络营销领域的革新者——花匠网络，广州市花匠网络科技有限公司（花匠网络），是国内首家完整具备连锁品牌整合传播能力的行销与策划机构，在品牌网络整合营销领域的成果正在不断刷新业界标准，引领整个中国的品牌网络营销未来走向。</p>
+            </li>
+        </ul>
+        <ul class="foot-short-list fl">
+        	<li><h1 class="foot-list-title"><span class="fr">></span>花匠创新业务单元</h1></li>
+        	<li>
+            <table width="100%" border="0">
+              <tr>
+                <td><a href="#">品牌咨询</a></td>
+                <td><a href="#">O2O品牌落地</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><a href="#">品牌设计</a></td>
+                <td><a href="#">整合营销</a></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><a href="#">视频广告</a></td>
+                <td><a href="#">网站定制</a></td>
+                
+              </tr>
+              <tr>
+                <td><a href="#">微营销</a></td>
+                <td><a href="#">移动策略</a></td>
+                <td></td>
+              </tr>
+             
+            </table>
+            </li>
+        </ul>
+        <div class="cb"></div>
+        <ul class="foot-longest-list fr">
+        	<li><h1 class="foot-list-title"><span class="fr">></span>花匠的荣誉</h1></li>
+        	<li>
+            <table width="100%" border="0">
+              <tr>
+                <td><span>•</span><a href="#">获选影响中国企业管理实践十大新锐公司”</a></td>
+                <td><span>•</span><a href="#">花匠品牌基因课程进入广州大学</a></td>
+                <td><span>•</span><a href="#">受邀为汕头大学、广州美院开设品牌设计课程</a></td>
+              </tr>
+             
+            </table>
+            </li>
+        </ul>
+        <ul class="foot-short-list fl f-l">
+        	<li><a href="#">友情链接</a></li>
+        	<li style="margin-top:2px;"><a href="#">联系我们</a></li>
+        </ul>
+        <div class="cb"></div>
+      </div>
+      </div>
+		<div style=" width:1000px; margin:0 auto;font-size:12px;color:#ffffff;margin-top:20px;"><span style="margin-right:50px;">2013-2014  广州花匠网络科技有限公司. <a href="http://www.miitbeian.gov.cn/">粤ICP备14073626号-1</a> </span><span>本网站所有图片及资料均为本公司版权所有，对于任何形式的侵权行为，我们将保留一切追究法律责任的权利. </span></div>
+        <div id="backTop"><img src="/templets/default/images/top.png" /> </div>
+  </div>
+  <div id="sidebar">
+    <ul class="sidebar-top-list">
+      <li><!--<a href="#"><img src="/Public/image/201410220940.png" />--></a></li>
+      <li>
+        <div class="s-button"><!--<img src="/Public/image/201410220945.png" />-->
+          <div class="online-gw zxgw">
+            <div class="online-content">
+              <p>希望与我们建立合作或咨询相关事宜，可以直接联系我们的专业顾问。 </p>
+              <p><img src="/Public/image/code.png" /></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="sidebar-foot-list">
+      <li> <a href="#" class="s-button"><!--<img src="/Public/image/newweibo.png" />--></a>
+        <div class="s-button newweixin">
+          <div class="online-gw wx">
+            <div class="online-content">
+              <p><img src="/Public/image/201411291551.png" /></p>
+            </div>
+          </div>
+        </div>
+        <div class="s-button newliuyan">
+          <div class="online-gw ly">
+            <form class="online-content" id="myform" method="post" action="/index.php?g=User&m=Post&a=insert" name="myform" onsubmit="return msgsend()">
+                <input id="catid" type="hidden" value="81" name="catid">
+                <input id="catid" type="hidden" value="16" name="moduleid">
+                <input type="hidden" value="1" name="lang">
+              <h1>联系我们</h1>
+              <p>姓名<span class="red">*</span>
+                <input type="text"  name="title" id="title1" />
+              </p>
+              <p>公司<span class="red">*</span>
+                <input type="text" value="" name="company" id="company1" validate="required:true" />
+              </p>
+              <p>职务<span class="red">*</span>
+                <input type="text" value="" name="position" id="position1" validate="required:true" />
+              </p>
+              <p>邮箱<span class="red">*</span>
+                <input type="text" value="" name="email" id="email1" validate="maxlength:40, required:true, email:true" />
+              </p>
+              <p>微信<span class="red">*</span>
+                <input type="text" value="" name="wechat" id="wechat1" validate="required:true" />
+              </p>
+              <p><b>请将您关心的问题填写在下方，
+                我们将尽快为您服务。</b></p>
+              <p>
+                <textarea name="content" id="content_1"></textarea>
+              </p>
+              <p>
+              
+                <input type="text" value="请输入验证码" onclick="ClearContent(this)" class="yzm" validate="required:true, en_num:true" id="verifyCode" name="verifyCode"/>
+                
+                <img id="verifyImage" title="点击刷新验证码" onclick="javascript:resetVerifyCode();" src="index.php?m=Index&amp;a=verify" />
+                
+                </p>
+              <p class="submit">
+                <input type="submit" value=""/>
+              </p>
+            </form>
+          </div>
+        </div>
+        <!--<a href="#"><img src="/Public/image/tel.png" /></a>--> 
+      </li>
+      <li>
+        <div class="s-button"></div> 
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="/templets/default/js/common.js"></script>   
+</body>
+</html>

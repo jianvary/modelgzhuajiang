@@ -1,0 +1,144 @@
+
+<div class="footer">
+  <div class="partners">
+    <span>合作客户</span>
+    <p>最新公司合作客户</p>
+  <img src="/images/partners.jpg"/> </div><!--partners-->
+  <div class="footer_title">
+    <div class="ftitle_box">
+      <div class="ftitle_a"><img src="/images/footer/footer_01.png" width="50" height="50" /></div>
+      <div class="ftitle_b">国际领先的品牌设计理念与品牌管理经验，使我们始终保持行业的领先设计思维与工作方法！</div>
+      {dede:type typeid='1'}<a href='[field:typeurl/]' [field:rel/]><div class="ftitle_c">花匠速拓优势</div></a>{/dede:type}
+    </div><!--ftitle_box-->
+  </div><!--footer_title-->
+  <div class="footercontent">
+    <div class="fcontent_box">
+      <div class="fcontent_a">
+       <div class="fcontent_a_1">公司动态</div><!--fcontent_a_1-->
+       {dede:arclist row=1 typeid='16' limit='0,1' flag='c' titlelen='55'}
+       <div class="fcontent_a_2" style="margin-top:5px;"><a href="[field:arcurl/]">[field:title/]</a></div>
+       {/dede:arclist}
+       {dede:arclist row=1 typeid='16' limit='1,5' flag='c' titlelen='55'}
+       <div class="fcontent_a_2"><a href="[field:arcurl/]">[field:title/]</a></div>
+       {/dede:arclist}
+      </div><!--fcontent_a--> 
+      <div class="fcontent_b">
+        <div class="fcontent_b_1">友情连接</div><!--fcontent_a_1-->
+        <div class="fcontent_b_2">
+      		{dede:flink linktype="2" row="40"}[field:link /]&nbsp;&nbsp;{/dede:flink}
+        </div>
+      </div><!--fcontent_b-->
+      <div class="fcontent_c">
+        <div class="fcontent_c_1">HUAJAING</div><!--fcontent_c_1-->
+        <div class="fcontent_c_2">您需要任何专业上的咨询，请直接与我们联系，我们将会尽快回复您的讯息并竭诚地为您服务。</div>
+        <div class="fcontent_c_3"><img src="/images/footer/footer_02.png" width="181" height="92" /></div>
+      </div><!--fcontent_c-->
+      <div class="fcontent_d">
+        <div class="fcontent_d_1">CONTACT</div>
+        <div class="fcontent_d_2">
+          <ul>
+            <li>Address</li>
+            <li>广州白云区国际单位二期A10栋</li>
+            <li>202A/202B</li>
+            <li>Telephone</li>
+            <li>400-0906-920</li>
+          </ul>    
+        </div>
+      </div><!--fcontent_d-->
+    </div><!--fcontent_box-->
+  </div><!--footercontent-->
+  <div class="footer_under"> 
+    <div class="funder_box">COPYRIGHTS 2013-2015. HUAJIANG CO.LTD. ALL RIGHTS RESERVED.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备14073626号-7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="color:#fff;" href="http://www.gzhuajiang.com/map/">网站地图</a></div>
+    <!--funder_box-->
+  </div><!--footer_under-->
+</div><!--footer-->
+	<script type="text/javascript">
+
+$(function() {
+
+    $.fn.toTop = function(options) {
+
+        var defaults = {
+
+            showHeight: 150,
+
+            speed: 1000
+
+        };
+
+        var options = $.extend(defaults, options);
+
+        $("body").prepend("<div id='totop'><a></a></div>");
+
+        var $toTop = $(this);
+
+        var $top = $("#totop");
+
+        var $ta = $("#totop a");
+
+        $toTop.scroll(function() {
+
+            var scrolltop = $(this).scrollTop();
+
+            if (scrolltop >= options.showHeight) {
+
+                $top.show()
+
+            } else {
+
+                $top.hide()
+
+            }
+
+        });
+
+        $ta.hover(function() {
+
+            $(this).addClass("cur")
+
+        }, function() {
+
+            $(this).removeClass("cur")
+
+        });
+
+        $top.click(function() {
+
+            $("html,body").animate({
+
+                scrollTop: 0
+
+            }, options.speed)
+
+        })
+
+    }
+
+});
+
+$(function() {
+
+    $(window).toTop({
+
+        showHeight: 100,
+
+        speed: 500
+
+    })
+
+});
+
+</script>
+    
+      <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3bc06a26a956efbd1cf59462fa228920";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fac892156eb7663e875efe56e07423e36' type='text/javascript'%3E%3C/script%3E")) </script>
+

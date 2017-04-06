@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.all{ width:1000px; height:auto; overflow:hidden; margin:15px auto;}
+.all img{ border:none;}
+.hj1{ width:998px; height:320px; overflow:hidden; float:left; /*border:1px solid #999;*/ }
+.hj2{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj3{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj4{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj5{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj6{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj7{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj8{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj9{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj10{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj11{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj12{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj13{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj14{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj15{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj16{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj17{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj18{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj19{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj20{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj21{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj22{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj23{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj24{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj25{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj26{ width:998px; height:auto; overflow:hidden; float:left;}
+.hj27{ width:998px; height:auto; overflow:hidden; float:left;}
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+</style>
+
+</head>
+<body class="articlelist">
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<div class="all">
+	<div class="hj1">
+    	<img src="/images/hj/hj_01_01.jpg" />
+        <img src="/images/hj/hj_01_02.jpg" />
+        <img src="/images/hj/hj_01_03.jpg" />
+        <img src="/images/hj/hj_01_04.jpg" />
+        <img src="/images/hj/hj_01_05.jpg" />
+        <img src="/images/hj/hj_01_06.jpg" />
+        <img src="/images/hj/hj_01_07.jpg" />
+        <img src="/images/hj/hj_01_08.jpg" />
+        <img src="/images/hj/hj_01_09.jpg" />
+        <img src="/images/hj/hj_01_10.jpg" />
+    </div><!--hj1-->
+    <div class="hj2">
+    	<img src="/images/hj/hj_02_01.jpg" />
+        <img src="/images/hj/hj_02_02.jpg" />
+        <img src="/images/hj/hj_02_03.jpg" />
+        <img src="/images/hj/hj_02_04.jpg" />
+        <img src="/images/hj/hj_02_05.jpg" />
+        <img src="/images/hj/hj_02_06.jpg" />
+        <img src="/images/hj/hj_02_07.jpg" />
+        <img src="/images/hj/hj_02_08.jpg" />
+        <img src="/images/hj/hj_02_09.jpg" />
+        <img src="/images/hj/hj_02_10.jpg" />
+    </div><!--hj2-->
+    <div class="hj3">
+    	<img src="/images/hj/hj_03_01.jpg" />
+        <img src="/images/hj/hj_03_02.jpg" />
+        <img src="/images/hj/hj_03_03.jpg" />
+        <img src="/images/hj/hj_03_04.jpg" />
+        <img src="/images/hj/hj_03_05.jpg" />
+        <img src="/images/hj/hj_03_06.jpg" />
+        <img src="/images/hj/hj_03_07.jpg" />
+        <img src="/images/hj/hj_03_08.jpg" />
+        <img src="/images/hj/hj_03_09.jpg" />
+        <img src="/images/hj/hj_03_10.jpg" />
+    </div><!--hj3-->
+    <div class="hj4">
+    	<img src="/images/hj/hj_04_01.jpg" />
+        <img src="/images/hj/hj_04_02.jpg" />
+        <img src="/images/hj/hj_04_03.jpg" />
+        <img src="/images/hj/hj_04_04.jpg" />
+        <img src="/images/hj/hj_04_05.jpg" />
+        <img src="/images/hj/hj_04_06.jpg" />
+        <img src="/images/hj/hj_04_07.jpg" />
+        <img src="/images/hj/hj_04_08.jpg" />
+        <img src="/images/hj/hj_04_09.jpg" />
+        <img src="/images/hj/hj_04_10.jpg" />
+    </div><!--hj4-->
+    <div class="hj5">
+    	<img src="/images/hj/hj_05_01.jpg" />
+        <img src="/images/hj/hj_05_02.jpg" />
+        <img src="/images/hj/hj_05_03.jpg" />
+        <img src="/images/hj/hj_05_04.jpg" />
+        <img src="/images/hj/hj_05_05.jpg" />
+        <img src="/images/hj/hj_05_06.jpg" />
+        <img src="/images/hj/hj_05_07.jpg" />
+        <img src="/images/hj/hj_05_08.jpg" />
+        <img src="/images/hj/hj_05_09.jpg" />
+        <img src="/images/hj/hj_05_10.jpg" />
+    </div><!--hj5-->
+    <div class="hj6">
+    	<img src="/images/hj/hj_06_01.jpg" />
+        <img src="/images/hj/hj_06_02.jpg" />
+        <img src="/images/hj/hj_06_03.jpg" />
+        <img src="/images/hj/hj_06_04.jpg" />
+        <img src="/images/hj/hj_06_05.jpg" />
+        <img src="/images/hj/hj_06_06.jpg" />
+        <img src="/images/hj/hj_06_07.jpg" />
+        <img src="/images/hj/hj_06_08.jpg" />
+        <img src="/images/hj/hj_06_09.jpg" />
+        <img src="/images/hj/hj_06_10.jpg" />
+    </div><!--hj6-->
+    <div class="hj7">
+    	<img src="/images/hj/hj_07_01.jpg" />
+        <img src="/images/hj/hj_07_02.jpg" />
+        <img src="/images/hj/hj_07_03.jpg" />
+        <img src="/images/hj/hj_07_04.jpg" />
+        <img src="/images/hj/hj_07_05.jpg" />
+        <img src="/images/hj/hj_07_06.jpg" />
+        <img src="/images/hj/hj_07_07.jpg" />
+        <img src="/images/hj/hj_07_08.jpg" />
+        <img src="/images/hj/hj_07_09.jpg" />
+        <img src="/images/hj/hj_07_10.jpg" />
+    </div><!--hj7-->
+    <div class="hj8">
+    	<img src="/images/hj/hj_08_01.jpg" />
+        <img src="/images/hj/hj_08_02.jpg" />
+        <img src="/images/hj/hj_08_03.jpg" />
+        <img src="/images/hj/hj_08_04.jpg" />
+        <img src="/images/hj/hj_08_05.jpg" />
+        <img src="/images/hj/hj_08_06.jpg" />
+        <img src="/images/hj/hj_08_07.jpg" />
+        <img src="/images/hj/hj_08_08.jpg" />
+        <img src="/images/hj/hj_08_09.jpg" />
+        <img src="/images/hj/hj_08_10.jpg" />
+    </div><!--hj8-->
+    <div class="hj9">
+    	<img src="/images/hj/hj_09_01.jpg" />
+        <img src="/images/hj/hj_09_02.jpg" />
+        <img src="/images/hj/hj_09_03.jpg" />
+        <img src="/images/hj/hj_09_04.jpg" />
+        <img src="/images/hj/hj_09_05.jpg" />
+        <img src="/images/hj/hj_09_06.jpg" />
+        <img src="/images/hj/hj_09_07.jpg" />
+        <img src="/images/hj/hj_09_08.jpg" />
+        <img src="/images/hj/hj_09_09.jpg" />
+        <img src="/images/hj/hj_09_10.jpg" />
+    </div><!--hj9-->
+    <div class="hj10">
+    	<img src="/images/hj/hj_10_01.jpg" />
+        <img src="/images/hj/hj_10_02.jpg" />
+        <img src="/images/hj/hj_10_03.jpg" />
+        <img src="/images/hj/hj_10_04.jpg" />
+        <img src="/images/hj/hj_10_05.jpg" />
+        <img src="/images/hj/hj_10_06.jpg" />
+        <img src="/images/hj/hj_10_07.jpg" />
+        <img src="/images/hj/hj_10_08.jpg" />
+        <img src="/images/hj/hj_10_09.jpg" />
+        <img src="/images/hj/hj_10_10.jpg" />
+    </div><!--hj10-->
+    <div class="hj11">
+    	<img src="/images/hj/hj_11_01.jpg" />
+        <img src="/images/hj/hj_11_02.jpg" />
+        <img src="/images/hj/hj_11_03.jpg" />
+        <img src="/images/hj/hj_11_04.jpg" />
+        <img src="/images/hj/hj_11_05.jpg" />
+        <img src="/images/hj/hj_11_06.jpg" />
+        <img src="/images/hj/hj_11_07.jpg" />
+        <img src="/images/hj/hj_11_08.jpg" />
+        <img src="/images/hj/hj_11_09.jpg" />
+        <img src="/images/hj/hj_11_10.jpg" />
+    </div><!--hj11-->
+    <div class="hj12">
+    	<img src="/images/hj/hj_12_01.jpg" />
+        <img src="/images/hj/hj_12_02.jpg" />
+        <img src="/images/hj/hj_12_03.jpg" />
+        <img src="/images/hj/hj_12_04.jpg" />
+        <img src="/images/hj/hj_12_05.jpg" />
+        <img src="/images/hj/hj_12_06.jpg" />
+        <img src="/images/hj/hj_12_07.jpg" />
+        <img src="/images/hj/hj_12_08.jpg" />
+        <img src="/images/hj/hj_12_09.jpg" />
+        <img src="/images/hj/hj_12_10.jpg" />
+    </div><!--hj12-->
+    <div class="hj13">
+    	<img src="/images/hj/hj_13_01.jpg" />
+        <img src="/images/hj/hj_13_02.jpg" />
+        <img src="/images/hj/hj_13_03.jpg" />
+        <img src="/images/hj/hj_13_04.jpg" />
+        <img src="/images/hj/hj_13_05.jpg" />
+        <img src="/images/hj/hj_13_06.jpg" />
+        <img src="/images/hj/hj_13_07.jpg" />
+        <img src="/images/hj/hj_13_08.jpg" />
+        <img src="/images/hj/hj_13_09.jpg" />
+        <img src="/images/hj/hj_13_10.jpg" />
+    </div><!--hj13-->
+    <div class="hj14">
+    	<img src="/images/hj/hj_14_01.jpg" />
+        <img src="/images/hj/hj_14_02.jpg" />
+        <img src="/images/hj/hj_14_03.jpg" />
+        <img src="/images/hj/hj_14_04.jpg" />
+        <img src="/images/hj/hj_14_05.jpg" />
+        <img src="/images/hj/hj_14_06.jpg" />
+        <img src="/images/hj/hj_14_07.jpg" />
+        <img src="/images/hj/hj_14_08.jpg" />
+        <img src="/images/hj/hj_14_09.jpg" />
+        <img src="/images/hj/hj_14_10.jpg" />
+    </div><!--hj14-->
+    <div class="hj15">
+    	<img src="/images/hj/hj_15_01.jpg" />
+        <img src="/images/hj/hj_15_02.jpg" />
+        <img src="/images/hj/hj_15_03.jpg" />
+        <img src="/images/hj/hj_15_04.jpg" />
+        <img src="/images/hj/hj_15_05.jpg" />
+        <img src="/images/hj/hj_15_06.jpg" />
+        <img src="/images/hj/hj_15_07.jpg" />
+        <img src="/images/hj/hj_15_08.jpg" />
+        <img src="/images/hj/hj_15_09.jpg" />
+        <img src="/images/hj/hj_15_10.jpg" />
+    </div><!--hj15-->
+    <div class="hj16">
+   		<img src="/images/hj/hj_16_01.jpg" />
+        <img src="/images/hj/hj_16_02.jpg" />
+        <img src="/images/hj/hj_16_03.jpg" />
+        <img src="/images/hj/hj_16_04.jpg" />
+        <img src="/images/hj/hj_16_05.jpg" />
+        <img src="/images/hj/hj_16_06.jpg" />
+        <img src="/images/hj/hj_16_07.jpg" />
+        <img src="/images/hj/hj_16_08.jpg" />
+        <img src="/images/hj/hj_16_09.jpg" />
+        <img src="/images/hj/hj_16_10.jpg" />
+    </div><!--hj16-->
+    <div class="hj17">
+    	<img src="/images/hj/hj_17_01.jpg" />
+        <img src="/images/hj/hj_17_02.jpg" />
+        <img src="/images/hj/hj_17_03.jpg" />
+        <img src="/images/hj/hj_17_04.jpg" />
+        <img src="/images/hj/hj_17_05.jpg" />
+        <img src="/images/hj/hj_17_06.jpg" />
+        <img src="/images/hj/hj_17_07.jpg" />
+        <img src="/images/hj/hj_17_08.jpg" />
+        <img src="/images/hj/hj_17_09.jpg" />
+        <img src="/images/hj/hj_17_10.jpg" />
+    </div><!--hj17-->
+    <div class="hj18">
+    	<img src="/images/hj/hj_18_01.jpg" />
+        <img src="/images/hj/hj_18_02.jpg" />
+        <img src="/images/hj/hj_18_03.jpg" />
+        <img src="/images/hj/hj_18_04.jpg" />
+        <img src="/images/hj/hj_18_05.jpg" />
+        <img src="/images/hj/hj_18_06.jpg" />
+        <img src="/images/hj/hj_18_07.jpg" />
+        <img src="/images/hj/hj_18_08.jpg" />
+        <img src="/images/hj/hj_18_09.jpg" />
+        <img src="/images/hj/hj_18_10.jpg" />
+    </div><!--hj18-->
+    <div class="hj19">
+    	<img src="/images/hj/hj_19_01.jpg" />
+        <img src="/images/hj/hj_19_02.jpg" />
+        <img src="/images/hj/hj_19_03.jpg" />
+        <img src="/images/hj/hj_19_04.jpg" />
+        <img src="/images/hj/hj_19_05.jpg" />
+        <img src="/images/hj/hj_19_06.jpg" />
+        <img src="/images/hj/hj_19_07.jpg" />
+        <img src="/images/hj/hj_19_08.jpg" />
+        <img src="/images/hj/hj_19_09.jpg" />
+        <img src="/images/hj/hj_19_10.jpg" />
+    </div><!--hj19-->
+    <div class="hj20">
+    	<img src="/images/hj/hj_20_01.jpg" />
+        <img src="/images/hj/hj_20_02.jpg" />
+        <img src="/images/hj/hj_20_03.jpg" />
+        <img src="/images/hj/hj_20_04.jpg" />
+        <img src="/images/hj/hj_20_05.jpg" />
+        <img src="/images/hj/hj_20_06.jpg" />
+        <img src="/images/hj/hj_20_07.jpg" />
+        <img src="/images/hj/hj_20_08.jpg" />
+        <img src="/images/hj/hj_20_09.jpg" />
+        <img src="/images/hj/hj_20_10.jpg" />
+    </div><!--hj20-->
+    <div class="hj21">
+    	<img src="/images/hj/hj_21_01.jpg" />
+        <img src="/images/hj/hj_21_02.jpg" />
+        <img src="/images/hj/hj_21_03.jpg" />
+        <img src="/images/hj/hj_21_04.jpg" />
+        <img src="/images/hj/hj_21_05.jpg" />
+        <img src="/images/hj/hj_21_06.jpg" />
+        <img src="/images/hj/hj_21_07.jpg" />
+        <img src="/images/hj/hj_21_08.jpg" />
+        <img src="/images/hj/hj_21_09.jpg" />
+        <img src="/images/hj/hj_21_10.jpg" />
+    </div><!--hj21-->
+    <div class="hj22">
+    	<img src="/images/hj/hj_22_01.jpg" />
+        <img src="/images/hj/hj_22_02.jpg" />
+        <img src="/images/hj/hj_22_03.jpg" />
+        <img src="/images/hj/hj_22_04.jpg" />
+        <img src="/images/hj/hj_22_05.jpg" />
+        <img src="/images/hj/hj_22_06.jpg" />
+        <img src="/images/hj/hj_22_07.jpg" />
+        <img src="/images/hj/hj_22_08.jpg" />
+        <img src="/images/hj/hj_22_09.jpg" />
+        <img src="/images/hj/hj_22_10.jpg" />
+    </div><!--hj22-->
+    <div class="hj23">
+    	<img src="/images/hj/hj_23_01.jpg" />
+        <img src="/images/hj/hj_23_02.jpg" />
+        <img src="/images/hj/hj_23_03.jpg" />
+        <img src="/images/hj/hj_23_04.jpg" />
+        <img src="/images/hj/hj_23_05.jpg" />
+        <img src="/images/hj/hj_23_06.jpg" />
+        <img src="/images/hj/hj_23_07.jpg" />
+        <img src="/images/hj/hj_23_08.jpg" />
+        <img src="/images/hj/hj_23_09.jpg" />
+        <img src="/images/hj/hj_23_10.jpg" />
+    </div><!--hj23-->
+    <div class="hj24">
+    	<img src="/images/hj/hj_24_01.jpg" />
+        <img src="/images/hj/hj_24_02.jpg" />
+        <img src="/images/hj/hj_24_03.jpg" />
+        <img src="/images/hj/hj_24_04.jpg" />
+        <img src="/images/hj/hj_24_05.jpg" />
+        <img src="/images/hj/hj_24_06.jpg" />
+        <img src="/images/hj/hj_24_07.jpg" />
+        <img src="/images/hj/hj_24_08.jpg" />
+        <img src="/images/hj/hj_24_09.jpg" />
+        <img src="/images/hj/hj_24_10.jpg" />
+    </div><!--hj24-->
+    <div class="hj25">
+    	<img src="/images/hj/hj_25_01.jpg" />
+        <img src="/images/hj/hj_25_02.jpg" />
+        <img src="/images/hj/hj_25_03.jpg" />
+        <img src="/images/hj/hj_25_04.jpg" />
+        <img src="/images/hj/hj_25_05.jpg" />
+        <img src="/images/hj/hj_25_06.jpg" />
+        <img src="/images/hj/hj_25_07.jpg" />
+        <img src="/images/hj/hj_25_08.jpg" />
+        <img src="/images/hj/hj_25_09.jpg" />
+        <img src="/images/hj/hj_25_10.jpg" />
+    </div><!--hj25-->
+    <div class="hj26">
+    	<img src="/images/hj/hj_26_01.jpg" />
+        <img src="/images/hj/hj_26_02.jpg" />
+        <img src="/images/hj/hj_26_03.jpg" />
+        <img src="/images/hj/hj_26_04.jpg" />
+        <img src="/images/hj/hj_26_05.jpg" />
+        <img src="/images/hj/hj_26_06.jpg" />
+        <img src="/images/hj/hj_26_07.jpg" />
+        <img src="/images/hj/hj_26_08.jpg" />
+        <img src="/images/hj/hj_26_09.jpg" />
+        <img src="/images/hj/hj_26_10.jpg" />
+    </div><!--hj26-->
+    <div class="hj27">
+    	<div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+    </div><!--hj27-->
+</div><!--all-->
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

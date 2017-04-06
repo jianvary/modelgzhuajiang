@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; background-color:#fff;}
+.hjlxpic{ width:1000px; height:420px; overflow:hidden; margin:10px auto; background-color:#ffffff;}
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+</style>
+</head>
+
+<body >
+
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div class="all">
+	 <div class="hjlxpic">
+    	<img src="/images/121.jpg" />
+    </div><!--hjlxpic-->
+    <div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠速拓品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠速拓<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+    <div class="hjditu">
+            <!--引用百度地图API-->
+            <style type="text/css">
+                html,body{margin:0;padding:0;}
+                .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+            </style>
+            <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+              <!--百度地图容器-->
+              <div style="width:998px;height:500px;border:#ccc solid 1px;" id="dituContent"></div>
+            <script type="text/javascript">
+                //创建和初始化地图函数：
+                function initMap(){
+                    createMap();//创建地图
+                    setMapEvent();//设置地图事件
+                    addMapControl();//向地图添加控件
+                    addMarker();//向地图中添加marker
+                }
+                
+                //创建地图函数：
+                function createMap(){
+                    var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                    var point = new BMap.Point(113.272342,23.212198);//定义一个中心点坐标
+                    map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+                    window.map = map;//将map变量存储在全局
+                }
+                
+                //地图事件设置函数：
+                function setMapEvent(){
+                    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                    map.enableKeyboard();//启用键盘上下左右键移动地图
+                }
+                
+                //地图控件添加函数：
+                function addMapControl(){
+                                    //向地图中添加比例尺控件
+                var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                map.addControl(ctrl_sca);
+                }
+                
+                //标注点数组
+                var markerArr = [{title:"广州市白云区国际单位二期A10栋202A",content:"广州市白云区国际单位二期A10栋202A",point:"113.272482|23.21258",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+                     ];
+                //创建marker
+                function addMarker(){
+                    for(var i=0;i<markerArr.length;i++){
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        label.setStyle({
+                                    borderColor:"#808080",
+                                    color:"#333",
+                                    cursor:"pointer"
+                        });
+                        
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                this.openInfoWindow(_iw);
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                    }
+                }
+                //创建InfoWindow
+                function createInfoWindow(i){
+                    var json = markerArr[i];
+                    var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+                    return iw;
+                }
+                //创建一个Icon
+                function createIcon(json){
+                    var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+                    return icon;
+                }
+                
+                initMap();//创建和初始化地图
+            </script>
+        </div><!--hjditu-->
+    	<div class="hjlxweixin">
+        	<img src="/images/wei.jpg" />
+        </div><!--hjlxweixin-->
+</div><!--all-->
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+
+.banner{ width:100%; height:647px; background-image:url(http://www.gzhuajiang.com/images/ppsj/ppsj01.jpg);}
+.banner02{ width:100%; height:647px; background-image:url(http://www.gzhuajiang.com/images/ppsj/ppsj02.jpg);}
+.banner03{ width:100%; height:647px; background-image:url(http://www.gzhuajiang.com/images/ppsj/ppsj03.jpg);}
+
+.ppsj01{ width:1100px; height:240px; margin:0 auto; margin-top:70px; margin-bottom:30px;  color:#e81460;} 
+.ppsj01 .box{ width:1050px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj01 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj01 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj01 .box .cont{ width:680px; height:200px; margin:0 auto; color:#585657; font-size:18px; line-height:30px;}
+.ppsj01 .box .cont span{ margin-top:-5px;}
+.ppsj01 .height60{ height:60px;}
+.ppsj01 .height110{ height:110px;}
+.line{ width:100%; height:30px; line-height:40px; }
+
+.ppsj02{width:1100px; height:400px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj02 .box{ width:1050px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj02 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj02 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj02 .box .cont{ width:1000px; height:260px; margin:0 auto; color:#585657;}
+.ppsj02 .box .cont .up{ width:1000px; height:220px;  margin:0 auto;}
+.ppsj02 .box .cont .down{ width:800px; height:40px;  margin:0 auto; font-size:25px; line-height:25px;}
+.ppsj02 .box .cont .down .font_kongxi{ width:130px; height:40px; margin-right:230px; line-height:40px;}
+.ppsj02 .height60{ height:60px;}
+.ppsj02 .height260{ height:260px;}
+
+.ppsj03{width:1100px; height:650px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj03 .box{ width:1050px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj03 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj03 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj03 .height60{ height:60px;}
+.ppsj03 .height300{ height:300px;}
+
+.ppsj04{width:1100px; height:350px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj04 .box{ width:1050px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj04 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj04 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj04 .height60{ height:60px;}
+.ppsj04 .height80{ height:80px;}
+.ppsj04 .height30{ height:30px;}
+.ppsj04 .height300{ height:300px;}
+
+.ppsj05{width:1100px; height:430px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj05 .box{ width:800px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj05 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj05 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj05 .height150{ height:150px;}
+.ppsj05 .height250{ height:250px;}
+
+.ppsj06{width:1100px; height:610px; margin:0 auto; margin-top:10px; margin-bottom:60px;  color:#e81460;}
+.ppsj06 .box{ width:800px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj06 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj06 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj06 .height60{ height:60px;}
+
+.ppsj07{width:1100px; height:2570px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj07 .box{ width:800px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj07 .box a{ text-decoration:none; }
+.ppsj07 .box a img{ text-decoration:none; border:none;}
+.ppsj07 .box .hjimg{ width:495px; height:330px; margin-left:13px; float:left; margin-bottom:15px;}
+.ppsj07 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj07 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj07 .height60{ height:60px;}
+
+.ppsj08{width:1100px; height:890px; margin:0 auto; margin-top:50px; margin-bottom:30px;  color:#e81460;}
+.ppsj08 .box{ width:800px; height:30px; margin:0 auto; margin-top:10px; }
+.ppsj08 .box .title{ width:680px; height:60px; line-height:60px; font-size:45px; font-weight:bold; margin:0 auto; }
+.ppsj08 .box .line{ width:170px; height:20px; border-top:2px solid #e81460; margin:0 auto;}
+.ppsj08 .height30{ height:30px;}
+.ppsj08 .height60{ height:60px;}
+.ppsj08 .height460{ height:460px;}
+.ppsj07 .box .hjimg{ width:500px; height:330px; margin-left:13px; float:left; margin-bottom:15px;}
+
+.ppsj09{width:1100px; height:620px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj09 .box{ width:800px; height:30px; margin:0 auto; margin-top:10px; }
+
+.ppsj10{width:1100px; height:280px; margin:0 auto; margin-top:10px; margin-bottom:30px;  color:#e81460;}
+.ppsj10 .box{ width:1000px; height:250px; margin:0 auto; margin-top:10px; }
+.ppsj10 .box .left{ width:280px; height:250px; float:left;}
+.ppsj10 .box .middle{ width:240px; height:250px; float:left; margin-left:75px;}
+.ppsj10 .box .right{ width:280px; height:250px; float:left; margin-left:100px;}
+
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+
+</style>
+</head>
+<body class="articlelist" style="background-color:#fff;">
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<div class="banner">
+      
+</div>
+
+<div class="ppsj01">
+	<div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title">
+        	花匠/品牌网络整合营销机构
+        </div>
+    </div>
+    <div class="box height110">
+    	<div class="cont">
+        	<p><b>花匠</b><span>®</span>&nbsp;中国首家集网络品牌推广、品牌整合设计、品牌网站定制的全网营销专业机构</p>
+            <p><b>花匠</b><span>®</span>&nbsp;中国最全面提供品牌营销顾问式咨询服务团队，开创市场领军品牌</p>
+            <p><b>花匠</b><span>®</span>&nbsp;中国品牌网络整合营销机构，深度聚集连锁行业品牌实战营销全案</p>
+        </div>
+    </div>
+</div><!--ppsj01-->
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj02">
+	<div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title">
+        	花匠的愿望/为梦想者种植品牌
+        </div>
+    </div>
+    <div class="box height260">
+    	<div class="cont">
+        	<div class="up">
+            	<img src="http://www.gzhuajiang.com/images/ppsj/pic.jpg" />
+            </div>
+            <div class="down">
+            	<span class="font_kongxi">品牌播种</span><span class="font_kongxi">品牌灌溉</span><span class="font_kongxi" style="margin-right:10px;                ">品牌传播</span>
+            </div>
+        </div>
+    </div>
+</div><!--ppsj02-->
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj03">
+	<div class="box height60">
+    	<div class="title">
+        	花匠&nbsp;互联网+品牌整合设计领航者
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title" style="font-size:24px; width:830px; font-weight:normal;">
+        	品牌整合推广 X 品牌视觉设计 X 品牌网站定制 X 新媒体营销设计 X 电商设计
+        </div>
+    </div>
+    <div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title" style="font-size:40px; width:800px; color:#585657;">
+        	现在设计公司的好与坏其实并不仅是看作品
+        </div>
+    </div>
+	 <div class="box height60">
+    	<div class="title" style="font-size:35px; font-weight:normal;">
+        	而是看这个作品能不能在互联网遍地开花
+        </div>
+    </div>
+    <div class="box height300" >
+    	<div style="width:300px; height:300px; margin:0 auto;">
+    	<img src="http://www.gzhuajiang.com/images/ppsj/pic2.jpg" />
+        </div>
+    </div>
+</div><!--ppsj03-->
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj04">
+	<div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title" style="width:550px; color:#e6145f;">
+        	国内标志性品牌的建造者
+        </div>
+    </div>
+    <div class="box height30">
+    	<div class="title" style="font-size:18px; font-weight:normal; width:920px; color:#595758; line-height:30px;">
+        	领先整合品牌定义、识别、营销力沟通和品牌管理系统，集品牌口碑营销、影视广告、数字互动营销、品牌VI视觉
+        </div>
+    </div>
+    <div class="box height30">
+    	<div class="title" style="font-size:18px; font-weight:normal; width:900px; color:#595758; line-height:30px;">
+        	设计、高端网站建设、微品牌营销于一身的数字化全网营销服务专业机构。花匠透过故事精彩/方案/设计创
+        </div>
+    </div>
+     <div class="box height30">
+    	<div class="title" style="font-size:18px; font-weight:normal; width:600px; color:#595758; line-height:30px;">
+        	意/影视画面/氛围形塑/新媒体力量/品牌营销培训及团队合作。
+        </div>
+    </div>
+    <div class="box height80">
+    	<div style="width:480px; height:80px; margin:0 auto; border:3px solid #e6145f;">
+        	<div style="width:60px; height:80px; float:left; margin-top:10px;">
+            	<img src="http://www.gzhuajiang.com/images/ppsj/pic3.jpg" />
+            </div>
+            <div style="width:380px; height:80px; line-height:80px; font-size:50px; float:left; margin-left:30px;">
+            	400-0906-920
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj05">
+	<div class="box height150">
+    	<img src="http://www.gzhuajiang.com/images/ppsj/pic4.jpg" />
+    </div>
+    <div class="box height250">
+    	<img src="http://www.gzhuajiang.com/images/ppsj/pic5.jpg" />
+    </div>
+</div><!--ppsj05-->
+
+<div class="banner02">
+      
+</div>
+
+<div class="ppsj06">
+	<div class="box" style="margin-top:40px;">
+    	<div class="line">
+        </div>
+    </div>
+	<div class="box height60">
+    	<div class="title" style="width:330px; margin:0 auto;">
+        	我们的强势服务
+        </div>
+    </div>
+    <div class="box" style="width:1000px; height:450px;">
+    	<div style=" width:440px; height:120px; float:left; margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao01.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">CIS 企业识别</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">了解企业愿景与价值，从中定义品牌精神，向下延伸至品牌识别设计与命名                 、应用识别等标准规范识别系统</span>
+            </div>
+        </div><!--tubiao_left-->
+        <div style=" width:440px; height:120px; float:left; margin-left:100px;  margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao02.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">网页设计</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">使用者经验、网页整体形象规划、程序设计、网站框架设计等相关服务。</span>
+            </div>
+        </div><!--tubiao_right-->
+        <div style=" width:440px; height:120px; float:left;  margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao03.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">品牌形象规划</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">品牌形象建立、品牌风格与视觉沟通、视觉识别、摄影风格整体规划。</span>
+            </div>
+        </div><!--tubiao_left-->
+         <div style=" width:440px; height:120px; float:left; margin-left:100px;  margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao04.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">型录设计</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">型录落版规划、视觉设计、插画、摄影企划、方案撰写、材质建议、印刷与                加工等整体规划</span>
+            </div>
+        </div><!--tubiao_right-->
+        <div style=" width:440px; height:120px; float:left;  margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao05.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">包装设计</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">以消费者角度思考，提供符合时代趋势的包装建议、材质设定、整体包装视觉规划。</                 span>
+            </div>
+        </div><!--tubiao_left-->
+         <div style=" width:440px; height:120px; float:left; margin-left:100px;  margin-bottom:50px;">
+        	<div style="width:120px; height:120px; float:left; margin-top:5px;" >
+            	<img src="http://www.gzhuajiang.com/images/ppsj/tubiao06.jpg" />
+            </div>
+            <div style="width:300px; height:120px; float:left; margin-left:10px;">
+            	<span style="font-size:30px; font-weight:100; color:#838182;">咨询图片</span><br />
+                <span style="font-size:14px; line-height:25px; color:#585858;">了解目标客群需求，提供数据与资讯整合、资讯传达图像化等相关服务。</span>
+            </div>
+        </div><!--tubiao_right-->
+    </div><!--tubiao_guang-->
+</div><!--ppsj06-->
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj07">
+	<div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height60">
+    	<div class="title" style="width:330px; margin:0 auto; ">
+        	OURS WORKS
+        </div>
+    </div>
+    <div class="box height30">
+    	<div class="title" style="font-size:20px; font-weight:normal; width:720px; color:#e71560; line-height:30px;">
+        	BEHIND EVERY SUCCESSFUL BRAND THERE IS A TOUCHING STORY
+        </div>
+    </div>
+    <div class="box" style=" width:1060px; height:2370px; margin-top:30px;">
+    	<div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150603626.html">
+           		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu01.jpg" />
+            </a>
+        </div>
+        <div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150715763.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu02.jpg" />
+            </a>
+        </div>
+        <div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150603627.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu03.jpg" />
+            </a>
+        </div>
+         <div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150714759.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu04.jpg" />
+            </a>
+        </div>
+        <div style="width:1000px; height:460px; margin-left:13px; float:left; margin-bottom:15px; margin-top:15px;">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150721771.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu05.jpg" />
+            </a>
+        </div>
+        <div class="hjimg">
+        	<a href="#">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu06.jpg" />
+            </a>
+        </div>
+        <div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150603629.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu07.jpg" />
+            </a>
+        </div>
+         <div style="width:1000px; height:460px; margin-left:13px; float:left; margin-bottom:15px; margin-top:15px;">
+             <a href="http://www.gzhuajiang.com/anli/ppsj/20150714758.html">
+                <img src="http://www.gzhuajiang.com/images/ppsj/sjtu08.jpg" />
+             </a>   
+        </div>
+        <div class="hjimg">
+        	<a href="http://www.gzhuajiang.com/anli/ppsj/20150603628.html">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu09.jpg" />
+            </a>
+        </div>
+        <div class="hjimg">
+        	<a href="#">
+        		<img src="http://www.gzhuajiang.com/images/ppsj/sjtu10.jpg" />
+            </a>
+        </div>
+    </div><!--box-->
+</div><!--ppsj07-->
+
+<div class="banner03">
+      
+</div>
+
+<div class="ppsj08">
+	<div class="box height60" style="width:430px;">
+    	<div class="title">
+        	花匠/为品牌业绩而生
+        </div>
+    </div>
+    <div class="box">
+    	<div class="line">
+        </div>
+    </div>
+    <div class="box height30">
+    	<div class="title" style="font-size:18px; font-weight:normal; width:380px; color:#595758; line-height:30px;">
+        	我们坚持做有思想的创意，有意思的设计。
+        </div>
+    </div>
+    <div class="box height30">
+    	<div class="title" style="font-size:18px; font-weight:normal; width:880px; color:#595758; line-height:30px;">
+        	花匠品牌创意【HUAJIANG】一直致力于帮助经营者完成从产品到商品，从商品到品牌的整个形象包装过程。
+        </div>
+    </div>
+    <div class="box" style="margin-top:30px;">
+    	<div class="line" >
+        </div>
+    </div>
+    <div class="box height60" >
+    	<div class="title">
+        	花匠设计中心品牌传播模型
+        </div>
+    </div>
+    <div class="box height60" style="width:920px;">
+    	<div class="title" style="width:840px;">
+        	精准的策略+独特创意+完美执行=品牌力
+        </div>
+    </div>
+     <div class="box height460">
+    	<div class="hjimg" style="width:500px; margin:0 auto;">
+        	<img src="http://www.gzhuajiang.com/images/ppsj/pic33.jpg" />
+        </div>
+    </div>
+</div>
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj09">
+	<div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+</div><!--ppsj09-->
+
+<div class="line">
+	<hr/>
+</div>
+
+<div class="ppsj10">
+	<div class="box ">
+    	<div class="left" style="color:#585858;">
+        	<div style="width:200px; height:50px; line-height:50px; font-size:30px; font-weight:bold;">
+            	HUAJIANG
+            </div>
+            <div style="width:270px; height:200px; line-height:25px; font-size:14px;">
+            	如您需要任何专业上的资讯，请直接与我们联系，我们将尽快回复您的讯息并竭诚地为您服务。
+            </div>
+        </div>
+        <div class="middle" style="color:#585858;">
+        	<div style="width:200px; height:50px; line-height:50px; font-size:30px; font-weight:bold;">
+            	CONTACT
+            </div>
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	Address
+            </div>
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	广州市白云区国际单位二期A10栋202A
+            </div><br />
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	Email
+            </div>
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	582908676@qq.com
+            </div><br />
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	Telphoto
+            </div>
+            <div style="width:270px; height:25px; line-height:25px; font-size:14px;">
+            	400-0906-920
+            </div>
+        </div>
+        <div class="right">
+        	<div>
+            	<img src="http://www.gzhuajiang.com/images/ppsj/pic34.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

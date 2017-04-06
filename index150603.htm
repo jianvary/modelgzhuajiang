@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pic_scroll.js"></script>
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<script src="/templets/default/style/jquery.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("a[_for]").mouseover(function(){
+			$(this).parents().children("a[_for]").removeClass("thisclass").parents().children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+		$("a[_for=flink_1]").mouseover();
+	});
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+  
+  <style>  	.tab-radio div a, .tab-radio div{ /*width:162px;*/  margin-right:21px;}
+	.tab-radio label{ margin:0px 0px 0px 52px;}
+	.tab-radio div a, .tab-radio div{ text-align:inherit; width:auto; margin-left:5px;margin-right:0}
+  </style>
+  				<div id="banner">
+                	<div class="banner"><!--banner start--><!--banner start-->
+                    		<div class="carousel">
+                            	<ul>
+                                <li><a href=""><img src="/templets/default/images/hj1.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj2.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj5.jpg"/></a></li>
+                                </ul>
+                              </div>
+                              <!--banner end-->
+                              <!--banner end-->
+                              </div>
+                              	<ul class="nav-banner">
+                               <li><a href=""><img src="/templets/default/images/hj1.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj2.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj3.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj4.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj5.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj6.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj7.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj8.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj9.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj10.jpg"/></a></li>
+                                <li><a href=""><img src="/templets/default/images/hj11.jpg"/></a></li>
+                                </ul>
+                                <div class="banner-wrapper">
+                                	<div class="focus"><!--自动生成焦点与统计信息，留空勿删-->
+                                    </div></div></div>
+                                   
+                                    <div id="tab">
+                                    	<div class="content-menu">
+                                        <ul>
+                                        	<li><a href="#"><img src="/image/c-icon001.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon002.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon003.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon004.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon005.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon006.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon007.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon008.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon009.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon010.png" /></a></li>
+                                            <li><a href="#"><img src="/image/c-icon011.png" /></a></li>
+                                            </ul>
+                                            </div>
+                                            <div class="wrapper">
+                                            	<table width="100%" border="1" bordercolor="white" class="major-list tab-table">
+                                                	<tr>
+                                                    <td colspan="2" width="333" class="major-item">
+                                                    <a href="#" style="background:url(/image/201410201638.jpg) repeat;z-index:2;">
+                                                    <span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>连锁</h1>
+                                                    <p>专注连锁领域品牌口碑营销全案</p>
+                                                    </span><span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    <td rowspan="2" width="333" class="major-item" height="360">
+                                                    <a href="#" style="background:url(/image/201410201712.jpg) repeat; height:359px;z-index:2;">
+                                                    <span class="txt-hide front-face" style="height:359px;">
+                                                    <h1><b>花匠</b>品牌咨询</h1>
+                                                    <p>跨界思维与体验式创新品牌咨询</p>
+                                                    </span>
+                                                    <span class="back-face tab-black"></span></a>
+                                                    </td>
+                                                    <td colspan="2" width="300" class="major-item">
+                                                    <a href="#" style="background:url(/image/201410301005.jpg) repeat;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>O2O</h1>
+                                                    <p>聚焦连锁O2O，让品牌双轨落地</p>
+                                                    </span><span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td colspan="2" width="333" class="major-item">
+                                                    <a href="#" style="background:url(/image/201410201640.jpg) repeat;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>大健康</h1>
+                                                    <p>健康产业领袖品牌创建者</p>
+                                                    </span>
+                                                    <span class="back-face tab-red"></span></a>
+                                                    </td>
+                                                    <td colspan="2"  width="333" class="major-item"><a href="#" style="background:#1c1c1c;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b> 微营销</h1>
+                                                    <p>微时代新形态品牌碎片化传播</p>
+                                                    </span><span class="back-face tab-red"></span></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td rowspan="2" width="166.5" class="major-item">
+                                                    <a href="#"  style="background:#f7aa28; z-index:2;"><span class="txt-hide front-face" style="background:#f7aa28;height:340px;">
+                                                    <h1><b>花匠</b><br/>整合营销</h1>
+                                                    <p class="bottom-text" >跨界全方位资源营销</p>
+                                                    </span><span class="back-face tab-red"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b><br/>视频广告</h1>
+                                                    <p class="bottom-text">以触动人心的画面，<br />抢占消费者心智份额</p>
+                                                    </span><span class="back-face tab-red"></span></a></td>
+                                                    <td  width="333" class="major-item"><a href="#" style="background:#e95412;z-index:2;"><span class="txt-hide front-face" style="height:340px;">
+                                                    <h1><b>花匠</b>品牌设计</h1>
+                                                    <p class="bottom-text" style="bottom:188px;">品牌创意设计，直达心扉</p></span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#e95412;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>学院</h1>
+                                                    <p class="bottom-text">国内连锁行业<br />网络营销革新者</p>
+                                                    </span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b><br/>灵魂</h1>
+                                                    <p class="bottom-text">做一件真的事</p></span><span class="back-face tab-red"></span></a></td> 
+                                                    </tr> 
+                                                    <tr> 
+                                                    <td  width="166.5" class="major-item"><a href="#" style="background:#e95412;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b><br/>移动策略</h1>
+                                                    <p class="bottom-text">轻松锁定<br />指尖上的财富</p></span><span class="back-face tab-black"></span></a></td>
+                                                    <td  width="333" class="major-item"><a href="/wzdz/" style="background:#f7aa28;z-index:2;"><span class="txt-hide front-face">
+                                                    <h1><b>花匠</b>网站定制</h1>
+                                                    <p class="bottom-text">卓越定制思维，
+                        							<br/>做真正的营销型网站
+                        							</p>
+                                                    </span><span class="back-face tab-red"></span></a></td>
+                        <td colspan="2" width="333" class="major-item"><a href="#" style="background:#e95412;z-index:2;"><span class="txt-hide front-face" >
+                        							<h1><b>花匠</b>实战营销</h1>
+                                                    <p class="bottom-text">不刷数据，不做搬砖工，创建真正的强大品牌</p>
+                                                    </span><span class="back-face tab-black"></span></a></td>
+                        </tr>
+                        </table>
+                       
+                        </div></div>
+                        
+                          <div id="content" style="height:1120px; ">
+                        	<div class="wrapper">
+                            <div class="index-adv">
+                            <img src="/image/201410220917.png" height="109" class="fl"/><a href="/anli/201412196.html">笆笆莎</a><a href="/anli/201412195.html">汇香坊</a><a href="/anli/201412197.html">美酒佳</a><a href="/anli/201412198.html">芋观园</a><a href="#"></a><div class="cb">
+                            </div>
+                       		</div>
+                            <ul class="case-list">
+                            	<li>
+                                <a href="/anli/201412196.html"><img src="/images/14121711.jpg" width="238" height="185"/></a>
+                                <a href="/anli/201412196.html">
+                                <h1>笆笆莎Babarsa一个时尚、摩登、美丽的内衣品牌</h1>
+                                </a>
+                                <p>
+                                品牌时刻紧跟国际潮流、与国际时尚同步，花匠网络笆笆莎将招商单页升级为多功能品牌网站，从品牌定位&品牌活动&品牌故事进行全面的文案撰写（消费者问答、品牌报道、品牌活动等多角度）...
+                                </p>
+                                <div class="case-theme-title">
+                                <a href="/anli/201412196.html">O2O品牌创新</a>
+                                </div>
+                                <div class="case-share">
+                                <a href="/anli/201412196.html"><img src="/image/heart.png" />88</a>
+                                <a href="/anli/201412196.html"><img src="/image/view.png" />738</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                
+                                <li>
+                                <a href="/anli/201412197.html"><img src="/images/14121713.jpg" width="238" height="185"/></a>
+                                <a href="/anli/201412197.html">
+                                <h1>GOOD WINE美酒佳红酒专门店，网罗世界各地的高品质葡萄酒</h1>
+                                </a>
+                                <p>
+                                GOOD WINE美酒佳红酒专门店为葡萄酒爱好者提供一处专业、舒适的购买及交流场，是香港名庄酒进口商。2011年与花匠达成战略合作，花匠网络围绕｛香港红酒｝｛红酒批发｝｛香港酒窖｝等50精准词..
+                                </p>
+                                <div class="case-theme-title">
+                                <a href="/anli/201412197.html">连琐品牌</a>
+                                </div>
+                                <div class="case-share">
+                                <a href="/anli/201412197.html"><img src="/image/heart.png" />88</a>
+                                <a href="/anli/201412197.html"><img src="/image/view.png" />738</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                
+                                <li>
+                                <a href="/anli/201412195.html"><img src="/images/14121712.jpg" width="238" height="185"/></a>
+                                <a href="/anli/201412195.html">
+                                <h1>汇香坊，源于1920年来自法国格拉斯的欧洲王室御用调香师Judy Andrew</h1>
+                                </a>
+                                <p>
+                                汇香坊用传承百年的经典打造世界一流的香薰品牌。花匠网络为汇香坊执行800个工作日的品牌整合营销，帮助它实现“从1千万到1个亿”的品牌跨越式发展。
+                                </p>
+                                <div class="case-theme-title">
+                                <a href="/anli/201412195.html">连琐品牌</a>
+                                </div>
+                                <div class="case-share">
+                                <a href="/anli/201412195.html"><img src="/image/heart.png" />88</a>
+                                <a href="/anli/201412195.html"><img src="/image/view.png" />738</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                
+                                   <li>
+                                <a href="/anli/201412198.html"><img src="/images/14121715.jpg" width="238" height="185"/></a>
+                                <a href="/anli/201412198.html">
+                                <h1>芋观园，诞生于2000年，以其健康环保的经营理念</h1>
+                                </a>
+                                <p>
+                                芋观园优良独特的产品品质，占据台湾甜品行业相当大的市场份额，成为消费者心目中的健康甜品领导品牌。 2013年来到中国内地以连锁加盟的方式拓展市场，2014年开始与花匠网络合作
+                                </p>
+                                <div class="case-theme-title">
+                                <a href="/anli/201412198.html">连琐品牌</a>
+                                </div>
+                                <div class="case-share">
+                                <a href="/anli/201412198.html"><img src="/image/heart.png" />88</a>
+                                <a href="/anli/201412198.html"><img src="/image/view.png" />738</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                <!--第二栏-->
+                              
+                                {dede:arclist  titlelen=42 row=4 typeid='2' type='image.' imgwidth='238' imgheight='185'}
+                                 <li>
+                                 <a href="[field:arcurl/]">[field:image/]</a>
+                                <h1 title='[field:title/]'>[field:title/]</h1>
+                               <p>[field:info/]...
+                   
+                </p>
+                                <div class="case-theme-title">
+                                <a href="[field:arcurl/]">连琐品牌</a>
+                                </div>
+                                <div class="case-share">
+                               <!-- <a href="/anli/201412198.html"><img src="/image/heart.png" />88</a>-->
+                                 <a href="#"><img src="/image/view.png" />[field:click/]</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                {/dede:arclist}
+                            </ul>
+                            </div> 
+                         
+                       		
+         </div>
+         
+       
+
+
+<script src="/templets/default/js/index.js"></script><script type="text/javascript">function msgsend(){
+	 var msg=[],i=0;
+	if($('#title1').val()==''){
+		msg[i++]= '请输入您的姓名';
+	}
+	if($('#company1').val()==''){
+		msg[i++]= '请输入您所在的公司';
+	}
+	if($('#position1').val()==''){
+		msg[i++]= '请输入您的职位';
+	}
+	if($('#email1').val()==''){
+		msg[i++]= '请输入您的邮箱';
+	}
+	if($('#wechat1').val()==''){
+		msg[i++]= '请输入您的微信';
+	}
+
+
+	if($('#content_1').val()==''){
+		msg[i++]= '请输入您的留言内容';
+	}
+	if($('#verifyCode1').val()==''){
+		msg[i++]= '请输入验证码';
+	}
+	
+	
+	if(msg.length>0){
+		alert(msg.join('\r\n'));
+		return false;
+	}
+	return true;
+	alert();
+}
+
+ 
+</script>
+
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+ 
+</body>
+</html>

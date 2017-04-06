@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<script src="/templets/default/style/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ $("span.div").hide();
+ $(".sis-li li").hover(function(){
+  $("span.div",this).slideToggle(100);
+ });
+ 
+ $(".imgtext").hide();
+ $(".zzsc").hover(function(){
+  $(".imgtext",this).slideToggle(1000);
+ });
+});
+</script>
+<style type="text/css">
+<!--
+*{ margin:0; padding:0; border:0;}
+
+</style>
+</head>
+<body >
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div style="width:1024px; height:128px; overflow:hidden; margin:1px auto; margin-top:10px; ">
+<img src="/images/anliti.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+  <area shape="rect" coords="261,14,465,119" href="/plus/list.php?tid=18" />
+  <area shape="rect" coords="521,18,713,114" href="/plus/list.php?tid=19" />
+  <area shape="rect" coords="772,15,970,117" href="/plus/list.php?tid=20" />
+</map>
+</div>
+<!--<div style="width:1024px; height:30px; overflow:hidden; margin:1px auto; line-height:30px; font-size:18px;">
+
+</div>-->
+
+<div style="width:1024px; height:auto; overflow:hidden; margin:10px auto;" >
+	<ul class="case-list">
+  {dede:arclist  titlelen=42 row=24 typeid='18' type='image.' imgwidth='230' imgheight='143' infolen='360'}
+                                 <li>
+                                 <a href="[field:arcurl/]" style="margin-left:3px;" target="_blank">[field:image/]</a>
+                                <h1 title='[field:title/]'><a href="[field:arcurl/]">[field:title/]<br /><span class="fot">[field:shorttitle/]</span></a></h1>
+                               <p>[field:info/]...
+                   
+                               </p>
+                                <div class="case-theme-title" >
+                                            <a href="[field:arcurl/]">[field:typename/]</a>
+                                </div>
+                                <div class="case-share">
+                                <!--<a href="#"><img src="/image/heart.png" />[field:click/]</a>-->
+                                <a href="[field:arcurl/]"><img src="/image/view.png" />[field:click/]</a>
+                                <div class="bdsharebuttonbox case-share-img" style="width: 30px!important;">
+                                <a href="#" class="bds_more" style="margin:4px 6px 6px 3px; background: url('/image/case-share.png') no-repeat scroll 0% 0% transparent!important;width: 39px!important; height: 39px !important;" data-cmd="more"></a>
+                                </div>
+								<script>							
+								window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                                </script>
+								</div>
+								</li>
+                                {/dede:arclist}
+                            </ul>
+ 
+
+</div><!--contenend -->
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

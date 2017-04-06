@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{dede:field.seotitle /}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/templets/default/css/reset.css" rel="stylesheet" type="text/css">
+<link href="/templets/default/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/templets/default/font/iconfont.css" rel="stylesheet" type="text/css">
+<link href="/templets/default/css/wechat.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="/templets/default/css/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+<script src="//use.typekit.net/sxv1brn.js"></script>
+<script src="/templets/default/js/jquery.min.js"></script>
+<link rel="stylesheet" href="/templets/default/css/banner1.css">
+<link rel="stylesheet" href="/templets/default/css/banner2.css"> 
+<!-- banner -->
+</head>
+
+{dede:include filename="headwechat.htm"/} 
+<!--头部--> 
+{dede:include filename="banner.htm"/} 
+<!-- banner -->
+<div class="wechat1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 pdlr5">
+        <div class="wechat1_a"><i class="icon iconfont">&#xe653;</i>
+          <p>APP推广</p>
+        </div>
+      </div>
+      <div class="col-xs-3 pdlr5">
+        <div class="wechat1_a"> <i class="icon iconfont">&#xe690;</i>
+          <p>公众号推广</p>
+        </div>
+      </div>
+      <div class="col-xs-3 pdlr5">
+        <div class="wechat1_a"> <i class="icon iconfont">&#xe698;</i>
+          <p>产品推广</p>
+        </div>
+      </div>
+      <div class="col-xs-3 pdlr5">
+        <div class="wechat1_a"><i class="icon iconfont">&#xe600;</i>
+          <p>社区营销</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--wechat1-->
+<div class="wechat_title ">
+  <p>APP|微信用户数据造血者</p>
+  <p>互联网公司上市融资“助跑者”</p>
+</div>
+<!--ctivity_box-->
+<div class="wechat2">
+  <div class="wechat2_a">成功案例</div>
+</div>
+<!--wechat2-->
+<div class="container wechat3">
+  <div class="row"> {dede:arclist row=2  type='image.' typeid=57 limit='0,8' titlelen='100'}
+    <div class="col-sm-6"> <a class="wechat3_a" href="[field:arcurl/]" target="_blank">
+      <div class="wechat3_img">[field:image/]</div>
+      <div class="wechat3_tit">[field:title/]</div>
+      <div class="wechat3_tit2">#[field:shorttitle/]#</div>
+      </a> </div>
+    {/dede:arclist} </div>
+</div>
+
+<!--wechat3-->
+<div class="more">
+  <div class="more_left">
+    <div class="more_left_1"> </div>
+  </div>
+  <a>查看更多案例</a>
+  <div class="more_right"> + </div>
+</div>
+<!--more-->
+<div class="wechat_title ">
+  <p>超100所高校，逾1500名地推组员</p>
+  <p>实现学校|社区|写字楼720度全面覆盖</p>
+</div>
+<!--ctivity_box-->
+<div class="wechat2">
+  <div class="wechat2_a">地推渠道</div>
+</div>
+<!--wechat2-->
+<div class="container ditui">
+  <div class="row"> {dede:arclist row=6  type='image.' typeid=59 limit='0,3' titlelen='100'}
+    <div class="col-sm-4"> <a class="ditui_a" href="#" target="_blank">
+      <div class="ditui_img">[field:image/]</div>
+      <div class="ditui_tit">[field:title/]</div>
+      <div class="ditui_tit2">[field:description function='cn_substr(@me,100)'/]</div>
+      </a> </div>
+    {/dede:arclist} </div>
+</div>
+<div class="container ditui overflow767">
+  <div class="row"> {dede:arclist row=6  type='image.' typeid=59 limit='3,3' titlelen='100'}
+    <div class="col-sm-4"> <a class="ditui_a" href="#" target="_blank">
+      <div class="ditui_img">[field:image/]</div>
+      <div class="ditui_tit">[field:title/]</div>
+      <div class="ditui_tit2">[field:description function='cn_substr(@me,100)'/]</div>
+      </a> </div>
+    {/dede:arclist} </div>
+</div>
+<!--ditui-->
+<div class="wechat_title ">
+  <p>1+N多渠道营销</p>
+  <p>可短时间影响逾100万人群</p>
+</div>
+<!--ctivity_box-->
+<div class="wechat2">
+  <div class="wechat2_a">网推渠道</div>
+</div>
+<!--wechat2-->
+<div class="container ditui">
+  <div class="row"> {dede:arclist row=6  type='image.' typeid=58 limit='0,3' titlelen='100'}
+    <div class="col-sm-4"> <a class="ditui_a" href="#" target="_blank">
+      <div class="ditui_img">[field:image/]</div>
+      <div class="ditui_tit">[field:title/]</div>
+      <div class="ditui_tit2">[field:description function='cn_substr(@me,100)'/]</div>
+      </a> </div>
+    {/dede:arclist} </div>
+</div>
+<div class="container ditui overflow767">
+  <div class="row"> {dede:arclist row=6  type='image.' typeid=58 limit='3,3' titlelen='100'}
+    <div class="col-sm-4"> <a class="ditui_a" href="#" target="_blank">
+      <div class="ditui_img">[field:image/]</div>
+      <div class="ditui_tit">[field:title/]</div>
+      <div class="ditui_tit2">[field:description function='cn_substr(@me,100)'/]</div>
+      </a> </div>
+    {/dede:arclist} </div>
+</div>
+<!--ditui-->
+<div class="overflow1200">
+  <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;">
+      <p style="line-height:40px;">集全网营销|社区地推|</p>
+      <p style="line-height:40px;">品牌设计|品牌咨询为一体的品牌顾问公司</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+      <div class="anlie_boxtwo_a">我们优势</div>
+    </div>
+    <!--anlie_boxtwo--> 
+  </div>
+  <!--anlie-->
+  
+  <div class="about6">
+    <div class="about6box">
+      <div class="about6_a">
+        <div class="about6_a_A"><img src="/images/about/about6_a.jpg" /></div>
+        <div class="about6_a_B">
+          <p>INTEGRATION</p>
+          <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌整合推广</p>
+          <ul>
+            <li><b>·</b>品牌定义</li>
+            <li><b>·</b>创意执行</li>
+            <li><b>·</b>网络营销</li>
+            <li><b>·</b>活动推广</li>
+            <li><b>·</b>微信营销</li>
+          </ul>
+        </div>
+        <!--bout6_a_B--> 
+      </div>
+      <!--about6_a-->
+      
+      <div class="about6_a" style=" margin-left:31px;">
+        <div class="about6_a_A"><img src="/images/about/about6_b.jpg" /></div>
+        <div class="about6_a_B">
+          <p>VISUAL DESIGN</p>
+          <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌视觉设计</p>
+          <ul>
+            <li><b>·</b>品牌设计&nbsp;VI设计&nbsp;&nbsp;&nbsp;</li>
+            <li><b>·</b>品牌连锁&nbsp;零售环境</li>
+            <li><b>·</b>产品包装&nbsp;视觉营销</li>
+          </ul>
+        </div>
+        <!--bout6_a_B--> 
+      </div>
+      <!--about6_a-->
+      
+      <div class="about6_a" style=" margin-left:31px;">
+        <div class="about6_a_A"><img src="/images/about/about6_c.jpg" /></div>
+        <div class="about6_a_B">
+          <p>Community push</p>
+          <p style=" font-size:28px; margin-top:5px; font-weight:bold;">社区地推</p>
+          <ul>
+            <li><b>·</b>APP推广&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li><b>·</b>公众号推广</li>
+            <li><b>·</b>产品推广&nbsp;&nbsp;&nbsp;</li>
+            <li><b>·</b>社区营销&nbsp;&nbsp;&nbsp;</li>
+          </ul>
+        </div>
+        <!--bout6_a_B--> 
+      </div>
+      <!--about6_a-->
+      
+      <div class="about6_a" style=" margin-left:30px;">
+        <div class="about6_a_A"><img src="/images/about/about6_d.jpg" /></div>
+        <div class="about6_a_B">
+          <p>Consultant</p>
+          <p style=" font-size:28px; margin-top:5px; font-weight:bold;">品牌咨询</p>
+          <ul>
+            <li><b>·</b>网络营销培训</li>
+            <li><b>·</b>企业团队打造</li>
+            <li><b>·</b>销售实战培训</li>
+            <li><b>·</b>招商会议讲师</li>
+          </ul>
+        </div>
+        <!--bout6_a_B--> 
+      </div>
+      <!--about6_a--> 
+      
+    </div>
+    <!--about6box--> 
+  </div>
+  <!--about6-->
+  <div class="anlie">
+    <div class="anlie_box" style="line-height:40px;">
+      <p style="line-height:40px;">HUAJIANG CASE</p>
+    </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+      <div class="anlie_boxtwo_a">花匠速拓品牌整合营销案例</div>
+    </div>
+    <!--anlie_boxtwo--> 
+  </div>
+  <!--anlie-->
+  
+  <div class="designcontent">
+    <div class="designnews"> {dede:arclist row=8  type='image.'  typeid='18' imgwidth='235' imgheight='160' limit='0,8' flag='c' titlelen='200'} <a href="[field:arcurl/]"> [field:image/]
+      <div class="dstiao">
+        <div class="dstiao_a"></div>
+        <div class="dstiao_b">[field:pubdate function="MyDate('y-m-d',@me)"/]</div>
+        <div class="dstiao_c"></div>
+        <div class="dstiao_b">[field:click/]</div>
+      </div>
+      <div class="news_title">
+        <p>[field:title/]</p>
+      </div>
+      <div class="news_detail">[field:description function='cn_substr(@me,200)'/]</div>
+      </a> {/dede:arclist} </div>
+    <!--designnews--> 
+  </div>
+  <!--designcontent--> 
+</div>
+<!--overflow1200-->
+<div class="wechat_title ">
+  <p>CONTACT US</p>
+</div>
+<!--ctivity_box-->
+<div class="wechat2">
+  <div class="wechat2_a">联系我们</div>
+</div>
+<!--wechat2-->
+<div class="container contact">
+  <form method="post" action="/plus/guestbook1.php" name="form1">
+    <input type='hidden' name='action' value='save' />
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>希望花匠速拓为您提供什么服务（可多选）</h3>
+        <p class="mt20">
+          <input type="checkbox" name="duoxuang" value="APP推广 " />
+          APP推广</p>
+        <P>
+          <input type="checkbox" name="duoxuang2" value="公众号推广" />
+          公众号推广</P>
+        <p>
+          <input type="checkbox" name="duoxuang3" value="产品推广" />
+          产品推广</p>
+        <p>
+          <input type="checkbox" name="duoxuang4" value="社区营销" />
+          社区营销</p>
+      </div>
+      <div class="col-lg-6">
+        <input type="text" id="txt" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+        <div class="sex">
+          <input type="radio" name="img" value="男"  checked="checked"/>
+          &nbsp;先生
+          <input type="radio" name="img" value="女" />
+          &nbsp;女士 </div>
+        <input type="text"  id="txt" name="qq"  value="回访电话  *" onFocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+        <input type="text"  id="txt" name="homepage"  value="品牌名称" onFocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+        <input type="text" id="txt2" name="msg"  value="请填写你的合作需求" onFocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+        <label>
+          <input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/>
+          健康 美肤 快消品</label>
+        <label>
+          <input name="email" type="radio" value="时尚 珠宝 服装" />
+          时尚 珠宝 服装</label>
+        <label>
+          <input name="email" type="radio" value="餐饮 家具 环保" />
+          餐饮 家具 环保</label>
+        <label>
+          <input name="email" type="radio" value="电商 互联网 科技" />
+          电商 互联网 科技</label>
+        <label>
+          <input name="email" type="radio" value="金融 制造 服务" />
+          金融 制造 服务</label>
+        <label>
+          <input name="email" type="radio" value="其他行业" />
+          其他行业</label>
+        <div class="submit">
+          <input type="submit" name="submit"  id="submit" value="点击提交"/>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!--contact-->
+{dede:include filename="footer_wechat.htm"/}
+<script src="/templets/default/css/respond.src.js" type="text/javascript"></script> 
+<script src="/templets/default/css/owl.carousel.js"></script> 
+<script>
+    jQuery(document).ready(function($) {
+
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            animateOut: 'fadeOut',
+            items: 1,
+            nav: true,
+            lazyLoad: true,
+            loop: true,
+            autoHeight: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 450
+        });
+    });
+    </script> 
+<!-- banner -->
+</body></html>

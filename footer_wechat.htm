@@ -1,0 +1,119 @@
+
+<div class="footer">
+  <div class="partners overflow1200">
+    <span>合作客户</span>
+    <p>最新公司合作客户</p>
+  <img src="/images/dituipartners.jpg"/> </div><!--partners-->
+  <div class="footer_title overflow1200">
+    <div class="ftitle_box">
+      <div class="ftitle_a"><img src="/images/footer/footer_01.png" width="50" height="50" /></div>
+      <div class="ftitle_b">国际领先的品牌设计理念与品牌管理经验，使我们始终保持行业的领先设计思维与工作方法！</div>
+      {dede:type typeid='1'}<a href='[field:typeurl/]' [field:rel/]><div class="ftitle_c">花匠速拓优势</div></a>{/dede:type}
+    </div><!--ftitle_box-->
+  </div><!--footer_title-->
+  <div class="footercontent overflow1200">
+    <div class="fcontent_box">
+      <div class="fcontent_a">
+       <div class="fcontent_a_1">公司动态</div><!--fcontent_a_1-->
+       {dede:arclist row=1 typeid='16' limit='0,1' flag='c' titlelen='55'}
+       <div class="fcontent_a_2" style="margin-top:5px;"><a href="[field:arcurl/]">[field:title/]</a></div>
+       {/dede:arclist}
+       {dede:arclist row=1 typeid='16' limit='1,5' flag='c' titlelen='55'}
+       <div class="fcontent_a_2"><a href="[field:arcurl/]">[field:title/]</a></div>
+       {/dede:arclist}
+      </div><!--fcontent_a--> 
+      <div class="fcontent_b">
+        <div class="fcontent_b_1">标签</div><!--fcontent_a_1-->
+        <div class="fcontent_b_2">
+      {dede:type typeid='1'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+      {dede:type typeid='2'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+      {dede:type typeid='3'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+      {dede:type typeid='4'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+      {dede:type typeid='5'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type} 
+      <a href='http://gzhuajiang.net/' target="_blank" style="margin-left:15px;">品牌设计</a></li>
+      <a href='/a/wangzhanjiansheweb' target="_blank"  style="margin-left:15px;">网站建设</a></li>
+      {dede:type typeid='8'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+      {dede:type typeid='9'}<a href='[field:typelink /]' target="_blank" style="margin-left:15px;">[field:typename /]</a>{/dede:type}
+        </div>
+      </div><!--fcontent_b-->
+      <div class="fcontent_c">
+        <div class="fcontent_c_1">HUAJAING</div><!--fcontent_c_1-->
+        <div class="fcontent_c_2">您需要任何专业上的咨询，请直接与我们联系，我们将会尽快回复您的讯息并竭诚地为您服务。</div>
+        <div class="fcontent_c_3"><img src="/images/footer/footer_02.png" width="181" height="92" /></div>
+      </div><!--fcontent_c-->
+      <div class="fcontent_d">
+        <div class="fcontent_d_1">CONTACT</div>
+        <div class="fcontent_d_2">
+          <ul>
+            <li>Address</li>
+            <li>广州白云区国际单位二期A10栋</li>
+            <li>202A/202B</li>
+            <li>Telephone</li>
+            <li>400-0906-920</li>
+          </ul>    
+        </div>
+      </div><!--fcontent_d-->
+    </div><!--fcontent_box-->
+  </div><!--footercontent-->
+  <div class="footer_under"> 
+    <div class="funder_box">COPYRIGHTS 2013-2015. HUAJIANG CO.LTD. ALL RIGHTS RESERVED.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;粤ICP备14073626号-7</div><!--funder_box-->
+  </div><!--footer_under-->
+</div><!--footer-->
+	<script type="text/javascript">
+	$(function(){
+		showScroll();
+		function showScroll(){
+			$(window).scroll( function() { 
+				var scrollValue=$(window).scrollTop();
+				scrollValue > 100 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+			} );	
+			$('#scroll').click(function(){
+				$("html,body").animate({scrollTop:0},200);	
+			});	
+		}
+	})
+	</script>
+<style type="text/css">
+
+	.scroll{
+
+		width:40px;
+
+		height:67px;
+
+		text-align:center;
+
+		position:fixed;
+
+		right:20px;
+
+		bottom:20px;
+
+		cursor:pointer;
+
+	}
+	#scroll a{width:40px;height:67px; display:block;background-image:url(/templets/default/css/gotop.png); opacity:1;}
+</style>
+
+    <div class="scroll" id="scroll" style="display:none;">
+      
+      <a href="#"></a>
+
+	</div>
+    
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3bc06a26a956efbd1cf59462fa228920";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>
+.ii img{
+	overflow:hidden;
+	width:0;
+	height:0;}
+</style>
+<div class="ii"><script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fac892156eb7663e875efe56e07423e36' type='text/javascript'%3E%3C/script%3E"))</script></div>

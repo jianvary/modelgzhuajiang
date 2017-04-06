@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.hjwei{ width:100%; height:auto; margin:0 auto;overflow:hidden;}
+.wei_01{width:100%; height:auto; float:left;}
+.wei_01 img{width:100%; height:auto;float:left;}
+.wei_02{width:100%; height:auto; float:left;}
+.wei_02 .wei_02box{ width:1060px; height:auto; margin:0 auto;}
+.wei_02 .wei_02box .wei_02_a{width:310px; height:330px; float:left; margin-top:30px;margin-left:30px; border:1px solid #d2d2d2;}
+.wei_02 .wei_02box .wei_02_a img{ float:left; margin-left:20px; margin-top:25px;}
+.wei_02 .wei_02box .wei_02_a span{float:left;margin-left:20px; margin-top:20px; font-size:20px; color:#d70050;}
+.wei_02 .wei_02box .wei_02_a p{ width:270px; height:60px;display:block;float:left;margin-left:20px; margin-top:15px; line-height:25px;font-size:16px; color:#818181; border-bottom:1px dotted #818181}
+.zhixian{width:100%; height:1px;float:left; border-bottom:1px solid #000; margin-top:30px; margin-bottom:30px;}
+.wei_03{width:1000px; height:auto; margin:0 auto;text-align:center; margin-top:30px;}
+.wei_03 span{font-size:40px; color:#d7004f; font-weight:bold; font-family:'微软雅黑';}
+.wei_03 p{ width:785px;font-size:20px;font-family:'微软雅黑'; text-align:center; color:#555555;margin:0 auto; margin-top:25px;}
+.wei_04{width:100%; height:auto; margin:0 auto; margin-top:30px;}
+.wei_04 img{width:100%; height:auto;float:left;}
+.wei_05{ width:1000px; margin:0 auto; height:auto; text-align:center; }
+.wei_05 .wei_5_a{ width:1000px; margin:0 auto; height:auto;font-size:60px; line-height:140px; color:#d7004f; font-weight:bold; font-family:'微软雅黑';}
+.wei_05 .wei_5_b{ width:1000px; margin:0 auto; height:auto;}
+.wei_05 .wei_5_b .wei_5_b_1{ float:left; width:auto;}
+.wei_05 .wei_5_b .wei_5_b_1 img{float:left;}
+.wei_05 .wei_5_b .wei_5_b_2{ float:right; margin-top:20px;}
+.wei_05 .wei_5_b .wei_5_b_2 .wei_5_b_2_1{ width:520px; height:110px; border-bottom:1px dotted #d6d6d6;}
+.wei_05 .wei_5_b .wei_5_b_2 .wei_5_b_2_1 img{ float:left;margin-top:20px;}
+.wei_05 .wei_5_b .wei_5_b_2 .wei_5_b_2_1 span{ float:left; margin-left:30px; margin-top:20px;font-size:30px; font-weight:inherit; color:#d7004f;}
+.wei_05 .wei_5_b .wei_5_b_2 .wei_5_b_2_1 p{ float:left; margin-left:30px;font-size:16px; margin-top:10px; color:#575757; text-align:left;}
+.wei_06{ width:1000px; margin:0 auto; height:auto;}
+.wei_06 .wei_06_a{width:1000px; float:left; height:auto;}
+.wei_06 .wei_06_a img{width:1000px;height:auto; float:left;}
+.wei_06 .wei_06_b{width:1000px;float:left; height:auto; text-align:center; font-size:60px; font-weight:bold; line-height:90px; color:#d7004f;}
+.wei_06 .wei_06_c{width:1000px;float:left; height:auto; text-align:center; margin-top:30px; margin-bottom:30px;}
+.wei_07{ width:1000px; margin:0 auto; height:auto;}
+.wei_07 img{width:1000px;height:auto; float:left;}
+.wei_08{ width:1000px; margin:0 auto; height:auto;}
+.wei_08 .wei_08_a{ float:left; width:500px; border-right:3px solid #d5014e;margin-top:30px;}
+.wei_08 .wei_08_a span{float:left; width:400px;font-size:30px; font-weight:bold; color:#dd004f;}
+.wei_08 .wei_08_a p{float:left; width:400px; margin-top:20px; line-height:30px;font-size:16px; color:#818181;}
+.wei_08 .wei_08_a img{float:left; width:426px; height: auto;padding-bottom:20px;}
+.wei_08 .wei_08_b{ float:right; width:400px;margin-top:30px;}
+.wei_08 .wei_08_b span{float:left; width:400px;font-size:30px; font-weight:bold; color:#dd004f;}
+.wei_08 .wei_08_b p{float:left; width:400px; margin-top:20px; line-height:30px;font-size:16px; color:#818181;}
+.wei_08 .wei_08_b img{float:left;width:422px;height: auto;padding-bottom:20px;}
+.wei_08 .wei_08_b a{ width:400px; font-size:16px; height:25px; margin-top:10px; display:block; line-height:25px;float:left; color:#FFF; background:#000; border-radius:5px; padding-left:10px;}
+.wei_09{ width:1000px; margin:0 auto; height:auto;}
+.wei_09 .wei_09_a{width:1000px; margin:0 auto; float:left;text-align:center; border-bottom:1px solid #dd004f;}
+.wei_09 .wei_09_a span{ font-size:60px; font-weight:bold; font-family:'微软雅黑'; line-height:120px;color:#d5014e;}
+.wei_09 .wei_09_a p{ font-size:30px;color:#d5014e; margin-bottom:20px;}
+.wei_10{ width:1080px; margin:0 auto; height:auto;}
+.wei_10 .wei_10_a{ width:305px; height:80px; float:left; margin-left:40px; font-size:30px; line-height:80px; text-align:center; background:#d70050; color:#FFF; margin-top:30px; margin-bottom:50px;}
+.wei_11{width:1000px; margin:0 auto; height:auto; text-align:center;}
+.wei_12 {width:1000px; margin:0 auto; height:auto; text-align:center;}
+.wei_12 span{ font-size:60px; line-height:100px; font-weight:bold; font-family:'微软雅黑';color:#d5014e;}
+.wei_12 p{ font-size:60px; margin-bottom:40px;font-family:'微软雅黑';color:#d5014e; }
+.wei_13{width:1080px; margin:0 auto; height:auto;}
+.wei_13 .wei_13_a{float:left; width:210px;height:auto;margin-left:45px;}
+.wei_13 .wei_13_a img{float:left; width:210px; height:auto;}
+.wei_14{width:1000px; margin:0 auto; height:auto;}
+.wei_14 .wei_14_a{width:1000px; float:left;height:auto;}
+.wei_14 .wei_14_a img{width:1000px; float:left;height:auto;}
+.wei_14 .wei_14_b {width:1000px; float:left;height:auto; text-align:center; margin-bottom:40px;}
+.wei_14 .wei_14_b span{ font-family:'微软雅黑';font-size:60px; line-height:120px; font-weight:bold; color:#d80051; }
+.wei_14 .wei_14_b p{ font-family:'微软雅黑';width:900px; margin:0 auto;font-size:18px; line-height:25px; color:#7f7f7f;}
+.wei_15{width:1000px; margin:0 auto; height:370px;border-bottom:1px dotted #666; margin-bottom:20px;}
+.wei_15 .wei_15_a{ float:left;}
+.wei_15 .wei_15_b{ float:right; width:440px;}
+.wei_15 .wei_15_b span{ float:left;font-size:30px; line-height:80px; color:#d80051; margin-top:50px;}
+.wei_15 .wei_15_b p{ float:left;font-size:18px; line-height:35px; color:#545454;font-family:'微软雅黑';}
+.wei_16{width:1000px; margin:0 auto; height:370px;border-bottom:1px dotted #666; margin-bottom:20px;}
+.wei_16 .wei_16_a{ float:right;}
+.wei_16 .wei_16_b{ float:left; width:440px;}
+.wei_16 .wei_16_b span{ float:left;font-size:30px; line-height:80px; color:#d80051; margin-top:50px;}
+.wei_16 .wei_16_b p{ float:left;font-size:18px; line-height:35px; color:#545454;font-family:'微软雅黑';}
+
+.wei_17{ width:1000px; height:auto; margin:0 auto;overflow:hidden; background-color:#fff;}
+.hjlyg{ width:1000px; height: auto; margin:10 auto; float:left; overflow:hidden;}
+.hjditu{ width:998px; height:500px; margin:10px auto; float:left;}
+.hjlxweixin{ width:1000px; height:250px; margin:0px auto; float:left;}
+
+.lian_all{ width:1000px; height:auto; overflow:hidden; margin:0 auto; margin-bottom:20px;}
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(/images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:27px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050; }
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+/*左边*/
+.lianxiwomen{ height: auto; width:1000px; margin:0 auto;/*border:1px solid #ccc;*/}
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:30px; }
+.lianxiwomen form .lianxiwomen_left .box_lxwm{height:400px; width:350px; float:left;/*border:1px solid #ccc;*/margin-top:40px; margin-right:10px;color:#686868;font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .timu{width:350px;/*border:1px solid #ccc;*/line-height:35px; font-size:25px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .duoxuan{width:350px;/*border:1px solid #ccc;*/line-height:30px; letter-spacing:0.1em; font-size:20px;}
+.lianxiwomen form .lianxiwomen_left .box_lxwm .liuliu{width:350px;/*border:1px solid #ccc;*/line-height:30px; font-size:12px; margin-top:20px;}
+/*右边*/
+.lianxiwomen form .lianxiwomen_right{ height: auto; width:450px; float:right;/*border:1px solid #ccc;*/ margin-top:30px; margin-right:50px;}
+.lianxiwomen form .lianxiwomen_right{width:420px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:160px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .submit{ float:right;margin-top:10px;}
+.anlie {
+	float: left;
+	width: 100%;
+}
+.anlie_box {
+	margin: 30px auto 0 auto;
+	width: 1200px;
+	text-align: center;
+}
+.anlie_box span {
+	font: normal 65px/70px 微软雅黑;
+	color: #ea2865;
+}
+.anlie_box p {
+	font: normal 30px/30px 微软雅黑;
+	color: #ea2865;
+}
+.anlie_box p small {
+	font: normal 30px/30px 微软雅黑;
+	color: #000;
+}
+.anlie_box p b {
+	font: normal 40px/30px 微软雅黑;
+	color: #000;
+}
+.anlie_boxtwo {
+	position: relative;
+	margin: 30px auto 0 auto;
+	width: 1200px;
+	border-top: 2px solid #ea2865;
+}
+.anlie_boxtwo_a {
+	position: relative;
+	margin-left: 375px;
+	margin-top: -20px;
+	display: block;
+	float: left;
+	width: 450px;
+	height: 35px;
+	font: normal 18px/35px 微软雅黑;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px;
+	background: #ea2865;
+}
+/*anlie*/
+
+.phonecase {
+	float: left;
+	width: 100%;
+}
+.phonecase_box {
+	margin: 0 auto;
+	width: 1220px;
+}
+.phonecase_a {
+	position: relative;
+	margin-left: 20px;
+	float: left;
+	width: 380px;
+	height: 815px;
+	overflow: hidden;
+	background: url(/images/phonebg.png) center no-repeat;
+}
+.phonecase_box_a {
+	margin-left: 23px;
+	margin-top: 105px;
+	float: left;
+	width: 320px;
+	height: 585px;
+	overflow: hidden;
+}
+.phonecase_box .phonecase_a a {
+	margin-top: 90px;
+	float: left;
+	display: block;
+	width: 320px;
+	font: normal 20px/50px 微软雅黑;
+	text-decoration: none;
+	text-align: center;
+}
+.phonecase_box .phonecase_a a:hover {
+	color: #ea2865;
+}
+/*phonecase_box*/
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+
+<div class="hjwei">
+
+<div class="wei_01">
+<img src="/images/wei2/wei_01.jpg"/>
+<img src="/images/wei2/wei_02.jpg"/>
+<img src="/images/wei2/wei_03.jpg"/>
+<img src="/images/wei2/wei_04.jpg"/>
+<img src="/images/wei2/wei_05.jpg"/>
+<img src="/images/wei2/wei_06.jpg"/>
+<img src="/images/wei2/wei_07.jpg"/>
+<img src="/images/wei2/wei_08.jpg"/>
+<img src="/images/wei2/wei_09.jpg"/>
+<img src="/images/wei2/wei_10.jpg"/>
+</div><!--wei_01-->
+<div class="anlie">
+    <div class="anlie_box"> <span>SHOW CASE</span>
+          <p><small>花匠</small><b>.</b>手机网站案例</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">全套移动端解决方案，100家连锁品牌实现快速拓店</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->
+      
+<div class="phonecase">
+    <div class="phonecase_box">
+    
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.gzhaodaizi.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.gzhaodaizi.net/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+         
+          
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.gangzailiansuo.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.gangzailiansuo.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+        
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.ygytw.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.ygytw.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.gzhuajiang.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.gzhuajiang.net/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+         
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://m.hanshili.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://m.hanshili.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a--> 
+          
+        </div>
+    <!--phonecase_box--> 
+    
+  </div>
+
+<div class="zhixian"></div>
+
+<div class="wei_03">
+  <span>手机网站带来无限商机</span>
+  <p>据统计，中国网民规模达6.32亿，83.4%在使用手机上网，传统网站手机端速度慢、流量大、导航复杂等糟糕体验必导致用户流失。</p>
+</div><!--wei_03-->
+<div class="wei_04">
+<img src="/images/wei/wei_04_a.jpg"/>
+</div><!--wei_04-->
+<div class="wei_05">
+  <div class="wei_5_a">六大优势完胜app应用</div><!--wei_5_a-->
+  <div class="wei_5_b">
+    <div class="wei_5_b_1"><img src="/images/wei/wei_5_b.jpg" width="473" height="730" /></div><!--wei_5_b_1-->
+    <div class="wei_5_b_2">
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_1.jpg"/>
+        <span>跨平台，节约成本开发</span>
+        <p>完美兼容安卓和IOS两大主流手机平台</p>
+      </div><!--"wei_5_b_2_1-->
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_2.jpg"/>
+        <span>有效利用搜索引擎</span>
+        <p>手机网站可被百度、谷歌、360等搜索引擎检索</p>
+      </div><!--"wei_5_b_2_1-->
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_3.jpg"/>
+        <span>易于维护</span>
+        <p>APP升级需要再次下载，而手机网站会自动更新</p>
+      </div><!--"wei_5_b_2_1-->
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_4.jpg"/>
+        <span>无需下载，即使浏览</span>
+        <p>瞬间打开手机网站，节省加载时间</p>
+      </div><!--"wei_5_b_2_1-->
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_5.jpg"/>
+        <span>便于网络营销推广</span>
+        <p>网页链接可通过多种渠道推广，APP则不支持超链接</p>
+      </div><!--"wei_5_b_2_1-->
+      <div class="wei_5_b_2_1">
+        <img src="/images/wei/wei_05_6.jpg"/>
+        <span>域名自动跳转，节约成本</span>
+        <p>使用同一域名，能识别判断不同终端实现自动跳转</p>
+      </div><!--"wei_5_b_2_1-->
+    </div><!--wei_5_b_2-->
+  </div><!--wei_5_b-->
+</div><!--wei_05--> 
+<div class="wei_06">
+  <div class="wei_06_a"><img src="/images/wei/wei_06_a.jpg"/></div><!--wei_06_a-->
+  <div class="wei_06_b">互联网+时代<br />品牌营销型网站建设思路改如何</div><!--wei_06_b-->
+  <div class="wei_06_c"><img src="/images/wei/wei_06_c.jpg"/></div>
+</div><!--wei_06-->
+
+<div class="wei_07">
+<img src="/images/wei/wei_07_c.jpg"/>
+</div><!--wei_07-->
+<div class="wei_08">
+  <div class="wei_08_a">
+    <span>现在要做的，就只有行动<br/>中国手机网民已经突破5.27亿</span>
+    <p>据统计，中国网民规模达6.32亿，83.4%在使用手机上网，传统网站手机端速度慢、流量大、导航复杂等糟糕体验必导致用户流失。</p>
+    <img src="/images/wei/wei_08_a.jpg"/> 
+  </div><!--wei_08_a-->
+  <div class="wei_08_b">
+    <img src="/images/wei/wei_08_b.jpg"/>
+    <span>我们为什么需要手机网站</span>
+    <p>PC版网站在手机端字体不清晰<br/>PC版图片尺寸大，吃掉很多流量<br/>PC搜索引擎端很难抓取到手机网站</p>
+    <a href="#">您的品牌连1个手机网站都不做，能有成交吗？</a>
+  </div><!--wei_08_b-->
+</div><!--wei_08-->
+
+<div class="wei_09">
+  <div class="wei_09_a">
+  <span>手机网站的便捷功能</span>
+  <p>花匠网络与您一起抓住那5.6亿手机用户</p>
+  </div>
+</div><!--wei_09-->
+<div class="wei_10">
+  <div class="wei_10_a">一键拨打</div><!--ei_10_a-->
+  <div class="wei_10_a">一键咨询</div><!--ei_10_a-->
+  <div class="wei_10_a">一键分享</div><!--ei_10_a-->
+  <div class="wei_10_a">一键留言</div><!--ei_10_a-->
+  <div class="wei_10_a">地图定位</div><!--ei_10_a-->
+  <div class="wei_10_a">互动推广</div><!--ei_10_a-->
+</div><!--wei_10-->
+<div class="wei_11"><img src="/images/wei/wei_06_a.jpg"/></div><!--wei_11-->
+<div class="wei_12">
+  <span>品牌商纷纷杀入移动市场</span>
+  <p>淘金掘银抢财富新商机</p>
+</div><!--wei_12-->
+<div class="wei_13">
+  <div class="wei_13_a"><img src="/images/wei/wei_13_a.jpg"/></div><!--wei_13_a-->
+  <div class="wei_13_a"><img src="/images/wei/wei_13_b.jpg"/></div><!--wei_13_a-->
+  <div class="wei_13_a"><img src="/images/wei/wei_13_c.jpg"/></div><!--wei_13_a-->
+  <div class="wei_13_a"><img src="/images/wei/wei_13_d.jpg"/></div><!--wei_13_a-->
+</div><!--wei_13-->
+<div class="zhixian"></div>
+<div class="wei_14">
+  <div class="wei_14_a"><img src="/images/wei/wei_14_a.jpg"/></div><!--wei_14_a-->
+  <div class="wei_14_b">
+    <span>适用于互联网营销推广移动端</span>
+    <p>有效利用搜索引擎推广,手机网站可被百度、谷歌、360等搜索引擎检索。便于网络营销推广，网页链接可通过多种渠道推广，APP则不支持超链接
+</p>
+  </div><!--wei_14_b-->
+</div><!--wei_14-->
+<div class="wei_11"><img src="/images/wei/wei_06_a.jpg"/></div><!--wei_11-->
+<div class="wei_15">
+  <div class="wei_15_a"><img src="/images/wei/wei_15_1.jpg"/></div><!--wei_15_a-->
+  <div class="wei_15_b">
+    <span>台湾芋观园手机营销官网</span>
+    <p>台湾甜品专家携手花匠网络，打造365天持续盈利的特色甜品店铺，2年成功在中国市场拓展365家连锁店铺，成为亚洲甜品市场领军品牌</p>
+  </div><!--wei_15_b-->
+</div><!--wei_15-->
+<div class="wei_16">
+  <div class="wei_16_b">
+    <span>港仔连锁手机营销官网</span>
+    <p>港仔连锁，国际一线化妆品中小样特色店，与花匠网络整合营销机构合作后，借助互联网成功拓展100多个网点，成为化妆品中小样店的领军品牌。
+</p>
+  </div><!--wei_15_b-->
+  <div class="wei_16_a"><img src="/images/wei/wei_15_2.jpg"/></div><!--wei_15_a-->
+</div><!--wei_15-->
+
+    <div class="wei_17">
+    	<div class="hjlyg">
+    	<div class="lian_all">
+    <div class="lianxiwomen_head">
+      <div class="lianxiwomen_headl"></div>
+      <div class="lianxiwomen_headm">联系我们</div>
+      <div class="lianxiwomen_headr">填写你的需求，花匠品牌顾问会即时与你联系</div>
+    </div>
+    <div class="lianxiwomen_bottom"></div>
+    <div class="lianxiwomen">
+     <form method="post" action="/plus/guestbook1.php" name="form1">
+     <input type='hidden' name='action' value='save' />
+      <div class="lianxiwomen_left">
+        <div class="box_lxwm">
+          <div class="timu">希望花匠<br/>为您提供什么服务（可多选）</div>
+          <br />
+          <div class="duoxuan">
+            <input type="checkbox" name="duoxuang" value="品牌网络整合营销" /><!--Network integrated marketing(英文翻译)-->
+             品牌网络整合营销
+            <br />
+            <input type="checkbox" name="duoxuang2" value="品牌视觉设计" /><!--Visual design(英文翻译)-->
+             品牌视觉设计
+            <br />
+            <input type="checkbox" name="duoxuang3" value="品牌网站建设" /><!--Website construction(英文翻译)-->
+             品牌网站建设
+            <br />
+            <input type="checkbox" name="duoxuang4" value="实战型品牌咨询" /><!--Actual brand consultation(英文翻译)-->
+             实战型品牌咨询
+           </div>
+        <div class="liuliu">其他需求可在留言框中简单说明</div>
+        </div>
+      </div><!--lianxiwomen_left-->
+      
+      <div class="lianxiwomen_right">
+        <input type="text" id="txtname" name="uname"  value="姓名  *"   onfocus="if(this.value=='姓名  *'){this.value='';}"  onblur="if(this.value==''){this.value='姓名  *';}"/>
+      
+        <div class="sex">
+        <input type="radio" name="img" value="男"  checked="checked"/>&nbsp;先生
+        <input type="radio" name="img" value="女" />&nbsp;女士
+        </div>
+      <input type="text"  id="telephone" name="qq"  value="回访电话  *" onfocus="if(this.value=='回访电话  *'){this.value='';}"  onblur="if(this.value==''){this.value='回访电话  *';}" />
+     
+       <input type="text"  id="brandname" name="homepage"  value="品牌名称" onfocus="if(this.value=='品牌名称'){this.value='';}"  onblur="if(this.value==''){this.value='品牌名称';}"/>
+      
+       <input type="text" id="cooperationneeds" name="msg"  value="请填写你的合作需求" onfocus="if(this.value=='请填写你的合作需求'){this.value='';}"  onblur="if(this.value==''){this.value='请填写你的合作需求';}"/>
+    
+        <label><input name="email" type="radio" value="健康 美肤 快消品"  checked="checked"/> 健康 美肤 快消品</label>
+        <label><input name="email" type="radio" value="时尚 珠宝 服装" /> 时尚 珠宝 服装</label>
+        <label><input name="email" type="radio" value="餐饮 家具 环保" /> 餐饮 家具 环保</label>
+        <label><input name="email" type="radio" value="电商 互联网 科技" /> 电商 互联网 科技</label>
+        <label><input name="email" type="radio" value="金融 制造 服务" /> 金融 制造 服务</label>
+        <label><input name="email" type="radio" value="其他行业" /> 其他行业</label>
+      	 <div class="submit"><input type="submit" name="submit"  id="submit" value="点击提交"/></div>
+     	 </div><!--lianxiwomen_right-->
+      	</form>
+    	</div><!--lianxiwomen-->
+		</div><!--lian_all-->
+    </div><!--hjlyg-->
+    </div><!--wwei_17-->
+
+
+
+
+
+</div><!--allwei-->
+
+
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

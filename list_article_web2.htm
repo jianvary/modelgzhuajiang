@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link href="/templets/default/style/webbuild.css" rel="stylesheet" media="screen" type="text/css"/>
+    <!-------------------------------轮播图开始------------------------------------------------------->
+    <link href="/templets/default/style/luenbotu.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="/templets/default/js/jquery-1.10.2.min.js"></script>
+    <script src="/templets/default/js/slider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var bannerSlider = new Slider($('#banner_tabs'), {
+            time: 5000,
+            delay: 500,
+            event: 'hover',
+            auto: true,
+            mode: 'fade',
+            controller: $('#bannerCtrl'),
+            activeControllerCls: 'active'
+        });
+        $('#banner_tabs .flex-prev').click(function() {
+            bannerSlider.prev()
+        });
+        $('#banner_tabs .flex-next').click(function() {
+            bannerSlider.next()
+        });
+    })
+    </script>
+    <!-------------------------------轮播图结束------------------------------------------------------->
+    </head>
+    <body>
+<div class="all"> {dede:include filename="head1.htm"/} 
+      <!-- /header -->
+      <div class="design_carouselfigure">
+    <div id="banner_tabs" class="flexslider">
+          <ul class="slides">
+        {dede:arclist row=1  type='image.'  typeid='49' flag='h' }
+        <li> <a href="#"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;" > </a> </li>
+        {/dede:arclist}
+        {dede:arclist row=1  type='image.'  typeid='50' flag='h' }
+        <li> <a href="http://www.gzhuajiang.com"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;"> </a> </li>
+        {/dede:arclist}
+        {dede:arclist row=1  type='image.'  typeid='51' flag='h' }
+        <li> <a href="#"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;"> </a> </li>
+        {/dede:arclist}
+        {dede:arclist row=1  type='image.'  typeid='52' flag='h' }
+        <li> <a href="#"> <img style="background: url([field:picname/]) no-repeat center; background-size:cover;"> </a> </li>
+        {/dede:arclist}
+       
+      </ul>
+          <ul class="flex-direction-nav">
+        <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+        <li><a class="flex-next" href="javascript:;">Next</a></li>
+      </ul>
+          <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+        <li><a>1</a></li>
+        <li><a>2</a></li>
+        <li><a>3</a></li>
+        <li><a>4</a></li>
+        <!--<li><a>5</a></li>-->
+      </ol>
+        </div>
+  </div>
+      <!--design_carouselfigure--> 
+      <!--轮播图-->
+      
+      <div class="chest">
+    <div class="chest_box">
+          <div class="chest_a"> <img src="/images/chesta/chest_1.png"/> <span>营销型网站</span> </div>
+          <!--chest_a-->
+          <div class="chest_a"> <img src="/images/chesta/chest_2.png"/> <span>品牌展示型</span> </div>
+          <!--chest_a-->
+          <div class="chest_a"> <img src="/images/chesta/chest_3.png"/> <span>移动网站</span> </div>
+          <!--chest_a-->
+          <div class="chest_a" style=" border-right:1px dotted #FFF;"> <img src="/images/chesta/chest_4.png"/> <span>量身定制型</span> </div>
+          <!--chest_a--> 
+        </div>
+    <!--chest_box--> 
+  </div>
+      <!--chest-->
+      <div class="activity">
+    <div class="activity_box"> <i>HUAJING DESIGN</i><br/>
+          <span>PREFERENTIAL ACTIVITY</span>
+          <p>优惠活动</p>
+        </div>      
+    <!--ctivity_box--> 
+  </div> 
+      <!--activity-->
+<div class="huodong">
+  <div class="huodong_box">
+     <img src="/images/huodong.jpg" />
+  </div><!--huodong_box-->
+</div><!--huodong-->
+      
+      <div class="customercase">
+    <div class="customercasebox">
+          <div class="customercasebox_a">
+        <div class="customercasebox_a_1"> <span>超过</span>
+              <p>50个连锁品牌</p>
+            </div>
+        <!--customercasebox_a_1-->
+        <div class="customercasebox_a_2"> < </div>
+        <!--ustomercasebox_a_2-->
+        <div class="customercasebox_a_1"> <span>超过</span>
+              <p>100个时尚品牌</p>
+            </div>
+        <!--customercasebox_a_1-->
+        <div class="customercasebox_a_2"> < </div>
+        <!--ustomercasebox_a_2-->
+        <div class="customercasebox_a_1"> <span>超过</span>
+              <p>800个家中小企业</p>
+            </div>
+        <!--customercasebox_a_1-->
+        <div class="customercasebox_a_2"> < </div>
+        <!--ustomercasebox_a_2-->
+        <div class="customercasebox_a_1"> <span>选择</span>
+              <p>花匠速拓建站</p>
+            </div>
+        <!--customercasebox_a_1--> 
+      </div>
+          <!--customercasebox_a--> 
+        </div>
+    <!--customercasebox--> 
+  </div>
+      <!--customercase-->
+      <div class="anlie">
+    <div class="anlie_box"> <span>SHOW CASE</span>
+          <p><small>花匠速拓</small><b>.</b>品牌营销型网站案例</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">花匠速拓专注建造识别强与询盘率爆表的营销网站</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie--> 
+      
+   
+      <div class="customercasetwo">
+    <div class="customercasetwobox"> {dede:arclist row=1  type='image.' idlist='48,1152' imgwidth='1200' imgheight='520'  titlelen='200'}
+          <div class="customercasetwobox_a"> <a href="[field:arcurl/]" target="_blank" id="design1">[field:image/]
+            <div class="bbtt">
+            <p>[field:title/]</p>
+          </div>
+            <!--bbtt--> 
+            </a> </div>
+          <!--customercasetwobox_a--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1155' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1154' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1157' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2-->  
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+           {dede:arclist row=1  type='image.' idlist='48,1156' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1153' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1158' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}                   
+           </div>
+    <!--customercasetwobox--> 
+  </div>
+      <!--customercasetwo-->
+      
+      <div class="morecase">
+    <div class="morecase_box">
+          <div class="morecase_box_a">
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1--> 
+        
+      </div>
+          <!--cmorecase_box_a--> 
+          
+          <a>查看更多作品</a> <span>+</span> </div>
+  </div>
+      <!--morecase-->
+      <div class="anlie">
+    <div class="anlie_box"> <span>SHOW CASE</span>
+          <p><small>花匠速拓</small><b>.</b>品牌展示型网站案例</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">涵盖移动端+PC端网站定制，赢得5000+品牌商掌声</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->
+      
+      <div class="customercasetwo">
+    <div class="customercasetwobox"> {dede:arclist row=1  type='image.' idlist='48,1159' imgwidth='1200' imgheight='520'  titlelen='200'}
+          <div class="customercasetwobox_a"> <a href="[field:arcurl/]" target="_blank" id="design1">[field:image/]
+            <div class="bbtt">
+            <p>[field:title/]</p>
+          </div>
+            <!--bbtt--> 
+            </a> </div>
+          <!--customercasetwobox_a--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1160' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1161' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1163' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2-->  
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+           {dede:arclist row=1  type='image.' idlist='48,1164' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1165' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}
+          
+          {dede:arclist row=1  type='image.' idlist='48,1167' imgwidth='390' imgheight='240'  titlelen='200'}
+          <div class="customercasetwobox_b">
+        <div class="customercasetwobox_b_1"> <a href="[field:arcurl/]" target="_blank"><span id="design2">[field:image/]</span>
+          <div class="txt">
+            <p>点击查看</p>
+          </div>
+          </a> 
+            </div>
+        <!--customercasetwobox_b_1-->
+        <div class="customercasetwobox_b_2"> <a href="[field:arcurl/]" target="_blank"> <span>[field:title/]</span>
+          <p>#[field:shorttitle/]#</p>
+          </a> </div>
+        <!--customercasetwobox_b_2--> 
+      </div>
+          <!--customercasetwobox_b--> 
+          {/dede:arclist}                   
+           </div>
+    <!--customercasetwobox--> 
+  </div>
+      <!--customercasetwo-->
+<script type="text/javascript">
+$(".customercasetwobox_b_1 a").hover(function(){
+	$(this).find(".txt").stop().animate({height:"240px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"60px"},400);
+},function(){
+	$(this).find(".txt").stop().animate({height:"0px"},400);
+	$(this).find(".txt span").stop().animate({paddingTop:"0px"},400);
+})
+</script>      
+      <div class="morecase">
+    <div class="morecase_box">
+          <div class="morecase_box_a">
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1--> 
+        
+      </div>
+          <!--cmorecase_box_a--> 
+          
+          <a>查看更多作品</a> <span>+</span> </div>
+  </div>
+      <!--morecase-->
+      
+      <div class="designbg"> </div>
+      <!--designbg-->
+      <div class="designbg_head">
+    <div class="designbg_head_box"> <img src="/images/tiaophone.jpg"/> </div>
+    <!--esignbg_head_box--> 
+  </div>
+      <!--designbg_head-->
+      
+      <div class="anlie">
+    <div class="anlie_box"> <span>SHOW CASE</span>
+          <p><small>花匠速拓</small><b>.</b>手机网站案例</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+          <div class="anlie_boxtwo_a">全套移动端解决方案，100家连锁品牌实现快速拓店</div>
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+      <!--anlie-->
+      
+      <div class="phonecase">
+    <div class="phonecase_box">
+    
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://m.hanshili.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://m.hanshili.net/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://gzhuajiang.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://gzhuajiang.net/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+         
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.gangzailiansuo.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.gangzailiansuo.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+          
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.ygytw.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.ygytw.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://wap.gzhuajiang.net/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://wap.gzhuajiang.net/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a-->
+          
+         
+          
+          <div class="phonecase_a">
+        <div class="phonecase_box_a">
+              <iframe src="http://m.hanshili.com/" id="c-c-iframe" name="c-c-iframe" height="100%" width="100%" frameborder="0" style="background-color:#FFFFFF;overflow:auto;"> </iframe>
+            </div>
+        <!--phonecase_box_a--> 
+        <a href="http://m.hanshili.com/" target="_blank">点击进入手机网站</a> </div>
+          <!--phonecase_a--> 
+          
+        </div>
+    <!--phonecase_box--> 
+    
+  </div>
+      <!--phonecase-->
+      
+      <div class="morecase">
+    <div class="morecase_box">
+          <div class="morecase_box_a">
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1--> 
+        
+      </div>
+          <!--cmorecase_box_a--> 
+          
+          <a>查看更多作品</a> <span>+</span> </div>
+  </div>
+      <!--morecase-->
+      
+     
+      
+      <div class="brand">
+    <div class="brand_box">
+          <div class="brand_top"> <span>通过研究商业模式来定义品牌模式</span>
+        <p>提供优秀的品牌整合解决方案，令品牌长远发展，更具竞争力</p>
+      </div>
+          <!--brand_top--> 
+          {dede:type typeid='5'}<a href='[field:typeurl/]' [field:rel/]>
+      <div class="brand_down">了解更多信息</div>
+      </a>{/dede:type}<!--brand_down--> 
+        </div>
+    <!--brand_box--> 
+  </div>
+      <!--"brand-->
+      
+      <div class="anlie">
+    <div class="anlie_box" style="border:0;"> <span>ACTIVITY NEWS</span>
+          <p><small>花匠速拓</small><b>.</b>活动新闻</p>
+        </div>
+    <!--anliebox-->
+   
+  </div>
+      <!--anlie-->
+      
+      <div class="designcontent">
+    <div class="designnews"> {dede:arclist row=8  type='image.'  typeid='14' imgwidth='235' imgheight='160' limit='0,8' flag='c' titlelen='200'} <a href="[field:arcurl/]"> [field:image/]
+      <div class="dstiao">
+        <div class="dstiao_a"></div>
+        <div class="dstiao_b">[field:pubdate function="MyDate('y-m-d',@me)"/]</div>
+        <div class="dstiao_c"></div>
+        <div class="dstiao_b">[field:click/]</div>
+      </div>
+      <div class="news_title">
+        <p>[field:title/]</p>
+      </div>
+      <div class="news_detail">[field:description function='cn_substr(@me,200)'/]</div>
+      </a> {/dede:arclist} </div>
+    <!--designnews--> 
+  </div>
+      <!--designcontent-->
+      
+      <div class="morecase">
+    <div class="morecase_box">
+          <div class="morecase_box_a">
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1-->
+        <div class="morecase_box_a1"> </div>
+        <!--morecase_box_a1--> 
+        
+      </div>
+          <!--cmorecase_box_a--> 
+          
+          <a>查看更多作品</a> <span>+</span> </div>
+  </div>
+      <!--morecase-->
+      
+      <div class="anlie">
+    <div class="anlie_box" style="border:0;"> <span>CONTACT US</span>
+          <p><small>花匠速拓</small><b>.</b>联系我们</p>
+        </div>
+    <!--anliebox-->
+    <div class="anlie_boxtwo">
+        </div>
+    <!--anlie_boxtwo--> 
+  </div>
+  
+   <div class="container">
+    <div class="row">
+          <div class="liuyingtop20">
+        <form method="post" action="/plus/guestbook1.php" name="form1">
+     	<input type='hidden' name='action' value='save' />
+              <div class="design-26">
+            <div class="design-27"> <span>SEND&nbsp;US&nbsp;MESSAGE</span>
+                  <p>填写您的需求，花匠速拓品牌顾问会即时与您联系</p>
+                </div>
+            
+            <!--lxwm_title-->
+            
+             <input type="text" class="design-28" name="uname" value="姓名  *" onFocus="if(this.value=='姓名  *'){this.value='';}" onBlur="if(this.value==''){this.value='姓名  *';}" />
+            <div class="sex">
+                  <input type="radio" name="img" value="男" checked="checked" />
+                  &nbsp;先生
+                  <input type="radio" name="img" value="女" />
+                  &nbsp;女士 </div>
+            <input type="text" class="design-28" name="qq" value="回访电话  *" onFocus="if(this.value=='回访电话  *'){this.value='';}" onBlur="if(this.value==''){this.value='回访电话  *';}" />
+            <input type="text" class="design-28" name="homepage" value="品牌名称" onFocus="if(this.value=='品牌名称'){this.value='';}" onBlur="if(this.value==''){this.value='品牌名称';}" />
+            <input type="text" class="design-29" name="msg" value="请填写你的合作需求" onFocus="if(this.value=='请填写你的合作需求'){this.value='';}" onBlur="if(this.value==''){this.value='请填写你的合作需求';}" />
+            <div class="design-30">
+                  <p>
+                <input name="email" type="radio" value="健康 美肤 快消品" checked="checked" />
+                &nbsp;健康&nbsp;美肤&nbsp;快消品</p>
+                  <p>
+                <input name="email" type="radio" value="时尚 珠宝 服装" />
+                &nbsp;时尚&nbsp;珠宝&nbsp;服装</p>
+                  <p>
+                <input name="email" type="radio" value="餐饮 家具 环保" />
+                &nbsp;餐饮&nbsp;家具&nbsp;环保</p>
+                  <p>
+                <input name="email" type="radio" value="电商 互联网 科技" />
+                &nbsp;电商&nbsp;互联网&nbsp;科技</p>
+                  <p>
+                <input name="email" type="radio" value="金融 制造 服务" />
+                &nbsp;金融&nbsp;制造&nbsp;服务</p>
+                  <p>
+                <input name="email" type="radio" value="其他行业" />
+                &nbsp;其他行业 </p>
+                </div>
+            <input type="submit" class="submit" name="submit" value="点击提交" />
+          </div>
+              
+              <!--design-26-->
+              
+            </form>
+      </div>
+          <div class="liuying30"> {dede:include filename="message.htm"/} </div>
+        </div>
+</div>
+<!--留言-->
+     
+      
+      {dede:include filename="footerweb.htm"/} </div>
+      
+      <script src="/templets/pc/js/message.js"></script>
+<!--all-->
+</body>
+</html>

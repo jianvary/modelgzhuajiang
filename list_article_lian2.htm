@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/default/style/normalize.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/animation.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/common.css" type="text/css" rel="stylesheet" />
+<link href="/templets/default/style/theme.css" type="text/css" rel="stylesheet" />
+<script src="/templets/default/style/jquery.js"></script>
+<script src="/templets/default/style/jquery.lazyload.js"></script>
+<style>
+.hjlxpic{ width:980px; height:420px; overflow:hidden; margin:5px auto; background-color:#ffffff;}
+.hjlxdizi{ width:980px; height:auto; margin:5px auto; background-color:#ffffff;}
+.hjdi{ width:400px; height:100px; margin:5px auto; line-height:30PX; color:#666; background-color:#ffffff; overflow:hidden; float:left;}
+.hjditu{ width:970px; height:800px; margin:5px auto;}
+.hjluiyi{ width:960; height:130px; margin:0px auto; line-height:30px; margin-top:10px; background-color:#ffffff;}
+.hjlxweixin{ width:970px; height:250px; margin:0px auto; float:left;}
+
+.lianxiwomen_head { height:95px; width:1000px; border-bottom: 1px solid #737373; margin:0 auto; overflow:hidden;}
+.lianxiwomen_head .lianxiwomen_headl{ height:50px; width:50px; float:left;margin-top:30px; background:url(images/gantan.jpg) no-repeat;}
+.lianxiwomen_head .lianxiwomen_headm{ height:40px; width:150px; float:left; margin-left:7px; margin-top:35px; /*border:1px solid #ccc;*/font-size:35px; color:#d70050;  font-weight:bold;}
+.lianxiwomen_head .lianxiwomen_headr{ height:20px; width:420px; float:left; margin-left:360px;margin-top:46px; font-size:20px;  color:#d70050;/*border:1px solid #ccc;*/ font-weight:bold;}
+.lianxiwomen_bottom{ height:100%;width:1000px; border-bottom:1px solid #dcdcdc; margin:0 auto;}
+.lianxiwomen{ height:510px; width:1000px; margin:0 auto;  overflow:hidden;} 
+.lianxiwomen form .lianxiwomen_left{ height:500px; width:400px; float:left;/*border:1px solid #ccc;*/ margin-left:10px; margin-top:30px;}
+.lianxiwomen form .lianxiwomen_left table {width: 400px; font-size:20px; color:#747474;}
+.lianxiwomen form .lianxiwomen_left table tr td input{ margin-top:20px;}
+.lianxiwomen form .lianxiwomen_left table tr td p{ font-size:12px;}
+.lianxiwomen form .lianxiwomen_right{ height:420px; width:390px; float: right;/*border:1px solid #ccc;*/ margin-top:20px;  color:#747474; font-size:12px; margin-right:60px;}
+.lianxiwomen form .lianxiwomen_right input{ margin-top:10px;}
+.lianxiwomen form .lianxiwomen_right #txtname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right .sex{height:25px;width:420px; text-align:right;}
+.lianxiwomen form .lianxiwomen_right #telephone{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #brandname{height:35px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right #cooperationneeds{height:215px;width:420px; padding-left:20px;color:#747474; font-size:12px;}
+.lianxiwomen form .lianxiwomen_right label{margin-left:8px; padding-left:20px;}
+.lianxiwomen form .lianxiwomen_right #submit{ height:25px; width:90px;background:#d70050; color:#FFF; border:0; font-size:12px; float:right;}
+</style>
+</head>
+<body class="articlelist">
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<div class="w960 center clear mt1" style="color:#000;"> 
+  <div class="hjlxpic">
+    	<img src="/images/121.jpg" />
+    </div>
+    <div class="hjlxdizi" >
+    	<div style="width:580px; height:280px; overflow:hidden; float:left;">
+        <style>
+	.lefttd {
+		border-left:1px solid #dedede;
+		border-right:1px solid #dedede;
+	}
+	.ltd {
+		border-left:1px solid #dedede;
+		border-right:1px solid #dedede;
+		border-top:1px solid #dedede;
+		border-bottom:1px dashed #dedede;
+	}
+	.msgtd {
+		line-height:180%;
+		border-right:1px solid #dedede;
+		padding:5px;
+		height:80px;
+	}
+	.timetd {
+		border-right:1px solid #dedede;
+		border-top:1px solid #dedede;
+		border-bottom:1px dashed #dedede;
+		padding-left:5px;
+	}
+	.bottomtd {
+		border-right:1px solid #dedede;
+		border-top:1px dashed #dedede;
+		padding-left:5px;
+	}
+	.writetable td {
+		padding: 5px;
+	}
+	.writetd {
+		background:url(img/wbg.gif);
+	}
+	.pagetable {
+		border:1px solid #dedede;
+		margin-bottom:8px;
+		background:#FBFEED;
+	}
+ .pagelistbox {
+ 	
+ }
+ .pagelistbox span{
+ 	  border:1px solid #dedede;
+ 	  padding:2px;
+ 	  margin-right:3px;
+ 	  background:#E8F9BF;
+ }
+ .pagelistbox a {
+ 	  border:1px solid #dedede;
+ 	  padding:2px;
+ 	  margin-right:3px;
+ 	  background:#E8F9BF;
+ 	  padding-left:5px;
+ 	  padding-right:5px;
+ }
+ .rebox {
+   width:98%;
+   padding:3px;
+   border:1px solid #dedede;
+ }
+</style>
+
+        	<table width="100%" border="0" cellspacing="2" cellpadding="4" align="center" bgcolor="#dedede" class='writetable'>
+      <form method="post" action="/plus/guestbook1.php" name="form1">
+        <input type='hidden' name='action' value='save' />
+       
+       
+        <tr bgcolor="#ffffff" style="margin-bottom:10px;">
+          <td width="10%" align="center" nowrap><font color="#FF0000">*</font>姓名：</td>
+          <td width="40%"><input type="text" maxlength="10" name="uname" size="60" value="" class="ipt-txt"/></td>
+          </tr>
+         
+          <tr bgcolor="#ffffff">
+          <td width="10%" align="center" nowrap><font color="#FF0000">*</font>手机：</td>
+          <td width="40%"><input maxlength="20" type="text" name="qq" size="60" class="ipt-txt" /></td>
+        </tr>
+       
+        <tr bgcolor="#ffffff">
+          <td align="center" nowrap width="10%">留言：<br />
+             </td>
+          <td align="left" width="40%">
+          	<textarea name="msg" cols="59" rows="10" class="textarea ipt-txt"></textarea>
+          </td>
+         
+         
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td colspan="4" align="center" nowrap><input maxlength="1000" type="submit" name="Submit" value="提 交" class="btn-2" />
+            &nbsp;&nbsp;
+            <input type="reset" name="Submit2" value="取 消" class="btn-2" /></td>
+        </tr>
+      </form>
+    </table>
+
+        </div><!--留言框-->
+    	<div class="hjdi">
+        	<p>广州花匠速拓网络科技有限公司 <br />广州市白云区国际单位二期A10栋202A <br />服务专线：400-0906-920</p>
+        </div>
+        <div class="hjditu">
+        	
+            <!--引用百度地图API-->
+            <style type="text/css">
+                html,body{margin:0;padding:0;}
+                .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+            </style>
+            <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+            </head>
+            
+            <body>
+              <!--百度地图容器-->
+              <div style="width:950px;height:500px;border:#ccc solid 1px;" id="dituContent"></div>
+            </body>
+            <script type="text/javascript">
+                //创建和初始化地图函数：
+                function initMap(){
+                    createMap();//创建地图
+                    setMapEvent();//设置地图事件
+                    addMapControl();//向地图添加控件
+                    addMarker();//向地图中添加marker
+                }
+                
+                //创建地图函数：
+                function createMap(){
+                    var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                    var point = new BMap.Point(113.272342,23.212198);//定义一个中心点坐标
+                    map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+                    window.map = map;//将map变量存储在全局
+                }
+                
+                //地图事件设置函数：
+                function setMapEvent(){
+                    map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                    map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                    map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                    map.enableKeyboard();//启用键盘上下左右键移动地图
+                }
+                
+                //地图控件添加函数：
+                function addMapControl(){
+                                    //向地图中添加比例尺控件
+                var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                map.addControl(ctrl_sca);
+                }
+                
+                //标注点数组
+                var markerArr = [{title:"广州市白云区国际单位二期A10栋202A",content:"广州市白云区国际单位二期A10栋202A",point:"113.272482|23.21258",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+                     ];
+                //创建marker
+                function addMarker(){
+                    for(var i=0;i<markerArr.length;i++){
+                        var json = markerArr[i];
+                        var p0 = json.point.split("|")[0];
+                        var p1 = json.point.split("|")[1];
+                        var point = new BMap.Point(p0,p1);
+                        var iconImg = createIcon(json.icon);
+                        var marker = new BMap.Marker(point,{icon:iconImg});
+                        var iw = createInfoWindow(i);
+                        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+                        marker.setLabel(label);
+                        map.addOverlay(marker);
+                        label.setStyle({
+                                    borderColor:"#808080",
+                                    color:"#333",
+                                    cursor:"pointer"
+                        });
+                        
+                        (function(){
+                            var index = i;
+                            var _iw = createInfoWindow(i);
+                            var _marker = marker;
+                            _marker.addEventListener("click",function(){
+                                this.openInfoWindow(_iw);
+                            });
+                            _iw.addEventListener("open",function(){
+                                _marker.getLabel().hide();
+                            })
+                            _iw.addEventListener("close",function(){
+                                _marker.getLabel().show();
+                            })
+                            label.addEventListener("click",function(){
+                                _marker.openInfoWindow(_iw);
+                            })
+                            if(!!json.isOpen){
+                                label.hide();
+                                _marker.openInfoWindow(_iw);
+                            }
+                        })()
+                    }
+                }
+                //创建InfoWindow
+                function createInfoWindow(i){
+                    var json = markerArr[i];
+                    var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+                    return iw;
+                }
+                //创建一个Icon
+                function createIcon(json){
+                    var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+                    return icon;
+                }
+                
+                initMap();//创建和初始化地图
+            </script>
+
+        </div><!--hjditu-->
+     
+        <div class="hjlxweixin">
+        	<img src="/images/wei.jpg" />
+        </div>
+    </div> <!--hjlxdizi-->
+ <br />
+</div>
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

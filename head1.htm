@@ -1,0 +1,54 @@
+<link href="/templets/default/style/headfoot.css" rel="stylesheet" media="screen" type="text/css" />
+
+<div class="jianHead">
+  <div class="jianContainer">
+	<div class="jianTop">
+    	<div class="jianTopLeft">
+        	<a href="/"><img src="/templets/pc/images/logo.png" /></a>
+        </div>
+        <div class="jianTopRight">
+        	<p>免费服务热线<br />FREE&nbsp;SERVICE<br />HOTLINE</p>
+            <p><span>400-0906-920</span></p>
+        </div>
+    </div>
+  </div>
+  <div class="jianMenu">
+	<div class="jianMenuCon">
+    	<ul id="jianMenuConNav">
+                    <li><a href='/' class="home"><span>></span>关于品牌整合创新</a> </li>
+                    <li><a href="/about/" >我们</a></li>
+                    <li><a href="/dt/" style="width:105px; text-align:center;">动态</a>
+                        <ul>
+                            <li> <a href='/dt/ppbd/' >品牌报道</a> </li>
+                            <li> <a href='/dt/xyxw/' >行业新闻</a> </li>
+                            <li>  </li>
+                            <li> <a href='/dt/zhys/' >整合营销</a> </li>
+                            <li> <a href='/dt/pbsj/' >品牌视觉</a> </li>
+                            <li> <a href='/dt/web/' >网站建设</a> </li>
+                            <li> <a href='/dt/wys/' >广州地推</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="/anli/">案例</a></li>
+                    <li><a href="http://www.zghuajiang.com/" target="_blank">培训</a></li>
+                    <li><a href="/zhyx/">网络整合营销</a></li>
+                    <li><a href="http://gzhuajiang.net/" target="_blank">品牌设计</a></li>
+                    <li><a href="/web/" target="_blank">网站建设</a></li>
+                    <li><a href="/ditui/" target="_blank">微信|APP推广</a></li>
+                    <li><a href="/lianxi/" >联系</a></li> 
+          </ul> 
+	</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#jianMenuConNav li").hover(function() {
+        $("ul", this).slideDown(200);
+        $(this).children("a:first").addClass("hov");
+    }, function() {
+        $("ul", this).slideUp(100);
+        $(this).children("a:first").removeClass("hov");
+    });
+});
+</script>
+
